@@ -1,4 +1,4 @@
-package com.lxg.sort;
+package com.lxg.sort.insert;
 
 /**
  * 二分法插入排序（按二分法找到合适位置插入）

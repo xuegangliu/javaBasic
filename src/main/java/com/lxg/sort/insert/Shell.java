@@ -1,4 +1,4 @@
-package com.lxg.sort;
+package com.lxg.sort.insert;
 
 /**
  * 希尔排序

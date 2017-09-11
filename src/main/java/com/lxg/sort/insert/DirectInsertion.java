@@ -1,4 +1,4 @@
-package com.lxg.sort;
+package com.lxg.sort.insert;
 
 /**
  * 直接插入排序 (从后向前找到合适位置后插入)

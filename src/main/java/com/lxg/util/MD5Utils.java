@@ -1,5 +1,5 @@
-﻿
-import static org.apache.commons.lang.StringUtils.isEmpty;
+﻿package com.lxg.util;
+
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -20,7 +20,7 @@ public class MD5Utils {
 
 	public static String md5String(String source, String encoder, String mid5key) {
 		StringBuilder hexString = new StringBuilder();
-		if (!isEmpty(source)) {
+		if (null!=source && ""!=source) {
 			try {
 				MessageDigest md = MessageDigest.getInstance("MD5");
 				md.update((source + mid5key).getBytes(encoder));

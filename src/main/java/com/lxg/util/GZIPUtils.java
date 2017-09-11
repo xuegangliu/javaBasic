@@ -1,5 +1,5 @@
-﻿
-  
+﻿package com.lxg.util;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -10,7 +10,6 @@ import java.io.OutputStream;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream; 
 
-import org.apache.commons.codec.binary.Base64;
  public abstract class GZIPUtils {  
 
     public static final int BUFFER = 1024;  

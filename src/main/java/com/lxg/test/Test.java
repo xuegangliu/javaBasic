@@ -12,6 +12,9 @@ public class Test {
         t.test1();
     }
 
+    /**
+     * continue、break、return的区别
+     */
     public void test1(){
         int a=0,b=0,c=0;
         for(int i=0;i<3;i++){

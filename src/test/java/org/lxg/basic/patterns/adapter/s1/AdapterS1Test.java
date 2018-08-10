@@ -1,6 +1,7 @@
-package org.lxg.basic.patterns.adapter;
+package org.lxg.basic.patterns.adapter.s1;
 
 import org.junit.Test;
+import org.lxg.basic.patterns.adapter.s1.*;
 
 /**
  * @author: xuegangliu
@@ -8,7 +9,7 @@ import org.junit.Test;
  * @DES:
  * @version: v1.0
  */
-public class AdapterTest {
+public class AdapterS1Test {
 
     @Test
     public void clientTest1(){

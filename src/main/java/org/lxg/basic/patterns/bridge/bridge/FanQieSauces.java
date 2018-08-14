@@ -1,10 +1,10 @@
 package org.lxg.basic.patterns.bridge.bridge;
 
 /**
+ * 描述: 酱汁大类-加番茄汁
  * Created by Administrator on 2017/2/5 0005.
  */
-
-class FanQieSauces extends Sauces{
+class FanQieSauces extends Sauces {
 
     FanQieSauces(Steak steak) { super(steak); }
 

@@ -1,12 +1,11 @@
 package org.lxg.basic.patterns.bridge.bridge;
 
 /**
- * 描述：
+ * 描述：牛排大类-羊扒小类
  *
  * @author coder-pig： 2017/02/05 下午2:11
  */
-
-class LambSteak extends Steak{
+class LambSteak extends Steak {
 
     LambSteak(Rations rations) { super(rations); }
 

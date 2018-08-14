@@ -1,16 +1,19 @@
 package org.lxg.basic.patterns.bridge.bridge;
 
+import org.junit.Test;
+
 import java.util.Date;
 
 /**
- * 描述：
- *
- * @author coder-pig： 2017/02/05 下午2:18
- * 桥接模式
+ * @author: xuegangliu
+ * @date: 8/14/2018 11:09 AM
+ * @DES:
+ * @version: v1.0
  */
+public class BridgeTest {
 
-public class Restaurant {
-    public static void main(String[] args) {
+    @Test
+    public void restaurantTest(){
         System.out.println("\n" + new Date(System.currentTimeMillis()));
         System.out.println("==================");
 

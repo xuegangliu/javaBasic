@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.builder;
 
 /**
+ * 描述:产品类
  * Created by Administrator on 2017/1/16 0016.
  */
-/* 产品类 */
 class Character {
     private String sex;
 
@@ -17,6 +17,6 @@ class Character {
 
     void setClothes(String clothes) { this.clothes = clothes;}
 
-    String showMsg() { return "你创建了一个穿着 " + clothes + " 一副 " + face + " 的" + sex + "ヾ(≧▽≦*)o 戳菊狂笑~"; }
+    String showMsg() { return "你创建了一个穿着 " + clothes + " 一副 " + face + " 的" + sex + "人"; }
 
 }

@@ -10,7 +10,7 @@ public class Queqe {
     private int number;
     private int max;
 
-    private Queqe(int maxsize){
+    Queqe(int maxsize){
         array = new int[maxsize];
         max = maxsize;
         front = 0;
@@ -18,7 +18,7 @@ public class Queqe {
         number = 0;
     }
 
-    private void insert(int item){
+    void insert(int item){
         if(isFull()){
             System.out.println("Queqe is full,can not insert");
             return;
@@ -27,7 +27,7 @@ public class Queqe {
         number++;
     }
 
-    private int remove(){
+    int remove(){
         if(isEmpty()){
             System.out.println("Queqe is empty,can not remove");
             return -1;
@@ -36,35 +36,18 @@ public class Queqe {
         return array[front++];
     }
 
-    private boolean isFull(){
+    boolean isFull(){
         return number == max;
     }
-    private boolean isEmpty(){
+    boolean isEmpty(){
         return number == 0;
     }
 
-    private int size(){
+    int size(){
         return number;
     }
 
-    private int peekFront(){
+    int peekFront(){
         return array[front];
-    }
-
-    public static void main(String[] args) {
-        Queqe q = new Queqe(4);
-        System.out.println("queqe is empty:"+q.isEmpty());
-
-        q.insert(1);
-        q.insert(2);
-        q.insert(3);
-        q.insert(4);
-        q.insert(5);
-
-        System.out.println(q.size());
-        System.out.println("front is "+q.peekFront());
-
-        while(!q.isEmpty())
-            System.out.println(q.remove());
     }
 }

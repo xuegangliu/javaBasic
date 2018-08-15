@@ -1,8 +1,8 @@
 package org.lxg.basic.jdk5;
 
-import com.lxg.test.jdk5.annotation.MethodInfo;
-import com.lxg.test.jdk5.api.TestImpl;
-import com.lxg.test.jdk5.api.TestService;
+import org.lxg.basic.jdk5.annotation.MethodInfo;
+import org.lxg.basic.jdk5.api.TestImpl;
+import org.lxg.basic.jdk5.api.TestService;
 
 import java.util.ArrayList;
 import java.util.List;

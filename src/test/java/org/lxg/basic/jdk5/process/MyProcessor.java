@@ -1,6 +1,6 @@
 package org.lxg.basic.jdk5.process;
 
-import com.lxg.test.jdk5.annotation.MethodInfo;
+import org.lxg.basic.jdk5.annotation.MethodInfo;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;

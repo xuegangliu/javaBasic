@@ -23,12 +23,4 @@ public class Loader extends Hello {// 子类
     { System.out.println("子类构造语句块:{}"); }
 
     static { System.out.println("子类静态语句块:static {}"); }
-
-    public static void main(String[] args) {
-        System.out.println("-------main start-------");
-        new Loader();
-        System.out.println("------------------------");
-        new Loader();
-        System.out.println("-------main end-------");
-    }
 }

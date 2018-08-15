@@ -17,14 +17,9 @@ public class Dervied extends Base {
         System.out.println("Dervied print name: " + name);
     }
 
-    public static void main(String[] args){
-
-        new Dervied();
- // 打印如下
-//        Dervied tell name: null
-//        Dervied print name: null
-//        Dervied tell name: dervied
-//        Dervied print name: dervied
+    public void base() {
+        System.out.println("--------------------------------------------------");
+        new Base();
     }
 }
 

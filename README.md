@@ -1,6 +1,6 @@
 # javaBasic
 
-[![Build Status](https://travis-ci.org/shuzheng/zheng.svg?branch=master)](https://github.com/xuegangliu/javaBasic)
+[![Build Status](https://travis-ci.org/xuegangliu/javaBasic.svg?branch=master)](https://github.com/xuegangliu/javaBasic)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/xuegangliu/javaBasic)
 [![GitHub stars](https://img.shields.io/github/stars/xuegangliu/javaBasic.svg?style=social&label=Stars)](https://github.com/xuegangliu/javaBasic)

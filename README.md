@@ -6,14 +6,21 @@
 [![GitHub stars](https://img.shields.io/github/stars/xuegangliu/javaBasic.svg?style=social&label=Stars)](https://github.com/xuegangliu/javaBasic)
 [![GitHub forks](https://img.shields.io/github/forks/xuegangliu/javaBasic.svg?style=social&label=Fork)](https://github.com/xuegangliu/javaBasic)
 
-java基础学习
-- crawler 爬虫
-- patterns 设计模式
-- sort 排序
-- struct 数据结构
-- web socket
+## 组织结构
+
+``` lua
+javaBasic
+├── crawler -- 爬虫
+├── patterns -- 设计模式
+├── sort -- 排序
+├── struct -- 数据结构
+├── test -- 测试
+├── util -- 工具
+├── web -- socket
+```
 
 ## ftp测试
+
 利用docker构建ftp服务
 ```
 docker pull docker.io/fauria/vsftpd

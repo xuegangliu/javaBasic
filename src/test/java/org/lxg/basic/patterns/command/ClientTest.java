@@ -1,22 +1,27 @@
 package org.lxg.basic.patterns.command;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/3/13 0013.
- * 命里模式
+ * @author: xuegangliu
+ * @date: 8/21/2018 11:35 AM
+ * @DES:
+ * @version: v1.0
  */
+public class ClientTest {
 
-public class Client {
-    public static void main(String[] args) {
+    @Test
+    public void storyTest(){
         //实例化播放列表
         List<Story> mList = new ArrayList<>();
-        mList.add(new Story("白雪公主",""));
-        mList.add(new Story("青蛙的愿望",""));
-        mList.add(new Story("驴和妈",""));
-        mList.add(new Story("小青蛙的烦恼",""));
-        mList.add(new Story("三字经",""));
+        mList.add(new Story("白雪公主","aaaaa"));
+        mList.add(new Story("青蛙的愿望","bbbbb"));
+        mList.add(new Story("驴和妈","ccccc"));
+        mList.add(new Story("小青蛙的烦恼","ddddd"));
+        mList.add(new Story("三字经","eeeee"));
 
         //实例化接收者
         StoryPlayer mPlayer = new StoryPlayer();

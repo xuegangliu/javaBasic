@@ -2,12 +2,32 @@ package org.lxg.basic;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.lxg.basic.util.FtpUtilTest;
 
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 
 public class BasicTest {
+
+    @Test
+    public void javaStartTest(){
+        // BootstrapClassLoader
+        System.out.println(System.getProperty("sun.boot.class.path"));
+
+        // ExtClassLoader
+        System.out.println(System.getProperty("java.ext.dirs"));
+
+        // AppClassLoader
+        System.out.println(System.getProperty("java.class.path"));
+
+        System.out.println("=======================");
+        ClassLoader cl = FtpUtilTest.class.getClassLoader();
+        System.out.println("ClassLoader is:"+cl.toString());
+        System.out.println("ClassLoader\'s parent is:"+cl.getParent().toString());
+        System.out.println("ClassLoader\'s grand father is:"+cl.getParent().getParent().toString());
+
+    }
 
     @Test
     public void oneTest(){

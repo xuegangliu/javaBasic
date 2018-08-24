@@ -1,11 +1,17 @@
 package org.lxg.basic.patterns.visitor;
 
-/**
- * Created by Administrator on 2017/3/20 0020.
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/24/2018 3:05 PM
+ * @DES:
+ * @version: v1.0
+ */
+public class VisitorTest {
+
+    @Test
+    public void visitorTest(){
         GameRoom room = new GameRoom();
         room.add(new Shooting());
         room.add(new Dancing());

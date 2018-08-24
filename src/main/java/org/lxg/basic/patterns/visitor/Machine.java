@@ -5,5 +5,5 @@ package org.lxg.basic.patterns.visitor;
  */
 
 public interface Machine {
-    public void accept(Player player);
+    void accept(Player player);
 }

@@ -6,7 +6,8 @@ package org.lxg.basic.patterns.visitor;
 
 public class Dancing implements Machine{
 
-    @Override public void accept(Player player) {
+    @Override
+    public void accept(Player player) {
         player.visit(this);
     }
 

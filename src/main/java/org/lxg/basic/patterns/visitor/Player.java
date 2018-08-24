@@ -6,9 +6,9 @@ package org.lxg.basic.patterns.visitor;
 
 public interface Player {
 
-    public void visit(Shooting machine);
+    void visit(Shooting machine);
 
-    public void visit(Dancing machine);
+    void visit(Dancing machine);
 
-    public void visit(Driving machine);
+    void visit(Driving machine);
 }

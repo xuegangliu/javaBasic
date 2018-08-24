@@ -1,12 +1,17 @@
 package org.lxg.basic.patterns.decorator;
 
-/**
- * Created by Administrator on 2017/1/21 0021.
- * 装饰者模式
- */
+import org.junit.Test;
 
-public class Store {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/23/2018 2:36 PM
+ * @DES:
+ * @version: v1.0
+ */
+public class DecoratorTest {
+
+    @Test
+    public void decoratorTest(){
         Tea tea1 = new MilkTea();
         System.out.println("你点的是：" + tea1.getName() + " 价格为：" + tea1.price());
 

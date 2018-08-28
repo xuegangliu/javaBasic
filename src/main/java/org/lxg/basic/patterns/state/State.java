@@ -5,5 +5,5 @@ package org.lxg.basic.patterns.state;
  */
 
 public interface State {
-    public void doSomeThing();
+    void doSomeThing();
 }

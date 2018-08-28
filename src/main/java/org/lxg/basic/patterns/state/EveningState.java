@@ -5,7 +5,8 @@ package org.lxg.basic.patterns.state;
  */
 
 public class EveningState implements State {
-    @Override public void doSomeThing() {
+    @Override
+    public void doSomeThing() {
         System.out.println("晚上打球！");
     }
 }

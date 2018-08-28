@@ -1,11 +1,17 @@
 package org.lxg.basic.patterns.state;
 
-/**
- * Created by Administrator on 2017/3/21 0021.
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/28/2018 3:55 PM
+ * @DES:
+ * @version: v1.0
+ */
+public class StateTest {
+
+    @Test
+    public void stateTest(){
         MorningState morningState = new MorningState();
         AfternoonState afternoonState = new AfternoonState();
         EveningState eveningState = new EveningState();

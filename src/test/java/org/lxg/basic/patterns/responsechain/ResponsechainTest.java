@@ -1,11 +1,17 @@
 package org.lxg.basic.patterns.responsechain;
 
-/**
- * Created by Administrator on 2017/3/20 0020.
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/29/2018 6:20 PM
+ * @DES:
+ * @version: v1.0
+ */
+public class ResponsechainTest {
+
+    @Test
+    public void responsechainTest(){
         Brother brother = new Brother();
         Father father = new Father();
         Mother mother = new Mother();

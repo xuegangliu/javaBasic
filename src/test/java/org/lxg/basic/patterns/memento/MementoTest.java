@@ -1,12 +1,17 @@
 package org.lxg.basic.patterns.memento;
 
-/**
- * Created by Administrator on 2017/3/15 0015.
- *备忘录模式 回忆模式
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 11:54 AM
+ * @DES:
+ * @version: v1.0
+ */
+public class MementoTest {
+
+    @Test
+    public void test(){
         Caretaker caretaker= new Caretaker();
         Character character = new Character(2000,1000,500);
         //存档
@@ -24,6 +29,5 @@ public class Client {
         System.out.println("=== 读取存档中... ===");
         character.restore(caretaker.getMemento());
         character.showMsg();
-
     }
 }

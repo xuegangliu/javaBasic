@@ -1,12 +1,17 @@
 package org.lxg.basic.patterns.flyweight.fly;
 
-/**
- * Created by Administrator on 2017/2/26 0026.
- * 轻量级模式
- */
+import org.junit.Test;
 
-public class Player {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 3:31 PM
+ * @DES:
+ * @version: v1.0
+ */
+public class FlyTest {
+
+    @Test
+    public void test(){
         for (int k = 0; k < 10; k ++){
             Card card = null;
             //随机花色

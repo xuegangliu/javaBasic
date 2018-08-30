@@ -1,16 +1,20 @@
 package org.lxg.basic.patterns.flyweight;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 描述：
- *
- * @author coder-pig： 2017/02/13 下午4:41
+ * @author: xuegangliu
+ * @date: 8/30/2018 3:29 PM
+ * @DES:
+ * @version: v1.0
  */
+public class FlyweightTest {
 
-public class Player {
-    public static void main(String[] args) {
+    @Test
+    public void test(){
         String[] colors = new String[] {"黑桃","红心","梅花","方块"};
         List<Card> cards = new ArrayList<>();
         for(int i = 0;i < 4; i++ ) {

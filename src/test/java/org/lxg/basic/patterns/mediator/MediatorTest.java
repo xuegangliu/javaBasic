@@ -1,12 +1,17 @@
 package org.lxg.basic.patterns.mediator;
 
-/**
- * Created by Administrator on 2017/3/15 0015.
- * 传递者模式
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 3:12 PM
+ * @DES:
+ * @version: v1.0
+ */
+public class MediatorTest {
+
+    @Test
+    public void mediatorTest(){
         //实例化中介者
         HouseMediator mediator = new HouseMediator();
         //实例化同事对象，传入中介者实例

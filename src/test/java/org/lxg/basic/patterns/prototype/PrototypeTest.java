@@ -1,11 +1,19 @@
 package org.lxg.basic.patterns.prototype;
 
-/**
- * Created by Administrator on 2017/1/16 0016.
- */
+import org.junit.Test;
 
-public class Wealth {
-    public static void main(String[] args) {
+import java.io.IOException;
+
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 10:48 AM
+ * @DES:
+ * @version: v1.0
+ */
+public class PrototypeTest {
+
+    @Test
+    public void prototypeTest(){
         Assets assets1 = new Assets(100,new Money("人民币"),"现金");
         Assets assets2 = (Assets) assets1.clone();
 
@@ -26,5 +34,20 @@ public class Wealth {
         assets2.getMoney().setType("美金");
         System.out.println("Assets1：" + assets1.toString());
         System.out.println("Assets2：" + assets2.toString());
+    }
+
+    @Test
+    public void prototypeTest2(){
+        AssetsS assetsS1 = new AssetsS(100,new MoneyS("人民币"),"现金");
+        try {
+            AssetsS assetsS2 = assetsS1.deepClone();    //序列化深克隆
+            //...其他代码
+            System.out.println(assetsS1.toString());
+            System.out.println(assetsS2.toString());
+            System.out.println(assetsS1.equals(assetsS2));
+            System.out.println(assetsS1==assetsS2);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

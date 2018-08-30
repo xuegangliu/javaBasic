@@ -1,14 +1,20 @@
 package org.lxg.basic.patterns.iterator;
 
-import java.util.*;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by Administrator on 2017/3/9 0009.
- * 迭代器模式
+ * @author: xuegangliu
+ * @date: 8/30/2018 3:18 PM
+ * @DES:
+ * @version: v1.0
  */
+public class IteratorTest {
 
-public class Client {
-    public static void main(String[] args) {
+    @Test
+    public void iteratorTest(){
         List<Song> list = new ArrayList<>();
         list.add(new Song("空白格","杨宗纬"));
         list.add(new Song("那时候的我","刘惜君"));

@@ -14,7 +14,8 @@ public class MyStoryList implements SongList{
         this.list = list;
     }
 
-    @Override public Iterator getIterator() {
+    @Override
+    public Iterator getIterator() {
         return new SongListIterator();
     }
 
@@ -22,12 +23,14 @@ public class MyStoryList implements SongList{
 
         private int cursor;
 
-        @Override public Song first() {
+        @Override
+        public Song first() {
             cursor = 0;
             return list.get(cursor);
         }
 
-        @Override public Song next() {
+        @Override
+        public Song next() {
             Song song = null;
             cursor++;
             if(hashNext()) {
@@ -36,11 +39,13 @@ public class MyStoryList implements SongList{
             return song;
         }
 
-        @Override public boolean hashNext() {
+        @Override
+        public boolean hashNext() {
             return !(cursor == list.size());
         }
 
-        @Override public Song currentItem() {
+        @Override
+        public Song currentItem() {
             return list.get(cursor);
         }
     }

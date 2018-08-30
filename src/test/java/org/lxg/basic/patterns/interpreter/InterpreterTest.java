@@ -1,12 +1,17 @@
 package org.lxg.basic.patterns.interpreter;
 
-/**
- * Created by Administrator on 2017/3/16 0016.
- * 解释器模式(申明器模式\翻译器解析器模式)
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 3:25 PM
+ * @DES:
+ * @version: v1.0
+ */
+public class InterpreterTest {
+
+    @Test
+    public void interpreterTest(){
         Context context = new Context();
 
         VariableExpression a = new VariableExpression("a");
@@ -18,6 +23,5 @@ public class Client {
 
         Expression expression = new PlusExpression(new PlusExpression(a,b),new MinusExpression(a,c));
         System.out.println(expression.toString() + " = " + expression.interpret(context));
-
     }
 }

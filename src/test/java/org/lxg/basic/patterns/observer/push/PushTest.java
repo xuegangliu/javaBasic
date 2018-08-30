@@ -1,11 +1,17 @@
 package org.lxg.basic.patterns.observer.push;
 
-/**
- * Created by Administrator on 2017/3/7 0007.
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 11:45 AM
+ * @DES:
+ * @version: v1.0
+ */
+public class PushTest {
+
+    @Test
+    public void test(){
         //创建被观察者
         Plant flower = new Flower();
         //创建三个观察者

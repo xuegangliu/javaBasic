@@ -1,12 +1,17 @@
 package org.lxg.basic.patterns.observer.observer;
 
-/**
- * Created by Administrator on 2017/3/7 0007.
- * 观察者模式
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 11:47 AM
+ * @DES:
+ * @version: v1.0
+ */
+public class ObserverTest {
+
+    @Test
+    public void test(){
         CoderPig coderPig = new CoderPig();
         AndroidDev dev = new AndroidDev();
         coderPig.addObserver(dev);

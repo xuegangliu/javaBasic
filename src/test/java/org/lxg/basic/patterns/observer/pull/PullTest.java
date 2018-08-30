@@ -1,11 +1,17 @@
 package org.lxg.basic.patterns.observer.pull;
 
-/**
- * Created by Administrator on 2017/3/7 0007.
- */
+import org.junit.Test;
 
-public class Client {
-    public static void main(String[] args) {
+/**
+ * @author: xuegangliu
+ * @date: 8/30/2018 11:46 AM
+ * @DES:
+ * @version: v1.0
+ */
+public class PullTest {
+
+    @Test
+    public void test(){
         OfficialAccount account = new CoderPig();
         User user = new AndroidDev();
         account.registerUser(user);

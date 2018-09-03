@@ -6,7 +6,15 @@ package org.lxg.basic.base;
  * @DES:
  * @version: v1.0
  */
-public class BaseTest extends BaseAbstract{
+public class BaseTest{
+    public static void main(String[] args) {
+        new BaseNoAbstract();
+        // 不能实例化抽象类
+//        new BaseHasAbstract();
+    }
+}
+
+class BaseNoAbstract extends BaseAbstract{
 
     @Override
     void helloAbstract() {
@@ -20,4 +28,5 @@ class TestBaseInterface implements BaseInterface{
     public void helloInterfaceTest() {
         System.out.println("helloTest");
     }
+
 }

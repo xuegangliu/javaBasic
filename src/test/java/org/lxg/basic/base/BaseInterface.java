@@ -7,5 +7,6 @@ package org.lxg.basic.base;
  * @version: v1.0
  */
 public interface BaseInterface {
+    // 除public外无其它修饰符；无main方法(1.8以上 可以)
     void helloInterfaceTest();
 }

@@ -108,6 +108,19 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.28</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.10.6</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -163,4 +176,5 @@
             </plugin>-->
         </plugins>
     </build>
+
 </project>

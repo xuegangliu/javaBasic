@@ -2,7 +2,6 @@ package org.lxg.basic.guice;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.google.inject.name.Named;
 import org.lxg.basic.guice.modules.AddModule;
 import org.lxg.basic.guice.test.service.Add;
 
@@ -29,8 +28,8 @@ public class ModuleTest {
 //        System.out.println("B:Some="+add2.getAddTogether(11,10));
 
         // Named注释
-        @Named("A") Add add3 = (Add)injector.getInstance(Add.class);
-        @Named("B") Add add4 = injector.getInstance(Add.class);
+        Add add3 = (Add)injector.getInstance(Add.class);
+        Add add4 = injector.getInstance(Add.class);
         System.out.println("A:"+add3.getAddTogether(11,11)+"---B:"+add4.getAddTogether(11,11));
     }
 }

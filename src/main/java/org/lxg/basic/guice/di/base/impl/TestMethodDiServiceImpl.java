@@ -1,8 +1,8 @@
 package org.lxg.basic.guice.di.base.impl;
 
 import com.google.inject.Inject;
-import com.lxg.di.base.DataProcessor;
-import com.lxg.di.base.SomeService;
+import org.lxg.basic.guice.di.base.DataProcessor;
+import org.lxg.basic.guice.di.base.SomeService;
 
 public class TestMethodDiServiceImpl implements SomeService {
     DataProcessor processor;

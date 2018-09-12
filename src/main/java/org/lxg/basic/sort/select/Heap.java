@@ -1,7 +1,5 @@
 package org.lxg.basic.sort.select;
 
-import java.util.Arrays;
-
 /**
  * 堆排序
  * 基本思想：
@@ -10,18 +8,7 @@ import java.util.Arrays;
  思想:初始时把要排序的数的序列看作是一棵顺序存储的二叉树，调整它们的存储序，使之成为一个 堆，这时堆的根节点的数最大。然后将根节点与堆的最后一个节点交换。然后对前面(n-1)个数重新调整使之成为堆。依此类推，直到只有两个节点的堆，并对 它们作交换，最后得到有 n 个节点的有序序列。从算法描述来看，堆排序需要两个过程，一是建立堆，二是堆顶与堆的最后一个元素交换位置。所以堆排序有两个函数组成。一是建堆的渗透函数，二是反复调用渗透函数实现排序的函数。
  */
 public class Heap {
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,76,13,27,49,78,34,12,64};
-        int arrayLength=a.length;
-        //循环建堆
-        for(int i=0;i<arrayLength-1;i++){
-            //建堆
-            buildMaxHeap(a,arrayLength-1-i);
-            //交换堆顶和最后一个元素
-            swap(a,0,arrayLength-1-i);
-            System.out.println(Arrays.toString(a));
-        }
-    }
+
     //对data数组从0到lastIndex建大顶堆
     public static void buildMaxHeap(int[] data, int lastIndex){
         //从lastIndex处节点（最后一个节点）的父节点开始
@@ -53,7 +40,7 @@ public class Heap {
         }
     }
     //交换
-    private static void swap(int[] data, int i, int j) {
+    public static void swap(int[] data, int i, int j) {
         int tmp=data[i];
         data[i]=data[j];
         data[j]=tmp;

@@ -6,13 +6,6 @@ package org.lxg.basic.sort.exchange;
  *      一部分比基准元素小,一部分大于等于基准元素,此时基准元素在其排好序后的正确位置,然后再用同样的方法递归地排序划分的两部分。
  */
 public class Quick {
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,76,13,27,49,78,34,12,64,1,8};
-        printBefore(a);
-        //快速排序
-        quick(a);
-        printEnd(a);
-    }
 
     public static void printEnd(int[] a) {
         System.out.println();
@@ -20,6 +13,7 @@ public class Quick {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i]+" ");
         }
+        System.out.println();
     }
 
     public static void printBefore(int[] a) {
@@ -27,9 +21,10 @@ public class Quick {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i]+" ");
         }
+        System.out.println();
     }
 
-    private static void quick(int[] a) {
+    public static void quick(int[] a) {
         if(a.length>0){
             quickSort(a,0,a.length-1);
         }

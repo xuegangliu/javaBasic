@@ -7,13 +7,6 @@ package org.lxg.basic.sort.exchange;
  *      即：每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。
  */
 public class Bubble {
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,76,13,27,49,78,34,12,64,1,8};
-        printBefore(a);
-        //冒泡排序
-        sort(a);
-        printEnd(a);
-    }
 
     public static void sort(int[] a) {
         for (int i = 0; i < a.length; i++) {
@@ -34,6 +27,7 @@ public class Bubble {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i]+" ");
         }
+        System.out.println();
     }
 
     public static void printBefore(int[] a) {
@@ -41,5 +35,6 @@ public class Bubble {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i]+" ");
         }
+        System.out.println();
     }
 }

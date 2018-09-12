@@ -7,16 +7,6 @@ package org.lxg.basic.sort.insert;
  */
 public class DirectInsertion {
 
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,76,13,27,49,78,34,12,64,1};
-        // 打印排序前
-        printBefore(a);
-        //直接插入排序
-        sort(a);
-        // 打印排序后
-        printEnd(a);
-    }
-
     public static void printBefore(int[] a) {
         System.out.println("排序之前：");
         for (int i = 0; i < a.length; i++) {

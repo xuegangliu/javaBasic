@@ -6,13 +6,6 @@ package org.lxg.basic.sort.select;
  *          然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止
  */
 public class Sample {
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,76,13,27,49,78,34,12,64,1,8};
-        printBefore(a);
-        //简单的选择排序
-        sort(a);
-        printEnd(a);
-    }
 
     public static void sort(int[] a) {
         for (int i = 0; i < a.length; i++) {

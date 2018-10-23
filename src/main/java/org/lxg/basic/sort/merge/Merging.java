@@ -5,13 +5,6 @@ package org.lxg.basic.sort.merge;
  * 基本思想:归并（Merge）排序法是将两个（或两个以上）有序表合并成一个新的有序表，即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列。
  */
 public class Merging {
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,76,13,27,49,78,34,12,64,1,8};
-        printBefore(a);
-        //归并排序
-        mergeSort(a,0,a.length-1);
-        printEnd(a);
-    }
 
     public static void printBefore(int[] a) {
         System.out.println("排序之前：");
@@ -28,7 +21,7 @@ public class Merging {
         }
     }
 
-    private static void mergeSort(int[] a, int left, int right) {
+    public static void mergeSort(int[] a, int left, int right) {
         if(left<right){
             int middle = (left+right)/2;
             //对左边进行递归

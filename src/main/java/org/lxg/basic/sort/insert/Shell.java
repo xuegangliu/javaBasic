@@ -8,15 +8,6 @@ package org.lxg.basic.sort.insert;
  *      即所有记录放在同一组中进行直接插入排序为止。该方法实质上是一种分组插入方法。
  */
 public class Shell {
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,76,13,27,49,78,34,12,64,1};
-        printBefore(a);
-        //希尔排序
-        int d = a.length;
-        sort(a, d);
-        printEnd(a);
-    }
-
     public static void sort(int[] a, int d) {
         while(true){
             d = d / 2;

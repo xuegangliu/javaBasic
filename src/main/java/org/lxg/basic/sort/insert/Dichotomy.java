@@ -7,14 +7,6 @@ package org.lxg.basic.sort.insert;
  */
 public class Dichotomy {
 
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,176,213,227,49,78,34,12,164,11,18,1};
-        printBefore(a);
-        //二分插入排序
-        sort(a);
-        printEnd(a);
-    }
-
     public static void printEnd(int[] a) {
         System.out.println();
         System.out.println("排序之后：");
@@ -30,7 +22,7 @@ public class Dichotomy {
         }
     }
 
-    private static void sort(int[] a) {
+    public static void sort(int[] a) {
         for (int i = 0; i < a.length; i++) {
             int temp = a[i];
             int left = 0;

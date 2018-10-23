@@ -8,14 +8,6 @@ import java.util.List;
  * 基本思想：将所有待比较数值（正整数）统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后,数列就变成一个有序序列。
  */
 public class Radix {
-    public static void main(String[] args) {
-        int[] a={49,38,65,97,176,213,227,49,78,34,12,164,11,18,1};
-        printBefore(a);
-        //基数排序
-        sort(a);
-        printEnd(a);
-    }
-
     public static void printEnd(int[] a) {
         System.out.println();
         System.out.println("排序之后：");
@@ -31,7 +23,7 @@ public class Radix {
         }
     }
 
-    private static void sort(int[] array) {
+    public static void sort(int[] array) {
         //找到最大数，确定要排序几趟
         int max = 0;
         for (int i = 0; i < array.length; i++) {

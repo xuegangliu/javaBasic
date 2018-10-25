@@ -25,6 +25,20 @@
 - -XX:+PrintTenuringDistribution
 - -XX:InitialTenuringThreshold， -XX:MaxTenuringThreshold and -XX:TargetSurvivorRatio
 - -XX:+NeverTenure and -XX:+AlwaysTenure
+
+ ```
+ 堆内存大小设置
+ -Xms :初始堆大小。只要启动，就占用的堆大小
+ -Xmx :最大堆大小。java.lang.OutOfMemoryError: Java heap这个错误可以通过配置-Xms和-Xmx参数来设置
+ -Xss：栈大小分配。栈是每个线程私有的区域，通常只有几百K大小，决定了函数调用的深度，而局部变量、参数都分配到栈上。当出现大量局部变量，递归时，会发生栈空间OOM（java.lang.StackOverflowError）之类的错误。
+ -XX:NewSize=n :设置新生代大小的绝对值
+ -XX:NewRatio=n: 设置年轻代和年老代的比值。比如设置为3，则新生代：老年代=1：3，新生代占1/4的总heap大小。
+ -XX:SurvivorRatio=n :年轻代中Eden区与两个Survivor区的比值。注意Survivor区有from和to两个。比如设置为8时，那么eden:from:to=8:1:1
+ -XX:MaxPermSize=n :设置持久代大小 ；java.lang.OutOfMemoryError: PermGen space这个OOM错误需要合理调大PermSize和MaxPermSize大小。
+ -XX:HeapDumpOnOutOfMemoryError ：发生OOM时转储堆到文件，这是一个非常好的诊断方法。
+ -XX:HeapDumpPath ：导出堆的转储文件路径
+ -XX:OnOutOfMemoryError：OOM时，执行一个脚本，比如发送邮件报警，重启程序。后面跟着一个脚本的路径。
+ ```
  
 ## GC 日志（垃圾收集）
 作用：记录了每一次的 GC 的执行时间和执行结果，通过分析 GC 日志可以优化堆设置和 GC 设置，或者改进应用程序的对象分配模式

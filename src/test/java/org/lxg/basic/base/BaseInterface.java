@@ -9,4 +9,9 @@ package org.lxg.basic.base;
 public interface BaseInterface {
     // 除public外无其它修饰符；无main方法(1.8以上 可以)
     void helloInterfaceTest();
+
+    // 1.6 编译不通过;1.8可以
+//    public static void main(String[] args) {
+//        System.out.println("BaseInterface main()");
+//    }
 }

@@ -56,7 +56,8 @@ public class ReflectionTest {
         A t = new A();// 对象实例
         Object args[] = new Object[1];
         args[0]="Tony";
-        Object m = talk.invoke( t,args );
+        Object m = talk.invoke( t,args );// 方法为构造器时，使用实例化对象即动态创建对象
         System.out.println(m.toString());
+
     }
 }

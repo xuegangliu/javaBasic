@@ -1,7 +1,5 @@
 package org.lxg.basic.sample.reflection;
 
-import org.lxg.basic.patterns.observer.pull.PullTest;
-
 /**
  * @author: xuegangliu
  * @date: 11/12/2018 11:35 AM
@@ -24,5 +22,13 @@ public class A {
     public String talk(String name){
         System.out.println("hello " +name);
         return "hello " +name;
+    }
+
+    public A(){
+        System.out.println("空构造器");
+    }
+
+    public A(String name){
+        System.out.println("有参构造器");
     }
 }

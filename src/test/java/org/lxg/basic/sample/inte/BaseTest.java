@@ -1,4 +1,4 @@
-package org.lxg.basic.base;
+package org.lxg.basic.sample.inte;
 
 import org.junit.Test;
 

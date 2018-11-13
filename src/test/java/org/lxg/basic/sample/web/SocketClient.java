@@ -1,4 +1,4 @@
-package org.lxg.basic.web;
+package org.lxg.basic.sample.web;
 
 import java.io.BufferedReader;
 import java.io.IOException;

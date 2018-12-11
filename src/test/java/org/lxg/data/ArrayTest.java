@@ -1,8 +1,11 @@
-package org.lxg.data.array;
+package org.lxg.data;
 
-public class BasicArray {
-    public static void main(String[] args) {
+import org.junit.Test;
 
+public class ArrayTest {
+
+    @Test
+    public void testBasicArray(){
         int[] arr = new int[10];
         for(int i = 0 ; i < arr.length ; i ++)
             arr[i] = i;
@@ -19,5 +22,15 @@ public class BasicArray {
 
         for(int i = 0 ; i < scores.length ; i ++)
             System.out.println(scores[i]);
+    }
+
+    @Test
+    public void testSelfArray(){
+        SelfArray selfArray = new SelfArray();
+        selfArray.addFirst(1);
+        selfArray.add(1,5);
+        System.out.println(selfArray.getSize());
+        selfArray.addLast(5);
+        System.out.println(selfArray.getSize());
     }
 }

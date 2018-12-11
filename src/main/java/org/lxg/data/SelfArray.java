@@ -1,8 +1,8 @@
 package org.lxg.data;
 
 public class SelfArray {
-    private int[] data;
-    private int size;
+    public int[] data;
+    public int size;
 
     // 构造函数，传入数组的容量capacity构造Array
     public SelfArray(int capacity){
@@ -49,6 +49,7 @@ public class SelfArray {
         if(index < 0 || index > size)
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
 
+        // 插入位置未中间,将后边的数据挪一位
         for(int i = size - 1; i >= index ; i --)
             data[i + 1] = data[i];
 

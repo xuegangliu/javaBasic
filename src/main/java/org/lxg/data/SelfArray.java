@@ -119,6 +119,14 @@ public class SelfArray<T> {
             remove(index);
     }
 
+    // 将数组空间的容量变成newCapacity大小
+    private void resize(int newCapacity){
+        T[] newData = (T[])new Object[newCapacity];
+        for(int i = 0 ; i < size ; i ++)
+            newData[i] = data[i];
+        data = newData;
+    }
+
     @Override
     public String toString(){
 

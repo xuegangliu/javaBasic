@@ -32,26 +32,57 @@ public class ArrayTest {
     @Test
     public void testSelfArray(){
         SelfArray selfArray = new SelfArray();
-        logger.info("数据大小:{},数组容量:{}",selfArray.getSize(),selfArray.getCapacity());
-
+        logger.info(selfArray.toString());
         selfArray.addFirst(1);
         selfArray.add(1,2);
-        printSelfData(selfArray);
+        logger.info(selfArray.toString());
 
-        logger.info("数据大小:{},数组容量:{}",selfArray.getSize(),selfArray.getCapacity());
         selfArray.addLast(3);
-        printSelfData(selfArray);
+        logger.info(selfArray.toString());
 
         selfArray.add(1,5);
-        logger.info("数据大小:{},数组容量:{}",selfArray.getSize(),selfArray.getCapacity());
-        printSelfData(selfArray);
+        logger.info(selfArray.toString());
+
+        selfArray.set(0,111);
+        logger.info(selfArray.toString());
+
+        logger.info(selfArray.get(2)+"");
+        selfArray.addLast(6);
+        selfArray.addLast(7);
+        selfArray.addLast(8);
+
+        logger.info(selfArray.toString());
+        selfArray.remove(4);
+        selfArray.find(8);
+        selfArray.removeFirst();
+        selfArray.removeLast();
+        logger.info(selfArray.toString());
+        logger.info("selfArray.contains(5):{}",selfArray.contains(5));
+        logger.info("selfArray.contains(11):{}",selfArray.contains(11));
     }
 
-    public void printSelfData(SelfArray selfArray){
-        StringBuffer data = new StringBuffer();
-        for(int t:selfArray.data){
-            data.append(t+",");
+    @Test
+    public void testStudentArray(){
+        SelfArray<Student> arr = new SelfArray<>();
+        arr.addLast(new Student("Alice", 100));
+        arr.addLast(new Student("Bob", 66));
+        arr.addLast(new Student("Charlie", 88));
+        logger.info(arr.toString());
+    }
+
+
+    class Student{
+        private String name;
+        private int score;
+
+        public Student(String studentName, int studentScore){
+            name = studentName;
+            score = studentScore;
         }
-        logger.info(data.toString());
+
+        @Override
+        public String toString(){
+            return String.format("Student(name: %s, score: %d)", name, score);
+        }
     }
 }

@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Stack;
+
 public class ArrayTest {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -88,6 +90,18 @@ public class ArrayTest {
         stack.pop();
         logger.info("出栈后:{}",stack.toString());
         logger.info("栈顶元素:{}",stack.peek());
+    }
+
+    @Test
+    public void testArrayQueue(){
+        ArrayQueue<Integer> queue = new ArrayQueue<>();
+        for(int i = 0 ; i < 10 ; i ++){
+            queue.enqueue(i);
+        }
+        logger.info("出队列前:{}",queue);
+        queue.dequeue();
+        queue.dequeue();
+        logger.info("出队列后:{}",queue);
     }
 
 

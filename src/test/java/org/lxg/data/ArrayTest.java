@@ -9,6 +9,12 @@ public class ArrayTest {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Test
+    public void test(){
+        System.out.println(0x7fffffff);
+        System.out.println(2 >> 32);
+    }
+
+    @Test
     public void testBasicArray(){
         int[] arr = new int[10];
         for(int i = 0 ; i < arr.length ; i ++)
@@ -68,6 +74,20 @@ public class ArrayTest {
         arr.addLast(new Student("Bob", 66));
         arr.addLast(new Student("Charlie", 88));
         logger.info(arr.toString());
+    }
+
+    @Test
+    public void testArrayStack(){
+        ArrayStack<Integer> stack = new ArrayStack<>();
+        for(int i = 0 ; i < 5 ; i ++){
+            stack.push(i);
+        }
+        logger.info("栈数据:{}",stack.toString());
+        stack.pop();
+        logger.info("出栈后:{}",stack.toString());
+        stack.pop();
+        logger.info("出栈后:{}",stack.toString());
+        logger.info("栈顶元素:{}",stack.peek());
     }
 
 

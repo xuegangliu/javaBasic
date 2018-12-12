@@ -127,6 +127,16 @@ public class SelfArray<T> {
         data = newData;
     }
 
+    // 获取最后一个元素
+    public T getLast(){
+        return get(size - 1);
+    }
+
+    // 获取第一个元素
+    public T getFirst(){
+        return get(0);
+    }
+
     @Override
     public String toString(){
 

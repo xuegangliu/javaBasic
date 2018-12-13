@@ -9,7 +9,7 @@
 ## 组织结构
 
 ``` lua
-javaBasic[基础练习]
+org.lxg.basic[基础练习]
 ├── crawler -- 爬虫
 ├── db      -- 数据库连接
 ├── elasic --elasticsearch
@@ -19,9 +19,10 @@ javaBasic[基础练习]
 ├── patterns -- 设计模式
 ├── quartz -- quartz定时
 ├── sort -- 排序
-├── struct -- 数据结构
-├── test -- 测试
 ├── util -- 工具
+org.lxg.data[数据结构]
+├── v1 --before
+org.lxg.data.get[新技能]
 ```
 
 ## 双亲委托的加载流程

@@ -1,6 +1,6 @@
 package org.lxg.data;
 
-public class BaseLinkedList<E> {
+public class SelfLinkedList<E> {
 
     private class Node{
         public E e;
@@ -28,7 +28,7 @@ public class BaseLinkedList<E> {
     private Node node;
     private int size;
 
-    public BaseLinkedList(){
+    public SelfLinkedList(){
         node = new Node();
         size = 0;
     }

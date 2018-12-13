@@ -132,6 +132,11 @@ public class DataStructTest {
         logger.info("添加尾4:{}",baseLinkedList);
         baseLinkedList.add(2,789);
         logger.info("位置2添加789:{}",baseLinkedList);
+        logger.info(baseLinkedList.contains(4)+"");
+        baseLinkedList.remove(2);
+        baseLinkedList.removeElement(3);
+        baseLinkedList.removeFirst();
+        logger.info(baseLinkedList.toString());
 
     }
 

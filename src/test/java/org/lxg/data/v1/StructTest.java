@@ -1,8 +1,6 @@
-package org.lxg.basic.struct;
+package org.lxg.data.v1;
 
 import org.junit.Test;
-
-import java.util.Scanner;
 
 /**
  * @author: xuegangliu

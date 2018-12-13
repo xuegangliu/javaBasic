@@ -1,4 +1,4 @@
-package org.lxg.basic.struct;
+package org.lxg.data.v1;
 
 public class UseArray {
     public int[] array;

@@ -1,4 +1,4 @@
-package org.lxg.basic.struct;
+package org.lxg.data.v1;
 
 /**
  * 队列先进先出

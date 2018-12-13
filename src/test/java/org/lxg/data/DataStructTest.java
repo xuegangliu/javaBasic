@@ -118,6 +118,22 @@ public class DataStructTest {
         System.out.println("LoopQueue, time: " + time2 + " s");
     }
 
+    @Test
+    public void testBaseLinkedList(){
+        BaseLinkedList<Integer> baseLinkedList = new BaseLinkedList<>();
+        logger.info("添加之前:{}",baseLinkedList.head);
+        baseLinkedList.addFirst(1);
+        logger.info("添加头1:{}",baseLinkedList.head);
+        baseLinkedList.addFirst(2);
+        logger.info("添加头2:{}",baseLinkedList.head);
+        baseLinkedList.addLast(3);
+        logger.info("添加尾3:{}",baseLinkedList.head);
+        baseLinkedList.addLast(4);
+        logger.info("添加尾4:{}",baseLinkedList.head);
+//        logger.info(baseLinkedList.head.toString());
+
+    }
+
 
     class Student{
         private String name;

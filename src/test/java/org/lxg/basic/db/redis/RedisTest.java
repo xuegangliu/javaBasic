@@ -35,7 +35,9 @@ public class RedisTest {
         System.out.println("连接成功");
         //查看服务是否运行
         System.out.println("服务正在运行: "+jedis.ping());
-        insertData(jedis);
+        jedis.select(3); // 切换数据库 默认16个库 下标0开始,默认第一个
+        jedis.set("test3","test3");
+//        insertData(jedis);
 
 //        keyOperate(jedis);
 //        stringOperate(jedis);

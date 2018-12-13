@@ -121,16 +121,17 @@ public class DataStructTest {
     @Test
     public void testBaseLinkedList(){
         BaseLinkedList<Integer> baseLinkedList = new BaseLinkedList<>();
-        logger.info("添加之前:{}",baseLinkedList.head);
+        logger.info("添加之前:{}",baseLinkedList);
         baseLinkedList.addFirst(1);
-        logger.info("添加头1:{}",baseLinkedList.head);
+        logger.info("添加头1:{}",baseLinkedList);
         baseLinkedList.addFirst(2);
-        logger.info("添加头2:{}",baseLinkedList.head);
+        logger.info("添加头2:{}",baseLinkedList);
         baseLinkedList.addLast(3);
-        logger.info("添加尾3:{}",baseLinkedList.head);
+        logger.info("添加尾3:{}",baseLinkedList);
         baseLinkedList.addLast(4);
-        logger.info("添加尾4:{}",baseLinkedList.head);
-//        logger.info(baseLinkedList.head.toString());
+        logger.info("添加尾4:{}",baseLinkedList);
+        baseLinkedList.add(2,789);
+        logger.info("位置2添加789:{}",baseLinkedList);
 
     }
 

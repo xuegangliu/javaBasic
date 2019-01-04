@@ -1,4 +1,4 @@
-package org.lxg.basic.test;
+package org.lxg.get;
 
 /**
  * 静态语句块、构造语句块以及构造函数的执行顺序

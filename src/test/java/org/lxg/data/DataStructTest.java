@@ -1,10 +1,18 @@
 package org.lxg.data;
 
 import org.junit.Test;
+import org.lxg.data.array.SelfArray;
+import org.lxg.data.array.SelfLinkedList;
+import org.lxg.data.queue.ArrayQueue;
+import org.lxg.data.queue.BaseQueue;
+import org.lxg.data.queue.LinkedListQueue;
+import org.lxg.data.queue.LoopQueue;
+import org.lxg.data.stack.ArrayStack;
+import org.lxg.data.stack.BaseStack;
+import org.lxg.data.stack.LinkedListStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.LinkedList;
 import java.util.Random;
 
 public class DataStructTest {
@@ -118,6 +126,65 @@ public class DataStructTest {
         System.out.println("LoopQueue, time: " + time2 + " s");
     }
 
+    @Test
+    public void testBaseLinkedList(){
+        SelfLinkedList<Integer> selfLinkedList = new SelfLinkedList<>();
+        logger.info("添加之前:{}", selfLinkedList);
+        selfLinkedList.addFirst(1);
+        logger.info("添加头1:{}", selfLinkedList);
+        selfLinkedList.addFirst(2);
+        logger.info("添加头2:{}", selfLinkedList);
+        selfLinkedList.addLast(3);
+        logger.info("添加尾3:{}", selfLinkedList);
+        selfLinkedList.addLast(4);
+        logger.info("添加尾4:{}", selfLinkedList);
+        selfLinkedList.add(2,789);
+        logger.info("位置2添加789:{}", selfLinkedList);
+        logger.info(selfLinkedList.contains(4)+"");
+        selfLinkedList.remove(2);
+        selfLinkedList.removeElement(3);
+        selfLinkedList.removeFirst();
+        logger.info(selfLinkedList.toString());
+    }
+
+    @Test
+    public void testLinkedListStackTime(){
+        int opCount = 100000;
+
+        ArrayStack<Integer> arrayStack = new ArrayStack<>(opCount);
+        double time1 = testStack(arrayStack, opCount);
+        System.out.println("ArrayStack, time: " + time1 + " s");
+
+        LinkedListStack<Integer> linkedListStack = new LinkedListStack<>();
+        double time2 = testStack(linkedListStack, opCount);
+        System.out.println("LinkedListStack, time: " + time2 + " s");
+
+        // 其实这个时间比较很复杂，因为LinkedListStack中包含更多的new操作
+    }
+
+    @Test
+    public void testLinkedListQueue(){
+        LinkedListQueue<Integer> queue = new LinkedListQueue<>();
+        for(int i = 0 ; i < 10 ; i ++){
+            queue.enqueue(i);
+        }
+        logger.info("出队前:{}",queue);
+        queue.dequeue();
+        queue.dequeue();
+        logger.info("出队后:{}",queue);
+    }
+
+    @Test
+    public void testLinkedListStack(){
+        LinkedListStack<Integer> queue = new LinkedListStack<>();
+        for(int i = 0 ; i < 10 ; i ++){
+            queue.push(i);
+        }
+        logger.info("出栈前:{}",queue);
+        queue.pop();
+        logger.info("出栈后:{}",queue);
+    }
+
 
     class Student{
         private String name;
@@ -142,6 +209,18 @@ public class DataStructTest {
             q.enqueue(random.nextInt(Integer.MAX_VALUE));
         for(int i = 0 ; i < opCount ; i ++)
             q.dequeue();
+        long endTime = System.nanoTime();
+        return (endTime - startTime) / 1000000000.0;
+    }
+
+    // 测试使用stack运行opCount个push和pop操作所需要的时间，单位：秒
+    private double testStack(BaseStack<Integer> stack, int opCount){
+        long startTime = System.nanoTime();
+        Random random = new Random();
+        for(int i = 0 ; i < opCount ; i ++)
+            stack.push(random.nextInt(Integer.MAX_VALUE));
+        for(int i = 0 ; i < opCount ; i ++)
+            stack.pop();
         long endTime = System.nanoTime();
         return (endTime - startTime) / 1000000000.0;
     }

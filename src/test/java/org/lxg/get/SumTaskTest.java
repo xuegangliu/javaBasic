@@ -1,6 +1,7 @@
-package org.lxg.basic.test;
+package org.lxg.get;
 
 import org.junit.Test;
+import org.lxg.get.SumTask;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;

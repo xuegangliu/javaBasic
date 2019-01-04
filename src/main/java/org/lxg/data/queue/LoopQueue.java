@@ -1,5 +1,9 @@
-package org.lxg.data;
+package org.lxg.data.queue;
 
+/**
+ * 循环队列
+ * @param <E>
+ */
 public class LoopQueue<E> implements BaseQueue<E> {
 
     private E[] data;

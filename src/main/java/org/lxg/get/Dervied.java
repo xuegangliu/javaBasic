@@ -1,4 +1,4 @@
-package org.lxg.basic.test;
+package org.lxg.get;
 
 public class Dervied extends Base {
 

@@ -1,8 +1,12 @@
-package org.lxg.data;
+package org.lxg.data.array;
 
+/**
+ * 自定义数组
+ * @param <T> 数据类型
+ */
 public class SelfArray<T> {
-    public T[] data;
-    public int size;
+    public T[] data; // 数组内容
+    public int size; // 数组大小
 
     // 构造函数，传入数组的容量capacity构造SelfArray
     public SelfArray(int capacity){

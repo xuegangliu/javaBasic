@@ -1,6 +1,15 @@
 package org.lxg.data;
 
 import org.junit.Test;
+import org.lxg.data.array.SelfArray;
+import org.lxg.data.array.SelfLinkedList;
+import org.lxg.data.queue.ArrayQueue;
+import org.lxg.data.queue.BaseQueue;
+import org.lxg.data.queue.LinkedListQueue;
+import org.lxg.data.queue.LoopQueue;
+import org.lxg.data.stack.ArrayStack;
+import org.lxg.data.stack.BaseStack;
+import org.lxg.data.stack.LinkedListStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

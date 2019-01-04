@@ -1,28 +1,31 @@
 # javaBasic
 
+[![GitHub stars](https://img.shields.io/github/stars/xuegangliu/javaBasic.svg?style=social&label=Stars)](https://github.com/xuegangliu/javaBasic)
+[![GitHub forks](https://img.shields.io/github/forks/xuegangliu/javaBasic.svg?style=social&label=Fork)](https://github.com/xuegangliu/javaBasic)
 [![Build Status](https://travis-ci.org/xuegangliu/javaBasic.svg?branch=master)](https://travis-ci.org/xuegangliu/javaBasic)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/xuegangliu/javaBasic/pulls)
-[![GitHub stars](https://img.shields.io/github/stars/xuegangliu/javaBasic.svg?style=social&label=Stars)](https://github.com/xuegangliu/javaBasic)
-[![GitHub forks](https://img.shields.io/github/forks/xuegangliu/javaBasic.svg?style=social&label=Fork)](https://github.com/xuegangliu/javaBasic)
+[![RELEASE](https://img.shields.io/github/release/xuegangliu/javaBasic.svg)](https://github.com/xuegangliu/javaBasic/releases)
+[![issues](https://img.shields.io/github/issues/xuegangliu/javaBasic.svg)](https://github.com/xuegangliu/javaBasic/issues)
 
 ## 组织结构
 
 ``` lua
 org.lxg.basic[基础练习]
-├── crawler -- 爬虫
-├── db      -- 数据库连接
-├── elasic --elasticsearch
-├── guice --google frame
-├── jms --消息队列
+├── crawler   -- 爬虫
+├── db        -- 数据库连接
+├── elasic    --elasticsearch
+├── guice     --google frame
+├── jms       --消息队列
 ├── listeners -- 监听
-├── patterns -- 设计模式
-├── quartz -- quartz定时
-├── sort -- 排序
-├── util -- 工具
+├── patterns  -- 设计模式
+├── quartz    -- quartz定时
+├── sort      -- 排序
+├── util      -- 工具
 org.lxg.data[数据结构]
-├── v1 --before
-org.lxg.data.get[新技能]
+├── array     -- 数组
+├── queue     -- 队列
+├── stack     --栈
 ```
 
 ## 双亲委托的加载流程

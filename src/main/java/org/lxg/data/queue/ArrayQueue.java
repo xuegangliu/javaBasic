@@ -1,13 +1,19 @@
-package org.lxg.data;
+package org.lxg.data.queue;
 
-public class ArrayStack<E> implements BaseStack<E> {
+import org.lxg.data.array.SelfArray;
+
+/**
+ * 基于数组实现队列
+ * @param <E>
+ */
+public class ArrayQueue<E> implements BaseQueue<E> {
     private SelfArray<E> array;
 
-    public ArrayStack(int capacity){
+    public ArrayQueue(int capacity){
         array = new SelfArray<>(capacity);
     }
 
-    public ArrayStack(){
+    public ArrayQueue(){
         array = new SelfArray<>();
     }
 
@@ -26,31 +32,31 @@ public class ArrayStack<E> implements BaseStack<E> {
     }
 
     @Override
-    public void push(E e){
+    public void enqueue(E e){
         array.addLast(e);
     }
 
     @Override
-    public E pop(){
-        return array.removeLast();
+    public E dequeue(){
+        return array.removeFirst();
     }
 
     @Override
-    public E peek(){
-        return array.getLast();
+    public E getFront(){
+        return array.getFirst();
     }
 
     @Override
     public String toString(){
         StringBuilder res = new StringBuilder();
-        res.append("Stack: ");
-        res.append('[');
+        res.append("Queue: ");
+        res.append("front [");
         for(int i = 0 ; i < array.getSize() ; i ++){
             res.append(array.get(i));
             if(i != array.getSize() - 1)
                 res.append(", ");
         }
-        res.append("] top");
+        res.append("] tail");
         return res.toString();
     }
 }

@@ -1,5 +1,11 @@
-package org.lxg.data;
+package org.lxg.data.stack;
 
+import org.lxg.data.array.SelfLinkedList;
+
+/**
+ * 链表栈
+ * @param <E>
+ */
 public class LinkedListStack<E> implements BaseStack<E> {
     private SelfLinkedList<E> list;
 

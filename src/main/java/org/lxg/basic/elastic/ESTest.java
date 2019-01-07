@@ -339,16 +339,13 @@ public class ESTest {
         // 创建BulkPorcessor对象
         BulkProcessor bulkProcessor = BulkProcessor.builder(client, new BulkProcessor.Listener() {
             public void beforeBulk(long paramLong, BulkRequest paramBulkRequest) {
-                // TODO Auto-generated method stub
             }
 
             // 执行出错时执行
             public void afterBulk(long paramLong, BulkRequest paramBulkRequest, Throwable paramThrowable) {
-                // TODO Auto-generated method stub
             }
 
             public void afterBulk(long paramLong, BulkRequest paramBulkRequest, BulkResponse paramBulkResponse) {
-                // TODO Auto-generated method stub
             }
         })
                 // 1w次请求执行一次bulk

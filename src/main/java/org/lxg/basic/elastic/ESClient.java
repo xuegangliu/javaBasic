@@ -51,7 +51,6 @@ public class ESClient {
                     .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(serverIP),port));
 //					.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.113.126"),9300));
         } catch (UnknownHostException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         System.out.println("连接成功！");

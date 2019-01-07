@@ -19,6 +19,13 @@ public class SelfArray<T> {
         this(10);
     }
 
+    public SelfArray(T[] arr){
+        data = (T[])new Object[arr.length];
+        for(int i = 0 ; i < arr.length ; i ++)
+            data[i] = arr[i];
+        size = arr.length;
+    }
+
     // 获取数组的容量
     public int getCapacity(){
         return data.length;
@@ -139,6 +146,15 @@ public class SelfArray<T> {
     // 获取第一个元素
     public T getFirst(){
         return get(0);
+    }
+
+
+    public void swap(int i, int j){
+        if(i < 0 || i >= size || j < 0 || j >= size)
+            throw new IllegalArgumentException("Index is illegal.");
+        T t = data[i];
+        data[i] = data[j];
+        data[j] = t;
     }
 
     @Override

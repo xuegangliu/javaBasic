@@ -1,6 +1,6 @@
 ---
 language: java
-sudo: mvn install -DskipTests=true
+sudo: gradle build -x test
 jdk:
   - oraclejdk8
 notifications:
@@ -8,4 +8,4 @@ notifications:
     recipients:
         - 1453860636@qq.com
     on_success: change
-#    on_failure: always
+    on_failure: always

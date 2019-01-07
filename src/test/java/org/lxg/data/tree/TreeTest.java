@@ -3,6 +3,8 @@ package org.lxg.data.tree;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class TreeTest {
@@ -75,5 +77,21 @@ public class TreeTest {
             if(nums.get(i - 1) < nums.get(i))
                 throw new IllegalArgumentException("Error!");
         System.out.println("removeMax test completed.");
+    }
+
+    @Test
+    public void testSegmentTree(){
+        Integer[] nums = {-2, 0, 3, -5, 2, -1};
+//        SegmentTree<Integer> segTree = new SegmentTree<>(nums,
+//                new Merger<Integer>() {
+//                    @Override
+//                    public Integer merge(Integer a, Integer b) {
+//                        return a + b;
+//                    }
+//                });
+
+        SegmentTree<Integer> segTree = new SegmentTree<>(nums,
+                (a, b) -> a + b);
+        System.out.println(segTree.toString());
     }
 }

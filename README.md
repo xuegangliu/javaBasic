@@ -19,28 +19,21 @@ org.lxg.basic[基础练习]
 ├── jms       --消息队列
 ├── listeners -- 监听
 ├── patterns  -- 设计模式
-├── quartz    -- quartz定时
+├── quartz    -- 定时
 ├── sort      -- 排序
 ├── util      -- 工具
 org.lxg.data[数据结构]
 ├── array     -- 数组
 ├── queue     -- 队列
-├── stack     --栈
+├── stack     -- 栈
+├── map       -- map
+├── set       -- set
+├── tree      -- tree
+org.lxg.get[新技能]
 ```
 
-## 双亲委托的加载流程
+## 文档
 
-![双亲委托的加载流程](./images/classloader.png)
+- [ftp搭建](doc/docker-ftp.md)
+- [Java加载](doc/java-classloader.md)
 
-## ftp测试
-
-利用docker构建ftp服务
-
-```
-docker pull docker.io/fauria/vsftpd
-docker run -d -v /home/vsftpd:/home/vsftpd -p 20:20 -p 21:21 -p 21100-21110:21100-21110 -e FTP_USER=test -e FTP_PASS=test --name vsftpd fauria/vsftpd
-```
-
-- 会以登录用户名 (test) 创建一个目录 (/home/vsftpd/test) 作为 ftp 根目录
-
-- 测试时发现不加 -p 20:20 依然可以正常操作

@@ -43,3 +43,16 @@ exclude(module: 'log4j')
     compile group: 'commons-pool', name: 'commons-pool', version:'1.6'
     compile group: 'org.mongodb', name: 'mongo-java-driver', version:'3.5.0'
 }
+
+test{
+    filter{
+        //包括在测试的任何具体方法
+        includeTestsMatching "test*"
+
+        //包括所有包种的测试
+//        includeTestsMatching "org.gradle.internal.*"
+
+        //包括所有的集成测试
+        includeTestsMatching "Test*"
+    }
+}

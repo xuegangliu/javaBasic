@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class TestBst {
+public class TreeTest {
 
     @Test
     public void testBst(){

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class TestSet {
+public class SetTest {
     @Test
     public void TestBstSet(){
         System.out.println("Pride and Prejudice");

@@ -1,5 +1,9 @@
 package org.lxg.data.tree;
 
+/**
+ * 线段树
+ * @param <E>
+ */
 public class SegmentTree<E> {
 
     private E[] tree;

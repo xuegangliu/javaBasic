@@ -1,6 +1,8 @@
 package org.lxg.data.tree;
 
 import org.junit.Test;
+import org.lxg.data.set.BSTSet;
+import org.lxg.data.set.SetTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -104,5 +106,34 @@ public class TreeTest {
         System.out.println(segTree.query(0, 2));
         System.out.println(segTree.query(2, 5));
         System.out.println(segTree.query(0, 5));
+    }
+
+    @Test
+    public void testTrieTime(){
+        System.out.println("Pride and Prejudice");
+        ArrayList<String> words = new ArrayList<>();
+        if(SetTest.readFile("pride-and-prejudice.txt", words)) {
+            long startTime = System.nanoTime();
+            BSTSet<String> set = new BSTSet<>();
+            for (String word : words)
+                set.add(word);
+            for (String word : words)
+                set.contains(word);
+            long endTime = System.nanoTime();
+            double time = (endTime - startTime) / 1000000000.0;
+            System.out.println("Total different words: " + set.getSize());
+            System.out.println("BSTSet: " + time + " s");
+            // ---
+            startTime = System.nanoTime();
+            Trie trie = new Trie();
+            for (String word : words)
+                trie.add(word);
+            for (String word : words)
+                trie.contains(word);
+            endTime = System.nanoTime();
+            time = (endTime - startTime) / 1000000000.0;
+            System.out.println("Total different words: " + trie.getSize());
+            System.out.println("Trie: " + time + " s");
+        }
     }
 }

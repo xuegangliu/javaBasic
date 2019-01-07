@@ -23,3 +23,6 @@
 ### tree
 - 二叉树
 - 线段树
+- 字典树
+    - 基于TreeMap
+    - 基于HashMap

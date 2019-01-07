@@ -1,6 +1,6 @@
 ---
 language: java
-sudo: gradle build -x test
+sudo: false
 jdk:
   - oraclejdk8
 notifications:

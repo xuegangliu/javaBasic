@@ -28,3 +28,6 @@
     - 基于HashMap
 - 红黑树
 - B-树
+
+### 并查集(Union-Find)
+- [文档](https://blog.csdn.net/guoziqing506/article/details/78752557)

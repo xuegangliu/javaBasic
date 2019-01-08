@@ -2,6 +2,10 @@ package org.lxg.data.queue;
 
 import org.lxg.data.heap.MaxHeap;
 
+/**
+ * 基于堆实现的队列
+ * @param <E>
+ */
 public class HeapQueue<E extends Comparable<E>>  implements BaseQueue<E> {
     private MaxHeap<E> maxHeap;
 

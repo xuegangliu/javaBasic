@@ -2,6 +2,10 @@ package org.lxg.data.heap;
 
 import org.lxg.data.array.SelfArray;
 
+/**
+ * 堆
+ * @param <E>
+ */
 public class MaxHeap<E extends Comparable<E>> {
 
     private SelfArray<E> data;

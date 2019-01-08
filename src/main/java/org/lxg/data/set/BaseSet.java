@@ -1,5 +1,9 @@
 package org.lxg.data.set;
 
+/**
+ * set基本方法
+ * @param <E>
+ */
 public interface BaseSet<E> {
     void add(E e);
     boolean contains(E e);

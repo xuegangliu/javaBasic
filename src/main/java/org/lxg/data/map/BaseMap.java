@@ -1,5 +1,10 @@
 package org.lxg.data.map;
 
+/**
+ * map基本方法
+ * @param <K>
+ * @param <V>
+ */
 public interface BaseMap<K,V> {
     void add(K key, V value);
     V remove(K key);

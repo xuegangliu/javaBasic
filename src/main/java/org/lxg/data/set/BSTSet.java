@@ -2,6 +2,10 @@ package org.lxg.data.set;
 
 import org.lxg.data.tree.BST;
 
+/**
+ * 基于二叉树的set
+ * @param <E>
+ */
 public class BSTSet<E extends Comparable<E>> implements BaseSet<E> {
 
     private BST<E> bst;

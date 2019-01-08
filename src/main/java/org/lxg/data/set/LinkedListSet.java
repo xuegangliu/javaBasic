@@ -2,6 +2,10 @@ package org.lxg.data.set;
 
 import org.lxg.data.array.SelfLinkedList;
 
+/**
+ * 基于链表的set
+ * @param <E>
+ */
 public class LinkedListSet<E> implements BaseSet<E> {
     private SelfLinkedList<E> list;
 

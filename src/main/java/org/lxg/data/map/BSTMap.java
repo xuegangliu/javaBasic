@@ -1,5 +1,10 @@
 package org.lxg.data.map;
 
+/**
+ * 基于二叉树实现的map
+ * @param <K>
+ * @param <V>
+ */
 public class BSTMap<K extends Comparable<K>, V>  implements BaseMap<K,V> {
 
     private Node root;

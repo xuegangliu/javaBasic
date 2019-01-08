@@ -1,5 +1,10 @@
 package org.lxg.data.map;
 
+/**
+ * 基于链表的map
+ * @param <K>
+ * @param <V>
+ */
 public class LinkedListMap<K,V> implements BaseMap<K,V>{
     private Node dummyHead;
     private int size;

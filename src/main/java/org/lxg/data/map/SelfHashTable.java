@@ -2,6 +2,11 @@ package org.lxg.data.map;
 
 import java.util.TreeMap;
 
+/**
+ * 自定义hashtable结构
+ * @param <K>
+ * @param <V>
+ */
 public class SelfHashTable<K, V> {
     private static final int upperTol = 10;
     private static final int lowerTol = 2;

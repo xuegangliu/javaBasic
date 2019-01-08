@@ -1,12 +1,12 @@
 # javaBasic
 
-[![GitHub stars](https://img.shields.io/github/stars/xuegangliu/javaBasic.svg?style=social&label=Stars)](https://github.com/xuegangliu/javaBasic)
-[![GitHub forks](https://img.shields.io/github/forks/xuegangliu/javaBasic.svg?style=social&label=Fork)](https://github.com/xuegangliu/javaBasic)
-[![Build Status](https://travis-ci.org/xuegangliu/javaBasic.svg?branch=master)](https://travis-ci.org/xuegangliu/javaBasic)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/xuegangliu/javaBasic/pulls)
+[![Build Status](https://travis-ci.org/xuegangliu/javaBasic.svg?branch=master)](https://travis-ci.org/xuegangliu/javaBasic)
 [![RELEASE](https://img.shields.io/github/release/xuegangliu/javaBasic.svg)](https://github.com/xuegangliu/javaBasic/releases)
 [![issues](https://img.shields.io/github/issues/xuegangliu/javaBasic.svg)](https://github.com/xuegangliu/javaBasic/issues)
+[![GitHub stars](https://img.shields.io/github/stars/xuegangliu/javaBasic.svg?style=social&label=Stars)](https://github.com/xuegangliu/javaBasic)
+[![GitHub forks](https://img.shields.io/github/forks/xuegangliu/javaBasic.svg?style=social&label=Fork)](https://github.com/xuegangliu/javaBasic)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## 组织结构
 

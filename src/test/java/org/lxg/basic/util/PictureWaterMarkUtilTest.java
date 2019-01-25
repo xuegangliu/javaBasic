@@ -23,8 +23,7 @@ public class PictureWaterMarkUtilTest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        new PictureWaterMarkUtil().addWatermark(is, "D:/new1.jpg", "xxxxxxxxx", "jpg");
-//        new PictureWaterMarkUtil().addWatermark(is, "D:/new0.jpg", "仅限北京和融通支付科技有限公司使用", "jpg");
+//        new PictureWaterMarkUtil().addWatermark(is, "D:/new1.jpg", "xxxxxxxxx", "jpg");
         System.out.println("水印完成。");
     }
 }

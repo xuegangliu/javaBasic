@@ -159,7 +159,7 @@
     </dependencies>
 
     <build>
-<!--        <sourceDirectory>src/main/java</sourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <outputDirectory>
             ${project.build.directory}/classes
         </outputDirectory>
@@ -183,7 +183,7 @@
                     <exclude>**/*.java</exclude>
                 </excludes>
             </testResource>
-        </testResources>-->
+        </testResources>
 
         <plugins>
             <plugin>

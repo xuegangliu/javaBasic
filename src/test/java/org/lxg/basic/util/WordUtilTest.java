@@ -2,6 +2,7 @@ package org.lxg.basic.util;
 
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +23,11 @@ public class WordUtilTest {
         map.put("company", "xxxx");
         try {
             WordUtil.createDoc(map,"test.ftl","test_1.doc");
-        } catch (IOException e) {
+            File t = new File("test_1.doc");
+            Thread.sleep(6000l);
+            if(t.exists())
+                t.delete();
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
     }

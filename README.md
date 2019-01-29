@@ -36,6 +36,8 @@ org.lxg.get[新技能]
 
 - [ftp搭建](doc/docker-ftp.md)
 - [Java加载](doc/java-classloader.md)
+- [数据结构分类](doc/struct-data.md)
+- [java生成word文档](doc/word.md)
 
 ## 了解
 - [线段树-blog文章](https://blog.csdn.net/johnny901114/article/details/80643017)

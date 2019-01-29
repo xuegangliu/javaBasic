@@ -9,6 +9,8 @@ import java.util.Map;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
+import freemarker.template.Version;
+
 /**************************
  * @description: WordUtil
  * @user: xuegangliu
@@ -22,7 +24,7 @@ public class WordUtil {
             getPath()+File.separatorChar+"config/tmp/";
 
     static {
-        configuration = new Configuration();
+        configuration = new Configuration(new Version("2.3.0.1"));
         configuration.setDefaultEncoding("utf-8");
         try {
             configuration.setDirectoryForTemplateLoading(new File(templateFolder));

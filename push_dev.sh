@@ -59,7 +59,7 @@ fi
 
 #echo $MM
 
-# git本地分支master提交到dev分支
+# git本地分支dev提交到dev分支
 git add .
 git commit -m "$MM"
 git push origin dev:dev

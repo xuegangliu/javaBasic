@@ -5,5 +5,5 @@ package org.lxg.basic.patterns.adapter.s1;
  */
 
 class ClassTranslator extends English implements Chinese {
-    @Override public void speakChinese(String string) { speakEnglish(string); }
+    @Override public void speakChinese(String string) { super.speakEnglish(string); }
 }

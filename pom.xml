@@ -5,7 +5,10 @@
     <groupId>org.lxg</groupId>
     <artifactId>javaBasic</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>core</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>javaBasic</name>
 

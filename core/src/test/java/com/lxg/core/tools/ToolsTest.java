@@ -71,22 +71,22 @@ public class ToolsTest {
         RuntimeMXBean runtimeMXBean = ManagementFactory.newPlatformMXBeanProxy(connection,
                 ManagementFactory.RUNTIME_MXBEAN_NAME,
                 RuntimeMXBean.class);
-        ClassUtils.excuteObjMethod(runtimeMXBean,RuntimeMXBean.class);
+        ClassUtils.excuteObjMethod(runtimeMXBean);
 
         ClassLoadingMXBean classLoadingMXBean = ManagementFactory.newPlatformMXBeanProxy(connection,
                 ManagementFactory.CLASS_LOADING_MXBEAN_NAME, ClassLoadingMXBean.class);
-        ClassUtils.excuteObjMethod(classLoadingMXBean,ClassLoadingMXBean.class);
+        ClassUtils.excuteObjMethod(classLoadingMXBean);
 
         MemoryMXBean memoryMXBean = ManagementFactory.newPlatformMXBeanProxy(connection,
                 ManagementFactory.MEMORY_MXBEAN_NAME, MemoryMXBean.class);
-        ClassUtils.excuteObjMethod(memoryMXBean,MemoryMXBean.class);
+        ClassUtils.excuteObjMethod(memoryMXBean);
 
         ThreadMXBean threadMXBean = ManagementFactory.newPlatformMXBeanProxy(connection,
                 ManagementFactory.THREAD_MXBEAN_NAME, ThreadMXBean.class);
-        ClassUtils.excuteObjMethod(threadMXBean,ThreadMXBean.class);
+        ClassUtils.excuteObjMethod(threadMXBean);
 
         OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.newPlatformMXBeanProxy(connection,
                 ManagementFactory.OPERATING_SYSTEM_MXBEAN_NAME, OperatingSystemMXBean.class);
-        ClassUtils.excuteObjMethod(operatingSystemMXBean,OperatingSystemMXBean.class);
+        ClassUtils.excuteObjMethod(operatingSystemMXBean);
     }
 }

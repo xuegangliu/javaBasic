@@ -16,13 +16,12 @@ public class ClassUtils {
     /**
      * 执行对象中的所有方法
      * @param obj 实例化的对象
-     * @param clazz 对象的class
      * @throws InvocationTargetException
      * @throws IllegalAccessException
      */
-    public static void excuteObjMethod(Object obj,Class clazz) throws InvocationTargetException, IllegalAccessException {
-        log.info("----------------- {} ------------------------",clazz.getName());
-        Method[] methods = clazz.getDeclaredMethods();
+    public static void excuteObjMethod(Object obj) throws InvocationTargetException, IllegalAccessException {
+        log.info("----------------- {} ------------------------",obj.getClass().getName());
+        Method[] methods = obj.getClass().getDeclaredMethods();
         for(Method t:methods){
             if(t.getParameterCount()==0)
                 log.info("{}():{}",t.getName(),t.invoke(obj,(Object[]) null));

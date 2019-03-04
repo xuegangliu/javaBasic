@@ -11,5 +11,12 @@
 
     <artifactId>problem</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.lxg</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

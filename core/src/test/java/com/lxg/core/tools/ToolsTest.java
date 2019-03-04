@@ -1,10 +1,10 @@
 package com.lxg.core.tools;
 
 import com.lxg.core.util.ClassUtils;
-import com.sun.tools.attach.AgentInitializationException;
-import com.sun.tools.attach.AgentLoadException;
-import com.sun.tools.attach.AttachNotSupportedException;
-import com.sun.tools.attach.VirtualMachine;
+//import com.sun.tools.attach.AgentInitializationException;
+//import com.sun.tools.attach.AgentLoadException;
+//import com.sun.tools.attach.AttachNotSupportedException;
+//import com.sun.tools.attach.VirtualMachine;
 import lombok.extern.log4j.Log4j2;
 import org.junit.Test;
 
@@ -46,26 +46,26 @@ public class ToolsTest {
         printInfo(connector.getMBeanServerConnection());
     }
 
-    @Test
-    public void testAttach() throws IOException, AttachNotSupportedException, AgentLoadException, AgentInitializationException, InvocationTargetException, IllegalAccessException {
-        // 监控应用与被监控应用不位于同一JVM但在同一物理主机上
-        // 通过进程Attach
-
-        //Attach 到5656的JVM进程上，后续Attach API再讲解 lib/tools.jar
-        VirtualMachine virtualmachine = VirtualMachine.attach("5524");
-        //让JVM加载jmx Agent，后续讲到Java Instrutment再讲解
-        String javaHome = virtualmachine.getSystemProperties().getProperty("java.home");
-        String jmxAgent = javaHome + File.separator + "lib" + File.separator + "management-agent.jar";
-        virtualmachine.loadAgent(jmxAgent, "com.sun.management.jmxremote");
-        //获得连接地址
-        Properties properties = virtualmachine.getAgentProperties();
-        String address = (String)properties.get("com.sun.management.jmxremote.localConnectorAddress");
-        //Detach
-        virtualmachine.detach();
-        JMXServiceURL url = new JMXServiceURL(address);
-        JMXConnector connector = JMXConnectorFactory.connect(url);
-        printInfo(connector.getMBeanServerConnection());
-    }
+//    @Test
+//    public void testAttach() throws IOException, AttachNotSupportedException, AgentLoadException, AgentInitializationException, InvocationTargetException, IllegalAccessException {
+//        // 监控应用与被监控应用不位于同一JVM但在同一物理主机上
+//        // 通过进程Attach
+//
+//        //Attach 到5656的JVM进程上，后续Attach API再讲解 lib/tools.jar
+//        VirtualMachine virtualmachine = VirtualMachine.attach("5524");
+//        //让JVM加载jmx Agent，后续讲到Java Instrutment再讲解
+//        String javaHome = virtualmachine.getSystemProperties().getProperty("java.home");
+//        String jmxAgent = javaHome + File.separator + "lib" + File.separator + "management-agent.jar";
+//        virtualmachine.loadAgent(jmxAgent, "com.sun.management.jmxremote");
+//        //获得连接地址
+//        Properties properties = virtualmachine.getAgentProperties();
+//        String address = (String)properties.get("com.sun.management.jmxremote.localConnectorAddress");
+//        //Detach
+//        virtualmachine.detach();
+//        JMXServiceURL url = new JMXServiceURL(address);
+//        JMXConnector connector = JMXConnectorFactory.connect(url);
+//        printInfo(connector.getMBeanServerConnection());
+//    }
 
     public void printInfo(MBeanServerConnection connection) throws IOException, InvocationTargetException, IllegalAccessException {
         RuntimeMXBean runtimeMXBean = ManagementFactory.newPlatformMXBeanProxy(connection,

@@ -1,5 +1,6 @@
 package org.lxg.data;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.lxg.data.array.SelfArray;
 import org.lxg.data.array.SelfLinkedList;
@@ -10,14 +11,13 @@ import org.lxg.data.queue.LoopQueue;
 import org.lxg.data.stack.ArrayStack;
 import org.lxg.data.stack.BaseStack;
 import org.lxg.data.stack.LinkedListStack;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Random;
 
+@Slf4j
 public class DataStructTest {
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+//    Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Test
     public void test(){
@@ -31,51 +31,51 @@ public class DataStructTest {
         for(int i = 0 ; i < arr.length ; i ++)
             arr[i] = i;
 
-        logger.info("--------- 遍历1 ---------------");
+        log.info("--------- 遍历1 ---------------");
         int[] scores = new int[]{100, 99, 66};
         for(int i = 0 ; i < scores.length ; i ++)
-            logger.info(scores[i]+"");
+            log.info(scores[i]+"");
 
-        logger.info("--------- 遍历2 ---------------");
+        log.info("--------- 遍历2 ---------------");
         for(int score: scores)
-            logger.info(score+"");
+            log.info(score+"");
 
-        logger.info("--------- scores[0] = 96 修改后 ---------");
+        log.info("--------- scores[0] = 96 修改后 ---------");
         scores[0] = 96;
         for(int i = 0 ; i < scores.length ; i ++)
-            logger.info(scores[i]+"");
+            log.info(scores[i]+"");
     }
 
     @Test
     public void testSelfArray(){
         SelfArray selfArray = new SelfArray();
-        logger.info(selfArray.toString());
+        log.info(selfArray.toString());
         selfArray.addFirst(1);
         selfArray.add(1,2);
-        logger.info(selfArray.toString());
+        log.info(selfArray.toString());
 
         selfArray.addLast(3);
-        logger.info(selfArray.toString());
+        log.info(selfArray.toString());
 
         selfArray.add(1,5);
-        logger.info(selfArray.toString());
+        log.info(selfArray.toString());
 
         selfArray.set(0,111);
-        logger.info(selfArray.toString());
+        log.info(selfArray.toString());
 
-        logger.info(selfArray.get(2)+"");
+        log.info(selfArray.get(2)+"");
         selfArray.addLast(6);
         selfArray.addLast(7);
         selfArray.addLast(8);
 
-        logger.info(selfArray.toString());
+        log.info(selfArray.toString());
         selfArray.remove(4);
         selfArray.find(8);
         selfArray.removeFirst();
         selfArray.removeLast();
-        logger.info(selfArray.toString());
-        logger.info("selfArray.contains(5):{}",selfArray.contains(5));
-        logger.info("selfArray.contains(11):{}",selfArray.contains(11));
+        log.info(selfArray.toString());
+        log.info("selfArray.contains(5):{}",selfArray.contains(5));
+        log.info("selfArray.contains(11):{}",selfArray.contains(11));
     }
 
     @Test
@@ -84,7 +84,7 @@ public class DataStructTest {
         arr.addLast(new Student("Alice", 100));
         arr.addLast(new Student("Bob", 66));
         arr.addLast(new Student("Charlie", 88));
-        logger.info(arr.toString());
+        log.info(arr.toString());
     }
 
     @Test
@@ -93,12 +93,12 @@ public class DataStructTest {
         for(int i = 0 ; i < 5 ; i ++){
             stack.push(i);
         }
-        logger.info("栈数据:{}",stack.toString());
+        log.info("栈数据:{}",stack.toString());
         stack.pop();
-        logger.info("出栈后:{}",stack.toString());
+        log.info("出栈后:{}",stack.toString());
         stack.pop();
-        logger.info("出栈后:{}",stack.toString());
-        logger.info("栈顶元素:{}",stack.peek());
+        log.info("出栈后:{}",stack.toString());
+        log.info("栈顶元素:{}",stack.peek());
     }
 
     @Test
@@ -107,10 +107,10 @@ public class DataStructTest {
         for(int i = 0 ; i < 10 ; i ++){
             queue.enqueue(i);
         }
-        logger.info("出队列前:{}",queue);
+        log.info("出队列前:{}",queue);
         queue.dequeue();
         queue.dequeue();
-        logger.info("出队列后:{}",queue);
+        log.info("出队列后:{}",queue);
     }
 
     @Test
@@ -129,22 +129,22 @@ public class DataStructTest {
     @Test
     public void testBaseLinkedList(){
         SelfLinkedList<Integer> selfLinkedList = new SelfLinkedList<>();
-        logger.info("添加之前:{}", selfLinkedList);
+        log.info("添加之前:{}", selfLinkedList);
         selfLinkedList.addFirst(1);
-        logger.info("添加头1:{}", selfLinkedList);
+        log.info("添加头1:{}", selfLinkedList);
         selfLinkedList.addFirst(2);
-        logger.info("添加头2:{}", selfLinkedList);
+        log.info("添加头2:{}", selfLinkedList);
         selfLinkedList.addLast(3);
-        logger.info("添加尾3:{}", selfLinkedList);
+        log.info("添加尾3:{}", selfLinkedList);
         selfLinkedList.addLast(4);
-        logger.info("添加尾4:{}", selfLinkedList);
+        log.info("添加尾4:{}", selfLinkedList);
         selfLinkedList.add(2,789);
-        logger.info("位置2添加789:{}", selfLinkedList);
-        logger.info(selfLinkedList.contains(4)+"");
+        log.info("位置2添加789:{}", selfLinkedList);
+        log.info(selfLinkedList.contains(4)+"");
         selfLinkedList.remove(2);
         selfLinkedList.removeElement(3);
         selfLinkedList.removeFirst();
-        logger.info(selfLinkedList.toString());
+        log.info(selfLinkedList.toString());
     }
 
     @Test
@@ -168,10 +168,10 @@ public class DataStructTest {
         for(int i = 0 ; i < 10 ; i ++){
             queue.enqueue(i);
         }
-        logger.info("出队前:{}",queue);
+        log.info("出队前:{}",queue);
         queue.dequeue();
         queue.dequeue();
-        logger.info("出队后:{}",queue);
+        log.info("出队后:{}",queue);
     }
 
     @Test
@@ -180,9 +180,9 @@ public class DataStructTest {
         for(int i = 0 ; i < 10 ; i ++){
             queue.push(i);
         }
-        logger.info("出栈前:{}",queue);
+        log.info("出栈前:{}",queue);
         queue.pop();
-        logger.info("出栈后:{}",queue);
+        log.info("出栈后:{}",queue);
     }
 
 

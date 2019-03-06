@@ -1,10 +1,13 @@
 package com.lxg.problem.thread;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**************************
  * @description: ThreadDemo
  * @author: xuegangliu
  * @date: 2019/3/4 11:32
  ***************************/
+@Slf4j
 public class ThreadDemo {
 
     static final Object obj = new Object();
@@ -16,7 +19,7 @@ public class ThreadDemo {
             int count = 10;
             while (count > 0) {
                 synchronized (ThreadDemo.obj) {
-                    System.out.println("A-----" + count);
+                    log.info("A-----" + count);
                     count--;
                     synchronized (ThreadDemo.obj) {
                         //notify()方法会唤醒因为调用对象的wait()而处于等待状态的线程，从而使得该线程有机会获取对象锁。
@@ -39,7 +42,7 @@ public class ThreadDemo {
             int count = 10;
             while (count > 0) {
                 synchronized (ThreadDemo.obj) {
-                    System.out.println("B-----" + count);
+                    log.info("B-----" + count);
                     count--;
                     synchronized (ThreadDemo.obj) {
                         //notify()方法会唤醒因为调用对象的wait()而处于等待状态的线程，从而使得该线程有机会获取对象锁。

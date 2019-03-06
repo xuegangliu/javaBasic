@@ -1,5 +1,7 @@
 package com.lxg.problem.thread;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -8,6 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author: xuegangliu
  * @date: 2019/3/4 10:07
  ***************************/
+@Slf4j
 public class ThreadUnSecurity {
     static int tickets = 10;
 
@@ -16,7 +19,7 @@ public class ThreadUnSecurity {
         public void run() {
             // 未加同步时产生脏数据
             while(tickets > 0) {
-                System.out.println(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
+                log.info(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
                 tickets--;
 //                try {
 //                    Thread.sleep(1000);
@@ -25,7 +28,7 @@ public class ThreadUnSecurity {
 //                }
             }
             if (tickets <= 0) {
-                System.out.println(Thread.currentThread().getName()+"--->售票结束！");
+                log.info(Thread.currentThread().getName()+"--->售票结束！");
             }
         }
     }
@@ -36,12 +39,12 @@ public class ThreadUnSecurity {
         public void run() {
             // 同步代码块 (将售票代码放到一个同步块中,售票能一个售票完后,下一个才能进行售票)
             while(tickets > 0) {
+                log.info(this.getClass().getName().toString());
                 synchronized (this) {
-//                    System.out.println(this.getClass().getName().toString());
                     if (tickets <= 0) {
                         return;
                     }
-                    System.out.println(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
+                    log.info(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
                     tickets--;
 //                    try {
 //                        Thread.sleep(100);
@@ -50,7 +53,7 @@ public class ThreadUnSecurity {
 //                    }
                 }
                 if (tickets <= 0) {
-                    System.out.println(Thread.currentThread().getName()+"--->售票结束！");
+                    log.info(Thread.currentThread().getName()+"--->售票结束！");
                 }
             }
         }
@@ -69,7 +72,7 @@ public class ThreadUnSecurity {
                     e.printStackTrace();
                 }
                 if (tickets<=0) {
-                    System.out.println(Thread.currentThread().getName()+"--->售票结束");
+                    log.info(Thread.currentThread().getName()+"--->售票结束");
                 }
             }
         }
@@ -78,7 +81,7 @@ public class ThreadUnSecurity {
                 if (tickets <=0) {
                     return;
                 }
-                System.out.println(Thread.currentThread().getName()+"---->售出第 "+tickets+" 票 ");
+                log.info(Thread.currentThread().getName()+"---->售出第 "+tickets+" 票 ");
                 tickets-- ;
             }
         }
@@ -96,7 +99,7 @@ public class ThreadUnSecurity {
                     if (tickets <= 0) {
                         return;
                     }
-                    System.out.println(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
+                    log.info(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
                     tickets--;
                 } catch (Exception e1) {
                     e1.printStackTrace();
@@ -110,7 +113,7 @@ public class ThreadUnSecurity {
                 }
             }
             if (tickets <= 0) {
-                System.out.println(Thread.currentThread().getName()+"--->售票结束！");
+                log.info(Thread.currentThread().getName()+"--->售票结束！");
             }
         }
     }

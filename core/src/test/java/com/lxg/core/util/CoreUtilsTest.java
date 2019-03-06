@@ -1,6 +1,6 @@
 package com.lxg.core.util;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.File;
@@ -10,7 +10,7 @@ import java.io.File;
  * @author: xuegangliu
  * @date: 2019/2/27 10:42
  ***************************/
-@Log4j2
+@Slf4j
 public class CoreUtilsTest {
 
     @Test
@@ -30,5 +30,6 @@ public class CoreUtilsTest {
         log.info("this is log info ....");
         log.error("this is log error ....");
         log.debug("this is log debug ....");
+        log.info("{},{}",1,2);
     }
 }

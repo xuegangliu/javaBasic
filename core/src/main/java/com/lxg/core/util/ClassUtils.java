@@ -1,6 +1,6 @@
 package com.lxg.core.util;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  * @author: xuegangliu
  * @date: 2019/3/1 10:29
  ***************************/
-@Log4j2
+@Slf4j
 public class ClassUtils {
 
     /**

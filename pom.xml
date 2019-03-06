@@ -10,10 +10,15 @@
         <module>core</module>
         <module>basic</module>
         <module>problem</module>
+        <module>common</module>
     </modules>
     <packaging>pom</packaging>
 
     <name>javaBasic</name>
+
+    <dependencies>
+
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>

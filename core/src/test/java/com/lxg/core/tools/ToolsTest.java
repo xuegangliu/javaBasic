@@ -5,7 +5,7 @@ import com.lxg.core.util.ClassUtils;
 //import com.sun.tools.attach.AgentLoadException;
 //import com.sun.tools.attach.AttachNotSupportedException;
 //import com.sun.tools.attach.VirtualMachine;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import javax.management.MBeanServer;
@@ -24,7 +24,7 @@ import java.util.Properties;
  * @author: xuegangliu
  * @date: 2019/3/1 9:45
  ***************************/
-@Log4j2
+@Slf4j
 public class ToolsTest {
 
     private final static String JMX_URL="service:jmx:rmi:///jndi/rmi://127.0.0.1:9999/jmxrmi";

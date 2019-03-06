@@ -1,6 +1,6 @@
 package com.lxg.problem.thread;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 /**************************
@@ -8,7 +8,7 @@ import org.junit.Test;
  * @author: xuegangliu
  * @date: 2019/3/4 10:10
  ***************************/
-@Log4j2
+@Slf4j
 public class ThreadTest {
 
     @Test
@@ -67,5 +67,10 @@ public class ThreadTest {
     public void testDemo(){
         new Thread(new ThreadDemo.ThreadA()).start();
         new Thread(new ThreadDemo.ThreadB()).start();
+    }
+
+    @Test
+    public void test1(){
+        log.info("{},{}",1,2);
     }
 }

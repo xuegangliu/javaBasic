@@ -20,6 +20,12 @@ public class DateToolsTest {
         for(int i=1;i<=12;i++) {
             log.info("{}月第一天:{}",i,DateTools.getMonthLastDay(i,"yyyyMMdd"));
         }
-
     }
+
+    @Test
+    public void test111(){
+        System.out.println(158394%1000);
+        System.out.println(158394/1000);
+    }
+
 }

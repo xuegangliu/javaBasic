@@ -21,12 +21,11 @@ public class StringTools {
         int count = getSubCount(sql,":");
         if(count!=args.length)
             return "";
-        String newSql = sql;
         int num = 1;
         for(String t:args){
-            newSql = newSql.replace(":"+num,t);
+            sql = sql.replace(":"+num,t);
             num++;
         }
-        return newSql;
+        return sql;
     }
 }

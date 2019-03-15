@@ -4,4 +4,4 @@
 |---|---|---|---|
 |双亲委托的加载流程|class加载图|@date:2019-01-07|by xuegangliu|
 
-![双亲委托的加载流程](../images/classloader.png)
+![双亲委托的加载流程](../img/classloader.png)

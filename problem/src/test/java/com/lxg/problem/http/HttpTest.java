@@ -57,9 +57,7 @@ public class HttpTest {
 //        bankcard string 是 银行卡卡号
 //        uorderid string 否 用户订单号,不超过32位，要保证唯一
 //        isshow int 否 是否显示匹配信息,0默认不显示，1显示
-//        sign string 是
-//        md5(openid+appkey+bankcard+realname+idcard),openid在个人中
-//        心查询
+//        sign string 是 md5(openid+appkey+bankcard+realname+idcard),openid在个人中心查询
 
         params.put("key","test");
         params.put("realname","test");
@@ -68,7 +66,6 @@ public class HttpTest {
         params.put("uorderid","test");
         params.put("isshow","test");
         params.put("sign","test");
-        params.put("md5","test");
         log.info("请求参数:{}", JSONObject.toJSON(params));
         String result = HttpClientTools.doPost(url,params);
         log.info("返回参数:{}", result);

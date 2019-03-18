@@ -1,6 +1,6 @@
-package org.lxg.basic.t.son;
+package com.lxg.problem.clazz.son;
 
-import org.lxg.basic.t.father.FatherA;
+import com.lxg.problem.clazz.father.FatherA;
 
 /**
  * @author: xuegangliu
@@ -16,12 +16,12 @@ public class SonB extends FatherA {
 
 
     public SonB(){
-        tt();
         System.out.println("SonB()");
+        tt();
     }
     public SonB(String name){
-        tt();
         System.out.println("SonB(String name)");
+        tt();
     }
 
     public void tt(){

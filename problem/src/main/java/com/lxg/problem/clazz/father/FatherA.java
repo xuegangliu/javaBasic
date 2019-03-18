@@ -1,4 +1,4 @@
-package org.lxg.basic.t.father;
+package com.lxg.problem.clazz.father;
 
 /**
  * @author: xuegangliu
@@ -18,8 +18,8 @@ public class FatherA {
     }
 
     public FatherA(){
-        tt();
         System.out.println("FatherA()");
+        tt();
     }
 
     public FatherA(String name){

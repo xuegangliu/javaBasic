@@ -1,4 +1,4 @@
-package org.lxg.get;
+package org.lxg.data;
 
 import org.junit.Test;
 

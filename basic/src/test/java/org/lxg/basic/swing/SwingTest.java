@@ -1,4 +1,4 @@
-package org.lxg.swing;
+package org.lxg.basic.swing;
 
 
 /**************************

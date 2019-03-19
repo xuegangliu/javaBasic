@@ -1,4 +1,4 @@
-package org.lxg.get;
+package com.lxg.problem.skills;
 
 import java.util.concurrent.RecursiveTask;
 

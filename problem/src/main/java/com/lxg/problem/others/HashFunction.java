@@ -1,4 +1,4 @@
-package org.lxg.get;
+package com.lxg.problem.others;
 
 public class HashFunction {
     int grade;

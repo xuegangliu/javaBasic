@@ -1,7 +1,6 @@
 package com.lxg.problem.clazz;
 
-import com.lxg.problem.clazz.father.FatherA;
-import com.lxg.problem.clazz.son.SonB;
+import com.lxg.problem.clazz.loader.Loader;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -14,41 +13,25 @@ import org.junit.Test;
 public class ClazzTest {
 
     @Test
-    public void testFather(){
-        new FatherA(  );
-        System.out.println("=================");
-        new FatherA( "name" );
-        System.out.println("=============");
-        String name = "Hello";
-        setT( name );
-        System.out.println(name);
+    /**
+     * 类不同内部信息的的加载顺序
+     */
+    public void testLoaderClass(){
+        log.info("第一次加载 start");
+        Loader t1 = new Loader();
+        log.info("第一次加载 end");
+        System.out.println(t1.name);
+        t1.method1();
+        t1.method3();
+
+
+        log.info("第二次加载 start");
+        Loader t2 = new Loader();
+        log.info("第二次加载 end");
+        t2.method1();
+        System.out.println(t2.name);
+        t2.method1();
+        t1.method3();
     }
 
-    public static void setT(String name){
-        name = name + " World";
-        System.out.println("static void print"+ name);
-    }
-
-    @Test
-    public void testSon(){
-        new SonB(  );
-    }
-
-    @Test
-    public void test2(){
-//        System.out.println(abc( 0 ));
-        System.out.println(abc( 1 ));
-        System.out.println(abc( 2 ));
-        System.out.println(abc( 3 ));
-        System.out.println(abc( 5 ));
-    }
-
-    public int abc(int n){
-        if(n<1)
-            return 0;
-        if(n==1)
-            return 1;
-        else
-            return n*abc( n-1 );
-    }
 }

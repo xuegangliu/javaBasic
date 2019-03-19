@@ -62,4 +62,10 @@ public class ValidationTest {
         }
         log.info(linkedList.toString());
     }
+
+    @Test
+    public void testlll(){
+        if(3>3)
+            log.info("{}",(3>3));
+    }
 }

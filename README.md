@@ -9,25 +9,10 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 #### 项目介绍
+
 Java基础练习,设计模式、算法、数据机构、定时、插件练习、问题总结
 
-#### 软件架构
-Maven
-```lua
-javaBasic
-├── core           -- 基础
-├── problem        -- 问题
-├── basic          -- 练习
-├── docs           -- 文档
-├── images         -- 图片
-```
 
 #### 文档
 
-- [ftp搭建](doc/docker-ftp.md)
-- [Java加载](doc/java-classloader.md)
-- [数据结构分类](doc/struct-data.md)
-- [java生成word文档](doc/word.md)
-
-#### 了解
-- [线段树-blog文章](https://blog.csdn.net/johnny901114/article/details/80643017)
+[doc](https://xuegangliu.github.io/javaBasic)

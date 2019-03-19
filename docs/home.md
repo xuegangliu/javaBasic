@@ -1,6 +1,8 @@
 # javaBasic
 
-![dream](_media/dream.jpg)
+<center>
+<img src='_media/dream.jpg' />
+</center>
 
-**There is no end,there is no goodbye!**
+<p style='float:right'>There is no end,there is no goodbye!</p>
 

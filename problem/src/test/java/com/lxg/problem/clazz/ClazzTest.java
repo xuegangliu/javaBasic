@@ -34,4 +34,19 @@ public class ClazzTest {
         t1.method3();
     }
 
+    @Test
+    public void testMethod(){
+        String text = "ok";
+        log.info("before:{}",text);
+        // 静态方法里重新指向新对象
+        sayOne(text);
+        log.info("end:{}",text);
+
+    }
+
+    public static void sayOne(String text){
+        log.info("static text:{}",text);
+        text=text+" hello!";
+        log.info("static text=text+hello:{}",text);
+    }
 }

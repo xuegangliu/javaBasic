@@ -1,4 +1,4 @@
-package org.lxg.basic.constants;
+package com.lxg.common.constants;
 
 /**
  * @author: xuegangliu

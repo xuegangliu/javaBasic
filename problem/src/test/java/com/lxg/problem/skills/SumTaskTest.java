@@ -33,7 +33,8 @@ public class SumTaskTest {
 
     public void fillRandom(long[] array){
         for(int i=0;i<array.length;i++){
-            array[i]= (long) Math.random()*100;
+//            array[i]= (long) Math.random()*100;
+            array[i]= i;
         }
 
     }

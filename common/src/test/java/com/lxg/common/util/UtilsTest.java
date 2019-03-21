@@ -1,5 +1,6 @@
-package org.lxg.basic.crawler;
+package com.lxg.common.util;
 
+import com.lxg.common.util.crawler.DataDownloaderUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,13 +11,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
+/**************************
+ * @description: UtilsTest
  * @author: xuegangliu
- * @date: 8/15/2018 3:55 PM
- * @DES:
- * @version: v1.0
- */
-public class DataDownloaderUtilTest {
+ * @date: 2019/3/21 14:31
+ ***************************/
+public class UtilsTest {
 
     @Test
     public void test(){

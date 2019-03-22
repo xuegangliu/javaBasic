@@ -1,6 +1,7 @@
 package com.lxg.problem.clazz;
 
 import com.lxg.problem.clazz.loader.Loader;
+import com.lxg.problem.clazz.v1.C;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -48,5 +49,20 @@ public class ClazzTest {
         log.info("static text:{}",text);
         text=text+" hello!";
         log.info("static text=text+hello:{}",text);
+    }
+
+    @Test
+    public void testV1(){
+        log.info("第一次加载子类C start");
+//        C c = new C();
+        C c = new C("abc");
+        c.say();
+        C.ok();
+        log.info("第一次加载子类C end");
+        log.info("第二次加载子类C start");
+        C c1 = new C("abc");
+        c1.say();
+        c1.ok();
+        log.info("第二次加载子类C end");
     }
 }

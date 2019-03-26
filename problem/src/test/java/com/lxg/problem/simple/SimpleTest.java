@@ -43,4 +43,16 @@ public class SimpleTest {
         log.info("i++:{}",(i++));
         log.info("++j:{}",(++j));
     }
+
+    @Test
+    public void testFinal(){
+        final int t = 5;
+        testT(t);
+    }
+
+    public void testT(int t){
+        log.info("{}",t);
+        ++t;
+        log.info("{}",t);
+    }
 }

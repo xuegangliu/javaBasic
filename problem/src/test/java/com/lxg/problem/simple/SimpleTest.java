@@ -3,6 +3,8 @@ package com.lxg.problem.simple;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.math.BigDecimal;
+
 /**************************
  * @description: SimpleTest
  * @author: xuegangliu
@@ -54,5 +56,12 @@ public class SimpleTest {
         log.info("{}",t);
         ++t;
         log.info("{}",t);
+    }
+
+    @Test
+    public void test11(){
+        Double t =0.03;
+        log.info("{}",new BigDecimal(t+""));
+
     }
 }

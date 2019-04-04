@@ -64,6 +64,7 @@ public class SimpleTest {
         Double t1 = 101.0000001;
         Long t2 = 101l;
         String t3 = "101.0000001";
+        log.info("{}",new BigDecimal(t1));
         log.info("{},{},{}",t.getClass(),t,new BigDecimal(t).divide(new BigDecimal(100)));
         log.info("{},{}",t1,new BigDecimal(t1).divide(new BigDecimal(100)));
         log.info("{},{}",t2,new BigDecimal(t2).divide(new BigDecimal(100)));

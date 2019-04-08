@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 /**************************
  * @description: SimpleTest
@@ -70,5 +72,30 @@ public class SimpleTest {
         log.info("{},{}",t2,new BigDecimal(t2).divide(new BigDecimal(100)));
         log.info("{},{}",t3,new BigDecimal(t3).divide(new BigDecimal(100)));
 
+    }
+
+    @Test
+    public void testBigDecimalNull(){
+        BigDecimal t = new BigDecimal("");
+        log.info("{}",t);
+    }
+
+    /**
+     * if 跳出
+     */
+    @Test
+    public void testIfBreak(){
+        log.info("start");
+        ok:if(1<10){
+            log.info("{}","1<10");
+            if(5<10) {
+                log.info("{}", "5<10");
+                break ok;
+            }
+            if(6<10){
+                log.info("{}","6<10");
+            }
+        }
+        log.info("end");
     }
 }

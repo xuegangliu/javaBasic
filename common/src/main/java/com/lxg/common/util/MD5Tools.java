@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
  * @author: xuegangliu
  * @date: 2019/3/18 10:57
  ***************************/
-public class MD5Tools {
+public final class MD5Tools {
 
     //写一个md5加密的方法
     public static String md5(String plainText) {

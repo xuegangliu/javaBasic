@@ -15,7 +15,7 @@ import java.net.URLConnection;
  * @date 2017年9月12日 上午10:38:35
  * @version v1.0
  */
-public class DataDownloaderUtil {
+public final class DataDownloaderUtil {
 
     /**
      * 根据网址和页面的编码集  获取网页的源代码

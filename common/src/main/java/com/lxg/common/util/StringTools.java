@@ -5,7 +5,7 @@ package com.lxg.common.util;
  * @author: xuegangliu
  * @date: 2019/3/6 15:50
  ***************************/
-public class StringTools {
+public final class StringTools {
 
     public static int getSubCount(String str, String key) {
         int count = 0;

@@ -16,6 +16,22 @@ import java.util.Map;
 public class SimpleTest {
 
     @Test
+    public void testAutoBox(){
+//        原始类型: boolean，char，byte，short，int，long，float，double
+//        包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double
+        log.info("Integer.Max:{},Integer.Min:{}",Integer.MAX_VALUE,Integer.MIN_VALUE);
+        Integer a = new Integer(3);
+        Integer b = 3;                  // 将3自动装箱成Integer类型
+        int c = 3;
+        log.info("a == b:{}",a == b);// false 两个引用没有引用同一对象
+        log.info("a == c:{}",a == c);// true a自动拆箱成int类型再和c比较
+        log.info("========================");
+        Integer f1 = 100, f2 = 100, f3 = 150, f4 = 150;
+        log.info("f1 == f2:{}",f1 == f2);
+        log.info("f3 == f4:{}",f3 == f4);
+    }
+
+    @Test
     public void testBasicStruct(){
 //        基本类型	大小(字节)	默认值	封装类
 //        byte	1	(byte)0	Byte
@@ -97,5 +113,23 @@ public class SimpleTest {
             }
         }
         log.info("end");
+    }
+
+    @Test
+    public void test111(){
+        int i=5;
+        if(i>1){
+            System.out.println(1);
+        }else if(i > 3){
+            System.out.println(2);
+        }
+    }
+
+    @Test
+    public void testLt0Integer(){
+        Integer i = -1;
+        Integer a=500,b=500;
+        log.info("{}",-1==i);
+        log.info("{}",a==b);
     }
 }

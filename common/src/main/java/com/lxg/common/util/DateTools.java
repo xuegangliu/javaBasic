@@ -8,7 +8,7 @@ import java.util.Calendar;
  * @author: xuegangliu
  * @date: 2019/3/6 14:20
  ***************************/
-public class DateTools {
+public final class DateTools {
 
     /**
      * 获取当年的月份第一天

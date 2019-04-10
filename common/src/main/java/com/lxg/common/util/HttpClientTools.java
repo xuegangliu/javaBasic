@@ -24,7 +24,7 @@ import java.util.Map;
  * @author: xuegangliu
  * @date: 2019/3/15 13:24
  ***************************/
-public class HttpClientTools {
+public final class HttpClientTools {
 
     public static String doGet(String url, Map<String, String> param) {
 

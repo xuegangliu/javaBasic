@@ -4,8 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**************************
  * @description: SimpleTest
@@ -131,5 +130,62 @@ public class SimpleTest {
         Integer a=500,b=500;
         log.info("{}",-1==i);
         log.info("{}",a==b);
+    }
+
+    @Test
+    public void tt(){
+        log.info("{}","nhh".getBytes());
+    }
+
+    @Test
+    public void testMapKeySort(){
+        Map map = new HashMap<String,String>();
+        map.put("bankcard", "1");//银行卡号
+        map.put("dsorderid", "1");//商户订单号
+        map.put("idcard", "1");//证件号码
+        map.put("idtype", "01");//证件类型
+        map.put("merchno","1");//商户号
+        map.put("ordersn", "1");//流水号
+//			map.put("reqIp", matb.getAuthType());//请求IP
+        map.put("username","1");//姓名
+        map.put("version", "1");//版本号
+        map.put("sceneCode","1");//版本号
+        map.put("sCustomerName", "1");//版本号
+
+        Set t1=map.keySet();
+        Object[] ss= t1.toArray();
+
+        for(Object s:ss){
+            System.out.println(s.toString());
+        }
+
+//        Set t = map.keySet();
+//        List[] ss= new List[]{Arrays.asList(t)};
+//        Arrays.sort(ss);
+//        for(List t1:ss){
+//            System.out.println(t1);
+//        }
+    }
+
+
+    public static void main(String[] args) {
+        String[] input=new String[] {"idtype", "sCustomerName", "dsorderid", "merchno", "ordersn", "sceneCode", "idcard", "bankcard", "version", "username"};
+        String[] keys=arraySort(input);
+        for (String key : keys) {
+            System.out.println(key);
+        }
+    }
+
+    public static String[] arraySort(String[] input){
+        for (int i=0;i<input.length-1;i++){
+            for (int j=0;j<input.length-i-1;j++) {
+                if(input[j].compareTo(input[j+1])>0){
+                    String temp=input[j];
+                    input[j]=input[j+1];
+                    input[j+1]=temp;
+                }
+            }
+        }
+        return input;
     }
 }

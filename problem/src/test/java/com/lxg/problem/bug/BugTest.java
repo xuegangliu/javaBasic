@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**************************
  * @description: BugTest
@@ -38,5 +39,36 @@ public class BugTest {
         log.info("i++ end i:{}",i);
         log.info("++j:{}",++j);
         log.info("++j end j:{}",j);
+    }
+
+    @Test
+    public void testPrefixOperators(){
+        int i = 1,s=1;
+
+        log.info("{}",i);
+        int j = - - -i;  // Noncompliant; just use -i
+        log.info("{}",i);
+        int k = ~~~s;    // Noncompliant; same as i
+        log.info("{}",i);
+        int m = + +i;    // Noncompliant; operators are useless here
+        log.info("{}",i);
+        boolean b = false;
+        boolean c = !!!b;   // Noncompliant
+
+        log.info("j:{},k:{},m:{},c:{}",j,k,m,c);
+    }
+
+    @Test
+    public void testAtomicInteger(){
+        AtomicInteger aInt1 = new AtomicInteger(0);
+        AtomicInteger aInt2 = new AtomicInteger(0);
+
+        if (aInt1.equals(aInt2)) {
+            log.info("aInt1.equals(aInt2)");
+        }  // Noncompliant
+
+        if (aInt1.get() == aInt2.get()) {
+            log.info("aInt1.get() == aInt2.get()");
+        }
     }
 }

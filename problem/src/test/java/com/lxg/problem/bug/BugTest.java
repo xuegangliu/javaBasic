@@ -3,6 +3,7 @@ package com.lxg.problem.bug;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -69,6 +70,39 @@ public class BugTest {
 
         if (aInt1.get() == aInt2.get()) {
             log.info("aInt1.get() == aInt2.get()");
+        }
+    }
+
+    @Test
+    public void testBigDecimal(){
+        double d = 1.1;
+        BigDecimal bd1 = new BigDecimal(d); // Noncompliant; see comment above
+        log.info("bd1:{}",bd1);
+        BigDecimal bd2 = new BigDecimal(1.1); // Noncompliant; same result
+        log.info("bd2:{}",bd2);
+
+        BigDecimal bd3 = BigDecimal.valueOf(d); // Compliant
+        BigDecimal bd4 = new BigDecimal("1.1"); // using String constructor will result in precise value
+        log.info("bd3:{}",bd3);
+        log.info("bd4:{}",bd4);
+
+        int i = 42;
+        double s = Double.longBitsToDouble(i);  // Noncompliant
+        log.info("{}",s);
+    }
+
+    @Test
+    public void testCompareTo(){
+        String a1 = "ABCDDFD";
+        String a2 = "ABCDSDFD";
+
+        if (a1.compareTo(a2) == -1) {  // Noncompliant
+            log.info("a1.compareTo(a2) == -1");
+        }
+
+        if (a1.compareTo(a2) < 0) {
+            log.info("{}",a1.compareTo(a2));
+            log.info("a1.compareTo(a2) < 0");
         }
     }
 }

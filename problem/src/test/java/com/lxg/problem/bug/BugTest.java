@@ -1,6 +1,7 @@
 package com.lxg.problem.bug;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.log4j.Level;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -104,5 +105,41 @@ public class BugTest {
             log.info("{}",a1.compareTo(a2));
             log.info("a1.compareTo(a2) < 0");
         }
+    }
+
+    @Test
+    public void testInstanceof(){
+//        Integer age = null;
+        Integer age = 1;
+        String name = null;
+        log.info("{},{}",age,(age instanceof Number));
+        log.info("{},{}",name,(name instanceof String));
+    }
+
+    @Test
+    public void test11(){
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    while (true) {
+                        log.info("111");
+//                        Thread.sleep(3000);
+                        // do stuff
+                        throw new InterruptedException("123");
+                    }
+                }catch (InterruptedException e) { // Noncompliant; logging is not enough
+                    log.info("Interrupted:{}",e);
+
+                    // Restore interrupted state...
+                    Thread.currentThread().interrupt();
+                }
+            }
+        });
+        t.start();
+        t.start();
+        t.start();
+        t.start();
+        t.start();
     }
 }

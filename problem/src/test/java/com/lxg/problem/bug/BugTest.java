@@ -1,13 +1,15 @@
 package com.lxg.problem.bug;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.log4j.Level;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**************************
@@ -117,7 +119,7 @@ public class BugTest {
     }
 
     @Test
-    public void test11(){
+    public void testInterruptedException(){
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -142,4 +144,14 @@ public class BugTest {
         t.start();
         t.start();
     }
+
+    @Test
+    public void testCreateARandom() throws NoSuchAlgorithmException {
+        Random rand = SecureRandom.getInstanceStrong();  // SecureRandom is preferred to Random
+        for(int i=1;i<=10;i++){
+            log.info("{}",rand.nextInt());
+        }
+    }
+
+    // sonar java rules to 35
 }

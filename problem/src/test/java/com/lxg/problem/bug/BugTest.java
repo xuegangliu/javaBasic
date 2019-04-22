@@ -8,7 +8,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -153,5 +155,20 @@ public class BugTest {
         }
     }
 
-    // sonar java rules to 35
+    @Test
+    public void testListToArray(){
+        List<String> list = new ArrayList();
+        for(int i=1;i<=10;i++){
+            list.add(i+" test");
+        }
+        String [] arrays = list.toArray(new String[0]);
+//        String [] arraysErr = (String[]) list.toArray(); // The method is error
+        int len = arrays.length;
+        for(int i=0;i<len;i++){
+            log.info(arrays[i]);
+//            log.info(arraysErr[i]);
+        }
+    }
+
+    // sonar java rules to 40
 }

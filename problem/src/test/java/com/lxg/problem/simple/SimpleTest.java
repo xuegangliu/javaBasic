@@ -188,4 +188,10 @@ public class SimpleTest {
         }
         return input;
     }
+
+    @Test
+    public void testUUID(){
+        String uuid = UUID.randomUUID().toString();
+        log.info("UUID.randomUUID().toString():{}",uuid);
+    }
 }

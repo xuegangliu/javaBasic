@@ -170,5 +170,58 @@ public class BugTest {
         }
     }
 
-    // sonar java rules to 40
+    @Test
+    public void testCt(){
+        final List t = new ArrayList<String>();
+        log.info("{}",t.getClass().isAssignableFrom(String.class));
+        log.info("{}",t.isEmpty());
+        throw new IllegalAccessError("调用webservice失败");
+    }
+
+    /**
+     *不抛出异常就不应该创建异常
+     */
+    @Test
+    public void testException(){
+        int i=5;
+        int j=0;
+        if(j==0) {
+            throw new IllegalArgumentException("zero");
+//            new IllegalArgumentException("zero");
+        }
+        log.info("{}",1);
+        log.info("{}",i/j);
+    }
+
+    /**
+     * assert 断言,需要jvm开启,否则不进行判断
+     * -ea java -ea 打开所有用户类的assertion
+     * -da java -da 关闭所有用户类的assertion
+     */
+    @Test
+    public void assertTest(){
+        boolean t=false;
+        try {
+            assert t : "ok";
+            log.info("{}","ok");
+        } catch (AssertionError err) {
+            log.error("{}",err.getMessage());
+        }
+    }
+
+//    @Test
+//    public void test1(){
+//        String str = "/File|Name.txt";
+//
+//        String clean = str.replaceAll(".",""); // Noncompliant; probably meant to remove only dot chars, but returns an empty string
+//        String clean2 = str.replaceAll("|","_"); // Noncompliant; yields _/_F_i_l_e_|_N_a_m_e_._t_x_t_
+//        String clean3 = str.replaceAll(File.separator,""); // Noncompliant; exception on Windows
+//
+//        String clean4 = str.replaceFirst(".",""); // Noncompliant;
+//        String clean5 = str.replaceFirst("|","_"); // Noncompliant;
+//        String clean6 = str.replaceFirst(File.separator,""); // Noncompliant;
+//    }
+
+    // sonar java rules to 73
+
 }

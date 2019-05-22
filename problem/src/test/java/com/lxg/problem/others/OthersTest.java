@@ -3,8 +3,13 @@ package com.lxg.problem.others;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 /**************************
  * @description: OthersTest
@@ -46,4 +51,38 @@ public class OthersTest {
         HashFunction student2 = new HashFunction(3, 2, "Bobo", "Liu");
         System.out.println(student2.hashCode());
     }
+
+    @Test
+    public void test111(){
+        Runnable t= new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000L);
+                    log.info("ssss");
+                    Thread.sleep(1000L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        List<Thread> list= new ArrayList<Thread>();
+        for(int i=0;i<=10;i++){
+            Thread s = new Thread(t);
+            s.setName("bb"+i);
+            s.start();
+            if(i%2==0)
+                s.setPriority(6);
+            list.add(s);
+        }
+
+        for(Thread k:list){
+            k.start();
+//            Thread.yield();
+//                k.join(); // 等待当前线程执行完,才处理下边
+            log.info("is end");
+        }
+    }
+
+
 }

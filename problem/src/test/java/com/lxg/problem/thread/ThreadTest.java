@@ -73,4 +73,81 @@ public class ThreadTest {
     public void test1(){
         log.info("{},{}",1,2);
     }
+
+    /**
+     * interrupt()示例
+     */
+    @Test
+    public void testSample1(){
+        Sample1 t = new Sample1();
+        log.info("Start thread");
+        t.start();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        log.info("...........");
+        t.stop=true;// 结束终止
+        t.interrupt();// 设置中断信号,提前终结自己的阻塞状态
+    }
+
+    /**
+     * yield()/join()使用
+     */
+    @Test
+    public void testSample2(){
+        Sample2 sample2 = new Sample2();
+        sample2.start();
+        log.info("yield() start");
+//        Thread.yield();// 不能由用户指定暂停多长时间
+        log.info("yield() end");
+//        log.info("{}",sample2.isInterrupted());
+        try {
+//            sample2.join(); //等待线程执行完毕后,处理下边的程序
+//            Thread.sleep(2000);
+//            log.info("wait start...");
+            synchronized (sample2) {
+                sample2.wait(5000);// 线程操作的wait()、notify()、notifyAll()方法只能在同步控制方法或同步控制块内调用
+            }
+//            log.info("{}",sample2.isAlive());
+            log.info("wait end...");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+@Slf4j
+class Sample1 extends Thread{
+    volatile boolean stop = false; // 结束开关
+    public void run() {
+        while (!stop){
+            log.info("Running is start...");
+            try {
+                Thread.sleep(4000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        log.info("Running is end ...");
+    }
+    /*当代码调用中须要抛出一个InterruptedException, 你可以选择把中断状态复位, 也可以选择向外抛出InterruptedException, 由外层的调用者来决定。
+    不是所有的阻塞方法收到中断后都可以取消阻塞状态, 输入和输出流类会阻塞等待 I/O 完成，但是它们不抛出 InterruptedException，而且在被中断的情况下也不会退出阻塞状态。
+    尝试获取一个内部锁的操作（进入一个 synchronized 块）是不能被中断的*/
+}
+
+@Slf4j
+class Sample2 extends Thread{
+
+    public void run(){
+        log.info("Sample2 run ...");
+        try {
+            Thread.sleep(2000);
+            log.info("Sample2 running is start");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        log.info("Sample2 running is end");
+    }
 }

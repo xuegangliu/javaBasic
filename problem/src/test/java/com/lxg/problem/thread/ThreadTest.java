@@ -116,6 +116,18 @@ public class ThreadTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void testSample3() throws InterruptedException{
+        Sample3 s3= new Sample3();
+        Thread b = new Thread(s3);
+        log.info("start before b={}",s3.b);
+        b.start();// 可能先执行,可能后执行
+        Thread.sleep(2000);
+        log.info("start running,b={}",s3.b);
+        s3.s2();
+        log.info("end,Sample3.b={}",s3.b);
+    }
 }
 
 @Slf4j
@@ -149,5 +161,37 @@ class Sample2 extends Thread{
             e.printStackTrace();
         }
         log.info("Sample2 running is end");
+    }
+}
+
+@Slf4j
+class Sample3 implements Runnable{
+
+    int b = 50;
+
+    /**
+     * 对象锁
+     * @throws InterruptedException
+     */
+    synchronized void s1() throws InterruptedException{
+        b = 100;
+    }
+
+    /**
+     * 对象锁
+     * @throws InterruptedException
+     */
+    synchronized void s2() throws InterruptedException{
+        b = 200;
+    }
+
+    @Override
+    public void run() {
+        try {
+            Thread.sleep(2000);
+            s1();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

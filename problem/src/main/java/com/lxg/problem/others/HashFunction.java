@@ -1,5 +1,8 @@
 package com.lxg.problem.others;
 
+/**
+ * @author xuegangliu
+ */
 public class HashFunction {
     int grade;
     int cls;
@@ -16,27 +19,27 @@ public class HashFunction {
     @Override
     public int hashCode(){
 
-        int B = 31;
+        int b = 31;
         int hash = 0;
-        hash = hash * B + ((Integer)grade).hashCode();
-        hash = hash * B + ((Integer)cls).hashCode();
-        hash = hash * B + firstName.toLowerCase().hashCode();
-        hash = hash * B + lastName.toLowerCase().hashCode();
+        hash = hash * b + ((Integer)grade).hashCode();
+        hash = hash * b + ((Integer)cls).hashCode();
+        hash = hash * b + firstName.toLowerCase().hashCode();
+        hash = hash * b + lastName.toLowerCase().hashCode();
         return hash;
     }
 
     @Override
     public boolean equals(Object o){
 
-        if(this == o)
+        if(this == o) {
             return true;
-
-        if(o == null)
+        }
+        if(o == null) {
             return false;
-
-        if(getClass() != o.getClass())
+        }
+        if(getClass() != o.getClass()) {
             return false;
-
+        }
         HashFunction another = (HashFunction)o;
         return this.grade == another.grade &&
                 this.cls == another.cls &&

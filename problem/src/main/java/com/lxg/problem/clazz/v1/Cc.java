@@ -2,35 +2,35 @@ package com.lxg.problem.clazz.v1;
 
 
 /**************************
- * @description: C
+ * @description: Cc
  * @author: xuegangliu
  * @date: 2019/3/22 14:06
  ***************************/
-public  class C extends B implements A{
+public  class Cc extends Bb implements Aa {
 
-    private static String name = "C";
+    private static String name = "Cc";
 
     private String name1="c";
 
     static {
-        System.out.println("C static{}"+_VERSION);
+        System.out.println("Cc static{}"+VERSION);
     }
 
     {
-        System.out.println("C {}");
+        System.out.println("Cc {}");
     }
 
-    public C(){
-        System.out.println("C()");
+    public Cc(){
+        System.out.println("Cc()");
     }
 
-    public C(String name1){
+    public Cc(String name1){
         this.name1=name1;
-        System.out.println("C(String name1)");
+        System.out.println("Cc(String name1)");
     }
 
     public static void ok(){
-        System.out.println("C static C.ok()");
+        System.out.println("Cc static Cc.ok()");
     }
 
     @Override
@@ -39,6 +39,6 @@ public  class C extends B implements A{
     }
 
     public static void main(String[] args) {
-        System.out.println("C main()");
+        System.out.println("Cc main()");
     }
 }

@@ -14,10 +14,10 @@ import java.text.SimpleDateFormat;
  ***************************/
 @Slf4j
 public class DateToolsTest {
-    public final static SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    public final static SimpleDateFormat df2 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-    public final static SimpleDateFormat df3 = new SimpleDateFormat("yyyy-MM-dd");
-    public final static SimpleDateFormat df4 = new SimpleDateFormat("yyyyMMdd");
+    public final static SimpleDateFormat DF1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    public final static SimpleDateFormat DF2 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    public final static SimpleDateFormat DF3 = new SimpleDateFormat("yyyy-MM-dd");
+    public final static SimpleDateFormat DF4 = new SimpleDateFormat("yyyyMMdd");
 
     public final String dateTest1="2018-12-01 13:15:20";
     public final String dateTest2="2018-12-01 01:15:20";
@@ -27,10 +27,10 @@ public class DateToolsTest {
     @Test
     public void test(){
         try {
-            log.info("{}",df1.format(df1.parse(dateTest1)));
-            log.info("{}",df2.format(df2.parse(dateTest2)));
-            log.info("{}",df3.format(df3.parse(dateTest3)));
-//            log.info("{}",df3.format(df3.parse(dateTest4)));
+            log.info("{}",DF1.format(DF1.parse(dateTest1)));
+            log.info("{}",DF2.format(DF2.parse(dateTest2)));
+            log.info("{}",DF3.format(DF3.parse(dateTest3)));
+//            log.info("{}",df3.format(DF4.parse(dateTest4)));
         } catch (ParseException e) {
             e.printStackTrace();
         }

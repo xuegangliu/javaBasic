@@ -1,10 +1,11 @@
 package com.lxg.problem.clazz.loader;
 
 /**
+ * @author xuegangliu
+ * 子类
  * 静态语句块、构造语句块以及构造函数的执行顺序
  * 1.静态语句块 > 2.父构造语句块、父构造函数 > 3.子构造语句块、子构造函数
  */
-// 子类
 public class Loader extends Hello {
     public String name = "子类属性值name!!";
     static {
@@ -23,7 +24,10 @@ public class Loader extends Hello {
         System.out.println("子类构造函数:Loader(String name){}:"+name);
     }
 
-    // 相当于重写父类
+    /**
+     * 相当于重写父类
+     */
+    @Override
     public void method1(){
         System.out.println("子类方法method1");
     }
@@ -37,7 +41,9 @@ public class Loader extends Hello {
     }
 }
 
-// 父类
+/**
+ * 父类
+ */
 class Hello{
     public String name = "父类属性值name!!";
 
@@ -46,17 +52,24 @@ class Hello{
         System.out.println("父类静态语句块:static {}");
     }
 
-    // 父类构造块
+    /**
+     * 父类构造块
+     */
     {
         System.out.println("父类构造语句块:{}");
     }
 
-    // 父类无参构造函数
+    /**
+     * 父类无参构造函数
+     */
     public Hello() {
         System.out.println("父类构造函数:Hello(){}");
     }
 
-    // 父类有参参构造函数
+    /**
+     * 父类有参参构造函数
+     * @param name
+     */
     public Hello(String name) {
         System.out.println("父类构造函数:Hello(String name){}"+name);
     }

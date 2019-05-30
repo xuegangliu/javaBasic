@@ -33,7 +33,9 @@ public class ThreadUnSecurity {
         }
     }
 
-    // 同步代码块
+    /**
+     * 同步代码块
+     */
     class SellTicketsSecurity implements Runnable{
         @Override
         public void run() {
@@ -59,7 +61,9 @@ public class ThreadUnSecurity {
         }
     }
 
-    // 同步方法
+    /**
+     * 同步方法
+     */
     class SellTicketsSecurity2 implements Runnable{
         @Override
         public void run() {
@@ -87,7 +91,9 @@ public class ThreadUnSecurity {
         }
     }
 
-    // Lock锁机制， 通过创建Lock对象，采用lock()加锁，unlock()解锁，来保护指定的代码块
+    /**
+     * Lock锁机制， 通过创建Lock对象，采用lock()加锁，unlock()解锁，来保护指定的代码块
+     */
     class SellTicketsSecurity3 implements Runnable{
         Lock lock = new ReentrantLock();
         @Override

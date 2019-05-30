@@ -35,15 +35,17 @@ public class AVLTree<K extends Comparable<K>, V> {
 
     // 获得节点node的高度
     private int getHeight(Node node){
-        if(node == null)
+        if(node == null) {
             return 0;
+        }
         return node.height;
     }
 
     // 获得节点node的平衡因子
     private int getBalanceFactor(Node node){
-        if(node == null)
+        if(node == null) {
             return 0;
+        }
         return getHeight(node.left) - getHeight(node.right);
     }
 

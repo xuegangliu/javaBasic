@@ -41,7 +41,7 @@ public class MyStoryList implements SongList{
 
         @Override
         public boolean hashNext() {
-            return !(cursor == list.size());
+            return cursor != list.size();
         }
 
         @Override

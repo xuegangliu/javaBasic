@@ -53,8 +53,9 @@ public class ArrayStack<E> implements BaseStack<E> {
         res.append('[');
         for(int i = 0 ; i < array.getSize() ; i ++){
             res.append(array.get(i));
-            if(i != array.getSize() - 1)
+            if(i != array.getSize() - 1) {
                 res.append(", ");
+            }
         }
         res.append("] top");
         return res.toString();

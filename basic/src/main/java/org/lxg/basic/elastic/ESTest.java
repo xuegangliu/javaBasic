@@ -53,7 +53,7 @@ public class ESTest {
      */
 //    @Before
     public void before() throws Exception {
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<>(1);
         map.put("cluster.name", cluster);
         Settings.Builder settings = Settings.builder().put(map);
         client = TransportClient.builder().settings(settings).build()
@@ -109,7 +109,7 @@ public class ESTest {
      * 使用map创建json
      */
     public Map<String, Object> createJson2() {
-        Map<String,Object> json = new HashMap<String, Object>();
+        Map<String,Object> json = new HashMap<>(3);
         json.put("user", "kimchy");
         json.put("postDate", new Date());
         json.put("message", "trying out elasticsearch");

@@ -30,7 +30,7 @@ public class DateTest {
         LocalDate endOfFeb = LocalDate.parse("2014-02-28"); // 严格按照ISO yyyy-MM-dd验证，02写成2都不行，当然也有一个重载方法允许自己定义格式
         System.out.println("LocalDate.parse(\"2014-02-28\")->"+endOfFeb);
 //        LocalDate.parse("2014-02-29"); // 无效日期无法通过：DateTimeParseException: Invalid date
-//        Assert.fail();
+//        AbstractAssert.fail();
 
 
         // 取本月第1天：

@@ -7,7 +7,9 @@ package com.lxg.common.constants;
  * @version: v1.0
  */
 public final class KafkaConstants {
-    // producer
+    /**
+     * producer
+     */
     public final static String PRODUCER_CONFIG_BROKER_LIST = "metadata.broker.list";
     public final static String PRODUCER_CONFIG_KEY_SERIALIZER = "kafka.serializer.StringEncodert";
     public final static String PRODUCER_CONFIG_VALUE_SERIALIZER = "kafka.serializer.StringEncoder";

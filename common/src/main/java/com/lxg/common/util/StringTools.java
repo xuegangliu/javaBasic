@@ -19,8 +19,9 @@ public final class StringTools {
 
     public static String getSql(String sql,String[] args){
         int count = getSubCount(sql,":");
-        if(count!=args.length)
+        if(count!=args.length) {
             return "";
+        }
         int num = 1;
         for(String t:args){
             sql = sql.replace(":"+num,t);

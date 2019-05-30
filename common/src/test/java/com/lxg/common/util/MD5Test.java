@@ -13,8 +13,8 @@ public class MD5Test {
 
     @Test
     public void testMd5(){
-        log.info(MD5Tools.md5("aaabb"));
-        log.info(MD5Tools.md5("aaabb"));
+        log.info(Md5Tools.md5("aaabb"));
+        log.info(Md5Tools.md5("aaabb"));
     }
 
     @Test

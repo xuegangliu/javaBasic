@@ -26,6 +26,8 @@ import java.util.Map;
  ***************************/
 public final class HttpClientTools {
 
+    private final static Integer RESPONSE_SUCCESS_STATUS=200;
+
     public static String doGet(String url, Map<String, String> param) {
 
         // 创建Httpclient对象
@@ -49,7 +51,7 @@ public final class HttpClientTools {
             // 执行请求
             response = httpclient.execute(httpGet);
             // 判断返回状态是否为200
-            if (response.getStatusLine().getStatusCode() == 200) {
+            if (response.getStatusLine().getStatusCode() == RESPONSE_SUCCESS_STATUS) {
                 resultString = EntityUtils.toString(response.getEntity(), "UTF-8");
             }
         } catch (Exception e) {

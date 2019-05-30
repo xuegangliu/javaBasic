@@ -5,13 +5,20 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**************************
- * @description: MD5Tools
+ * @description: Md5Tools
  * @author: xuegangliu
  * @date: 2019/3/18 10:57
  ***************************/
-public final class MD5Tools {
+public final class Md5Tools {
 
-    //写一个md5加密的方法
+    private final static Integer LENGTH=32;
+    private final static String CODE="0";
+
+    /**
+     * 写一个md5加密的方法
+     * @param plainText
+     * @return
+     */
     public static String md5(String plainText) {
         //定义一个字节数组
         byte[] secretBytes = null;
@@ -26,9 +33,11 @@ public final class MD5Tools {
             throw new RuntimeException("没有md5这个算法！");
         }
         //将加密后的数据转换为16进制数字
-        String md5code = new BigInteger(1, secretBytes).toString(16);// 16进制数字
+        String md5code = new BigInteger(1, secretBytes).toString(16);
         // 如果生成数字未满32位，需要前面补0
-        for ( ; md5code.length() < 32 ; md5code = "0" + md5code) continue;
+        for ( ; md5code.length() < LENGTH ; md5code = CODE + md5code){
+            continue;
+        }
 //        for (int i = 0; i < 32 - md5code.length(); i++) {
 //            md5code = "0" + md5code;
 //        }

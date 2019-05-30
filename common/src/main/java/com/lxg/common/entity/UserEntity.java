@@ -8,13 +8,12 @@ import lombok.extern.slf4j.Slf4j;
 
 /**************************
  * @description: UserEntity
- * @author: xuegangliu
+ * @author xuegangliu
  * @date: 2019/4/10 15:14
  * @since: jdk1.8+
  ***************************/
 @Data
 @ToString
-//@NoArgsConstructor
 @AllArgsConstructor
 @Slf4j
 public class UserEntity {

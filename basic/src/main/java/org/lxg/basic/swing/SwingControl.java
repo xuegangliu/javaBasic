@@ -29,6 +29,7 @@ public class SwingControl {
         statusLabel = new JLabel("",JLabel.CENTER);
         statusLabel.setSize(350,100);
         mainFrame.addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent windowEvent){
                 System.exit(0);
             }
@@ -57,6 +58,7 @@ public class SwingControl {
         mainFrame.setVisible(true);
     }
     private class ButtonClickListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent e) {
             String command = e.getActionCommand();
             if( command.equals( "OK" ))  {

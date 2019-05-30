@@ -338,13 +338,15 @@ public class ESTest {
     public void testBulkProcessor() throws Exception {
         // 创建BulkPorcessor对象
         BulkProcessor bulkProcessor = BulkProcessor.builder(client, new BulkProcessor.Listener() {
+            @Override
             public void beforeBulk(long paramLong, BulkRequest paramBulkRequest) {
             }
 
             // 执行出错时执行
+            @Override
             public void afterBulk(long paramLong, BulkRequest paramBulkRequest, Throwable paramThrowable) {
             }
-
+            @Override
             public void afterBulk(long paramLong, BulkRequest paramBulkRequest, BulkResponse paramBulkResponse) {
             }
         })

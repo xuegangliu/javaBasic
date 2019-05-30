@@ -56,27 +56,29 @@ public class AVLTree<K extends Comparable<K>, V> {
 
     // 向以node为根的二分搜索树中插入元素(key, value)，递归算法
     // 返回插入新节点后二分搜索树的根
-    private Node add(Node node, K key, V value){
+    private Node add(Node node, K key, V value) {
 
-        if(node == null){
-            size ++;
+        if (node == null) {
+            size++;
             return new Node(key, value);
         }
 
-        if(key.compareTo(node.key) < 0)
+        if (key.compareTo(node.key) < 0) {
             node.left = add(node.left, key, value);
-        else if(key.compareTo(node.key) > 0)
+        } else if (key.compareTo(node.key) > 0) {
             node.right = add(node.right, key, value);
-        else // key.compareTo(node.key) == 0
+        } else{ // key.compareTo(node.key) == 0
             node.value = value;
+        }
 
         // 更新height
         node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
 
         // 计算平衡因子
         int balanceFactor = getBalanceFactor(node);
-        if(Math.abs(balanceFactor) > 1)
+        if(Math.abs(balanceFactor) > 1) {
             System.out.println("unbalanced : " + balanceFactor);
+        }
 
         return node;
     }
@@ -84,15 +86,18 @@ public class AVLTree<K extends Comparable<K>, V> {
     // 返回以node为根节点的二分搜索树中，key所在的节点
     private Node getNode(Node node, K key){
 
-        if(node == null)
+        if(node == null) {
             return null;
-
-        if(key.equals(node.key))
+        }
+        if(key.equals(node.key)) {
             return node;
-        else if(key.compareTo(node.key) < 0)
+        }
+        else if(key.compareTo(node.key) < 0) {
             return getNode(node.left, key);
-        else // if(key.compareTo(node.key) > 0)
+        }
+        else {// if(key.compareTo(node.key) > 0)
             return getNode(node.right, key);
+        }
     }
 
     public boolean contains(K key){
@@ -107,16 +112,17 @@ public class AVLTree<K extends Comparable<K>, V> {
 
     public void set(K key, V newValue){
         Node node = getNode(root, key);
-        if(node == null)
+        if(node == null) {
             throw new IllegalArgumentException(key + " doesn't exist!");
-
+        }
         node.value = newValue;
     }
 
     // 返回以node为根的二分搜索树的最小值所在的节点
     private Node minimum(Node node){
-        if(node.left == null)
+        if(node.left == null) {
             return node;
+        }
         return minimum(node.left);
     }
 
@@ -148,9 +154,9 @@ public class AVLTree<K extends Comparable<K>, V> {
 
     private Node remove(Node node, K key){
 
-        if( node == null )
+        if( node == null ) {
             return null;
-
+        }
         if( key.compareTo(node.key) < 0 ){
             node.left = remove(node.left , key);
             return node;

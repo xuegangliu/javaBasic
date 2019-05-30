@@ -5,5 +5,6 @@ package org.lxg.basic.patterns.decorator;
  */
 
 abstract class Decorator extends Tea{
+    @Override
     public abstract String getName();
 }

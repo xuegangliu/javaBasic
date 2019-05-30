@@ -3,6 +3,7 @@ package org.lxg.basic.data.stack;
 import org.lxg.basic.data.array.SelfLinkedList;
 
 /**
+ * @author xuegangliu
  * 链表栈
  * @param <E>
  */

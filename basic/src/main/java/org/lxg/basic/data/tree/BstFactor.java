@@ -1,6 +1,11 @@
 package org.lxg.basic.data.tree;
 
-public class BSTFactor<K extends Comparable<K>, V> {
+/**
+ * @author xuegangliu
+ * @param <K>
+ * @param <V>
+ */
+public class BstFactor<K extends Comparable<K>, V> {
 
     private class Node{
         public K key;
@@ -18,7 +23,7 @@ public class BSTFactor<K extends Comparable<K>, V> {
     private Node root;
     private int size;
 
-    public BSTFactor(){
+    public BstFactor(){
         root = null;
         size = 0;
     }
@@ -31,13 +36,22 @@ public class BSTFactor<K extends Comparable<K>, V> {
         return size == 0;
     }
 
-    // 向二分搜索树中添加新的元素(key, value)
+    /**
+     * 向二分搜索树中添加新的元素(key, value)
+     * @param key
+     * @param value
+     */
     public void add(K key, V value){
         root = add(root, key, value);
     }
 
-    // 向以node为根的二分搜索树中插入元素(key, value)，递归算法
-    // 返回插入新节点后二分搜索树的根
+    /**
+     * 向以node为根的二分搜索树中插入元素(key, value)，递归算法
+     * @param node
+     * @param key
+     * @param value
+     * @return 返回插入新节点后二分搜索树的根
+     */
     private Node add(Node node, K key, V value){
 
         if(node == null){
@@ -45,25 +59,33 @@ public class BSTFactor<K extends Comparable<K>, V> {
             return new Node(key, value);
         }
 
-        if(key.compareTo(node.key) < 0)
+        if(key.compareTo(node.key) < 0) {
             node.left = add(node.left, key, value);
-        else if(key.compareTo(node.key) > 0)
+        } else if(key.compareTo(node.key) > 0) {
             node.right = add(node.right, key, value);
-        else // key.compareTo(node.key) == 0
+        }else {// key.compareTo(node.key) == 0
             node.value = value;
+        }
         return node;
     }
 
-    // 返回以node为根节点的二分搜索树中，key所在的节点
-    private Node getNode(Node node, K key){
-        if(node == null)
+    /**
+     * getNode
+     * @param node
+     * @param key
+     * @return 返回以node为根节点的二分搜索树中，key所在的节点
+     */
+    private Node getNode(Node node, K key) {
+        if (node == null) {
             return null;
-        if(key.equals(node.key))
+        }
+        if (key.equals(node.key)) {
             return node;
-        else if(key.compareTo(node.key) < 0)
+        } else if (key.compareTo(node.key) < 0) {
             return getNode(node.left, key);
-        else // if(key.compareTo(node.key) > 0)
+        } else{ // if(key.compareTo(node.key) > 0)
             return getNode(node.right, key);
+        }
     }
 
     public boolean contains(K key){
@@ -78,20 +100,29 @@ public class BSTFactor<K extends Comparable<K>, V> {
 
     public void set(K key, V newValue){
         Node node = getNode(root, key);
-        if(node == null)
+        if(node == null) {
             throw new IllegalArgumentException(key + " doesn't exist!");
+        }
         node.value = newValue;
     }
 
-    // 返回以node为根的二分搜索树的最小值所在的节点
+    /**
+     * minimum
+     * @param node
+     * @return 返回以node为根的二分搜索树的最小值所在的节点
+     */
     private Node minimum(Node node){
-        if(node.left == null)
+        if(node.left == null) {
             return node;
+        }
         return minimum(node.left);
     }
 
-    // 删除掉以node为根的二分搜索树中的最小节点
-    // 返回删除节点后新的二分搜索树的根
+    /**
+     * 删除掉以node为根的二分搜索树中的最小节点
+     * @param node
+     * @return 返回删除节点后新的二分搜索树的根
+     */
     private Node removeMin(Node node){
 
         if(node.left == null){
@@ -105,7 +136,11 @@ public class BSTFactor<K extends Comparable<K>, V> {
         return node;
     }
 
-    // 从二分搜索树中删除键为key的节点
+    /**
+     * 从二分搜索树中删除键为key的节点
+     * @param key
+     * @return
+     */
     public V remove(K key){
 
         Node node = getNode(root, key);
@@ -118,18 +153,17 @@ public class BSTFactor<K extends Comparable<K>, V> {
 
     private Node remove(Node node, K key){
 
-        if( node == null )
+        if( node == null ) {
             return null;
+        }
 
         if( key.compareTo(node.key) < 0 ){
             node.left = remove(node.left , key);
             return node;
-        }
-        else if(key.compareTo(node.key) > 0 ){
+        } else if(key.compareTo(node.key) > 0 ){
             node.right = remove(node.right, key);
             return node;
-        }
-        else{   // key.compareTo(node.key) == 0
+        } else{   // key.compareTo(node.key) == 0
 
             // 待删除节点左子树为空的情况
             if(node.left == null){

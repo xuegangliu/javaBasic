@@ -3,6 +3,7 @@ package org.lxg.basic.data.queue;
 import org.lxg.basic.data.heap.MaxHeap;
 
 /**
+ * @author xuegangliu
  * 基于堆实现的队列
  * @param <E>
  */

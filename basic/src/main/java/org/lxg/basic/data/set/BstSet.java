@@ -1,17 +1,18 @@
 package org.lxg.basic.data.set;
 
-import org.lxg.basic.data.tree.BST;
+import org.lxg.basic.data.tree.Bst;
 
 /**
+ * @author xuegangliu
  * 基于二叉树的set
  * @param <E>
  */
-public class BSTSet<E extends Comparable<E>> implements BaseSet<E> {
+public class BstSet<E extends Comparable<E>> implements BaseSet<E> {
 
-    private BST<E> bst;
+    private Bst<E> bst;
 
-    public BSTSet(){
-        bst = new BST<>();
+    public BstSet(){
+        bst = new Bst<>();
     }
 
     @Override

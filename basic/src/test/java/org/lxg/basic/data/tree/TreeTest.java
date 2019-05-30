@@ -1,7 +1,7 @@
 package org.lxg.basic.data.tree;
 
 import org.junit.Test;
-import org.lxg.basic.data.set.BSTSet;
+import org.lxg.basic.data.set.BstSet;
 import org.lxg.basic.data.set.SetTest;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class TreeTest {
     @Test
     public void testBst(){
         Integer [] arr = {1,2,3,7,9,4,6,3,5};
-        BST<Integer> bst1 = new BST<>();
+        Bst<Integer> bst1 = new Bst<>();
         for(int p:arr)
             bst1.add(p);
         System.out.println(bst1.toString());
@@ -27,7 +27,7 @@ public class TreeTest {
     @Test
     public void testPreOrderNR(){
         Integer [] arr = {1,2,3,7,9,4,6,3,5};
-        BST<Integer> bst1 = new BST<>();
+        Bst<Integer> bst1 = new Bst<>();
         for(int p:arr)
             bst1.add(p);
         bst1.preOrderNR();
@@ -36,7 +36,7 @@ public class TreeTest {
     @Test
     public void testLevelOrder(){
         Integer [] arr = {1,2,3,7,9,4,6,3,5};
-        BST<Integer> bst1 = new BST<>();
+        Bst<Integer> bst1 = new Bst<>();
         for(int p:arr)
             bst1.add(p);
         bst1.levelOrder();
@@ -44,7 +44,7 @@ public class TreeTest {
 
     @Test
     public void testTT(){
-        BST<Integer> bst = new BST<>();
+        Bst<Integer> bst = new Bst<>();
         Random random = new Random();
 
         int n = 1000;
@@ -112,7 +112,7 @@ public class TreeTest {
         ArrayList<String> words = new ArrayList<>();
         if(SetTest.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
-            BSTFactor<String, Integer> map = new BSTFactor<>();
+            BstFactor<String, Integer> map = new BstFactor<>();
             for (String word : words) {
                 if (map.contains(word))
                     map.set(word, map.get(word) + 1);
@@ -132,7 +132,7 @@ public class TreeTest {
         ArrayList<String> words = new ArrayList<>();
         if(SetTest.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
-            AVLTree<String, Integer> map = new AVLTree<>();
+            AvlTree<String, Integer> map = new AvlTree<>();
             for (String word : words) {
                 if (map.contains(word))
                     map.set(word, map.get(word) + 1);
@@ -152,7 +152,7 @@ public class TreeTest {
         ArrayList<String> words = new ArrayList<>();
         if(SetTest.readFile("pride-and-prejudice.txt", words)) {
             long startTime = System.nanoTime();
-            BSTSet<String> set = new BSTSet<>();
+            BstSet<String> set = new BstSet<>();
             for (String word : words)
                 set.add(word);
             for (String word : words)
@@ -160,7 +160,7 @@ public class TreeTest {
             long endTime = System.nanoTime();
             double time = (endTime - startTime) / 1000000000.0;
             System.out.println("Total different words: " + set.getSize());
-            System.out.println("BSTSet: " + time + " s");
+            System.out.println("BstSet: " + time + " s");
             // ---
             startTime = System.nanoTime();
             Trie trie = new Trie();

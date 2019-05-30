@@ -1,14 +1,40 @@
 package org.lxg.basic.data.stack;
 
 /**
+ * @author xuegangliu
  * 栈为后进先出
  * 栈基本方法
  * @param <E>
  */
 public interface BaseStack<E> {
-    int getSize(); // 栈数据大小
-    boolean isEmpty(); // 栈是否为空
-    void push(E e); // 入栈
-    E pop(); // 出栈
-    E peek(); // 栈顶元素
+
+    /**
+     * 栈数据大小
+     * @return
+     */
+    int getSize();
+
+    /**
+     * 栈是否为空
+     * @return
+     */
+    boolean isEmpty();
+
+    /**
+     * 入栈
+     * @param e
+     */
+    void push(E e);
+
+    /**
+     * 出栈
+     * @return
+     */
+    E pop();
+
+    /**
+     * 栈顶元素
+     * @return
+     */
+    E peek();
 }

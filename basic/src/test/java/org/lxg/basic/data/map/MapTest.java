@@ -34,7 +34,7 @@ public class MapTest {
         ArrayList<String> words = new ArrayList<>();
         if(SetTest.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
-            BSTMap<String, Integer> map = new BSTMap<>();
+            BstMap<String, Integer> map = new BstMap<>();
             for (String word : words) {
                 if (map.contains(word))
                     map.set(word, map.get(word) + 1);
@@ -51,9 +51,9 @@ public class MapTest {
     @Test
     public void testTime(){
         String filename = "pride-and-prejudice.txt";
-        BSTMap<String, Integer> bstMap = new BSTMap<>();
+        BstMap<String, Integer> bstMap = new BstMap<>();
         double time1 = testMap(bstMap, filename);
-        System.out.println("BST Map: " + time1 + " s");
+        System.out.println("Bst Map: " + time1 + " s");
         System.out.println();
         LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
         double time2 = testMap(linkedListMap, filename);
@@ -95,9 +95,9 @@ public class MapTest {
 
             // Collections.sort(words);
 
-            // Test BST
+            // Test Bst
             long startTime = System.nanoTime();
-//            BST<String, Integer> bst = new BST<>();
+//            Bst<String, Integer> bst = new Bst<>();
 //            for (String word : words) {
 //                if (bst.contains(word))
 //                    bst.set(word, bst.get(word) + 1);
@@ -108,12 +108,12 @@ public class MapTest {
 //                bst.contains(word);
             long endTime = System.nanoTime();
             double time = (endTime - startTime) / 1000000000.0;
-//            System.out.println("BST: " + time + " s");
+//            System.out.println("Bst: " + time + " s");
 
 
             // Test AVL
 //            startTime = System.nanoTime();
-//            AVLTree<String, Integer> avl = new AVLTree<>();
+//            AvlTree<String, Integer> avl = new AvlTree<>();
 //            for (String word : words) {
 //                if (avl.contains(word))
 //                    avl.set(word, avl.get(word) + 1);

@@ -35,7 +35,7 @@ public class UnionFindTest {
         System.out.println("UnionFind6 : " + testUF(uf6, m) + " s");
     }
 
-    private static double testUF(UF uf, int m){
+    private static double testUF(Uf uf, int m){
         int size = uf.getSize();
         Random random = new Random();
         long startTime = System.nanoTime();

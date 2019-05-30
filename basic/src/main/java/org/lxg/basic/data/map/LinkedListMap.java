@@ -1,6 +1,7 @@
 package org.lxg.basic.data.map;
 
 /**
+ * @author xuegangliu
  * 基于链表的map
  * @param <K>
  * @param <V>
@@ -27,8 +28,9 @@ public class LinkedListMap<K,V> implements BaseMap<K,V>{
     private Node getNode(K key){
         Node cur = dummyHead.next;
         while(cur != null){
-            if(cur.key.equals(key))
+            if(cur.key.equals(key)) {
                 return cur;
+            }
             cur = cur.next;
         }
         return null;
@@ -51,17 +53,17 @@ public class LinkedListMap<K,V> implements BaseMap<K,V>{
         if(node == null){
             dummyHead.next = new Node(key, value, dummyHead.next);
             size ++;
-        }
-        else
+        } else {
             node.value = value;
+        }
     }
 
     @Override
     public void set(K key, V newValue){
         Node node = getNode(key);
-        if(node == null)
+        if(node == null) {
             throw new IllegalArgumentException(key + " doesn't exist!");
-
+        }
         node.value = newValue;
     }
 
@@ -70,8 +72,9 @@ public class LinkedListMap<K,V> implements BaseMap<K,V>{
 
         Node prev = dummyHead;
         while(prev.next != null){
-            if(prev.next.key.equals(key))
+            if(prev.next.key.equals(key)) {
                 break;
+            }
             prev = prev.next;
         }
 

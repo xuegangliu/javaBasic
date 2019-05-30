@@ -17,7 +17,7 @@ public class SetTest {
         ArrayList<String> words1 = new ArrayList<>();
         if(readFile("pride-and-prejudice.txt", words1)) {
             System.out.println("Total words: " + words1.size());
-            BSTSet<String> set1 = new BSTSet<>();
+            BstSet<String> set1 = new BstSet<>();
             for (String word : words1)
                 set1.add(word);
             System.out.println("Total different words: " + set1.getSize());
@@ -27,7 +27,7 @@ public class SetTest {
         ArrayList<String> words2 = new ArrayList<>();
         if(readFile("a-tale-of-two-cities.txt", words2)){
             System.out.println("Total words: " + words2.size());
-            BSTSet<String> set2 = new BSTSet<>();
+            BstSet<String> set2 = new BstSet<>();
             for(String word: words2)
                 set2.add(word);
             System.out.println("Total different words: " + set2.getSize());
@@ -60,9 +60,9 @@ public class SetTest {
     @Test
     public void testTime(){
         String filename = "pride-and-prejudice.txt";
-        BSTSet<String> bstSet = new BSTSet<>();
+        BstSet<String> bstSet = new BstSet<>();
         double time1 = testSet(bstSet, filename);
-        System.out.println("BST Set: " + time1 + " s");
+        System.out.println("Bst Set: " + time1 + " s");
         System.out.println();
         LinkedListSet<String> linkedListSet = new LinkedListSet<>();
         double time2 = testSet(linkedListSet, filename);

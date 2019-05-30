@@ -3,6 +3,7 @@ package org.lxg.basic.data.set;
 import org.lxg.basic.data.array.SelfLinkedList;
 
 /**
+ * @author xuegangliu
  * 基于链表的set
  * @param <E>
  */
@@ -25,8 +26,9 @@ public class LinkedListSet<E> implements BaseSet<E> {
 
     @Override
     public void add(E e){
-        if(!list.contains(e))
+        if(!list.contains(e)) {
             list.addFirst(e);
+        }
     }
 
     @Override

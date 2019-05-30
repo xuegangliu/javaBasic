@@ -1,6 +1,7 @@
 package org.lxg.basic.data.queue;
 
 /**
+ * @author xuegangliu
  * 链表队列
  * @param <E>
  */
@@ -39,22 +40,24 @@ public class LinkedListQueue<E> implements BaseQueue<E> {
 
     @Override
     public E dequeue(){
-        if(isEmpty())
+        if(isEmpty()) {
             throw new IllegalArgumentException("Cannot dequeue from an empty queue.");
-
+        }
         Node retNode = head;
         head = head.next;
         retNode.next = null;
-        if(head == null)
+        if(head == null) {
             tail = null;
+        }
         size --;
         return retNode.e;
     }
 
     @Override
     public E getFront(){
-        if(isEmpty())
+        if(isEmpty()) {
             throw new IllegalArgumentException("Queue is empty.");
+        }
         return head.e;
     }
 

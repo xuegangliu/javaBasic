@@ -3,6 +3,7 @@ package org.lxg.basic.data.stack;
 import org.lxg.basic.data.array.SelfArray;
 
 /**
+ * @author xuegangliu
  * 基于数组实现的栈
  * @param <E>
  */

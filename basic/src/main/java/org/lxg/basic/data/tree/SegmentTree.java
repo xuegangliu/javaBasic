@@ -32,9 +32,9 @@ public class SegmentTree<E> {
         this.merger = merger;
 
         data = (E[])new Object[arr.length];
-        for(int i = 0 ; i < arr.length ; i ++)
+        for(int i = 0 ; i < arr.length ; i ++) {
             data[i] = arr[i];
-
+        }
         tree = (E[])new Object[4 * arr.length];
         buildSegmentTree(0, 0, arr.length - 1);
     }

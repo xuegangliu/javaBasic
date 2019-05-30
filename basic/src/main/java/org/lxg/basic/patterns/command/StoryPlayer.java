@@ -41,13 +41,17 @@ public class StoryPlayer {
 
     public void next() {
         cursor++;
-        if(cursor == playList.size()) cursor = 0;
+        if(cursor == playList.size()){
+            cursor = 0;
+        }
         play(cursor);
     }
 
     public void pre() {
         cursor--;
-        if(cursor < 0) cursor = playList.size() - 1;
+        if(cursor < 0) {
+            cursor = playList.size() - 1;
+        }
         play(cursor);
     }
 

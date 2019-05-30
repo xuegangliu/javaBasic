@@ -120,7 +120,9 @@ public class SFTPUtil {
             String [] dirs=directory.split("/");
             String tempPath=basePath;
             for(String dir:dirs){
-                if(null== dir || "".equals(dir)) continue;
+                if(null== dir || "".equals(dir)){
+                    continue;
+                }
                 tempPath+="/"+dir;
                 try{
                     sftp.cd(tempPath);

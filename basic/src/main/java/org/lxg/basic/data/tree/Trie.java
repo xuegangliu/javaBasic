@@ -53,8 +53,9 @@ public class Trie {
         Node cur = root;
         for(int i = 0 ; i < word.length() ; i ++){
             char c = word.charAt(i);
-            if(cur.next.get(c) == null)
+            if(cur.next.get(c) == null) {
                 return false;
+            }
             cur = cur.next.get(c);
         }
         return cur.isWord;
@@ -69,8 +70,9 @@ public class Trie {
         Node cur = root;
         for(int i = 0 ; i < prefix.length() ; i ++){
             char c = prefix.charAt(i);
-            if(cur.next.get(c) == null)
+            if(cur.next.get(c) == null) {
                 return false;
+            }
             cur = cur.next.get(c);
         }
         return true;

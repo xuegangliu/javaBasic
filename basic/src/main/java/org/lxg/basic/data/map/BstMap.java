@@ -68,8 +68,9 @@ public class BstMap<K extends Comparable<K>, V>  implements BaseMap<K,V> {
      * @return 返回以node为根节点的二分搜索树中，key所在的节点
      */
     private Node getNode(Node node, K key){
-        if(node == null)
+        if(node == null) {
             return null;
+        }
         if(key.equals(node.key)) {
             return node;
         }
@@ -151,8 +152,9 @@ public class BstMap<K extends Comparable<K>, V>  implements BaseMap<K,V> {
 
     private Node remove(Node node, K key){
 
-        if( node == null )
+        if( node == null ) {
             return null;
+        }
 
         if( key.compareTo(node.key) < 0 ){
             node.left = remove(node.left , key);

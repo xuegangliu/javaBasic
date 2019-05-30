@@ -78,16 +78,17 @@ public class UnionFind6 implements Uf {
         int pRoot = find(p);
         int qRoot = find(q);
 
-        if( pRoot == qRoot )
+        if( pRoot == qRoot ) {
             return;
+        }
 
         // 根据两个元素所在树的rank不同判断合并方向
         // 将rank低的集合合并到rank高的集合上
-        if( rank[pRoot] < rank[qRoot] )
+        if( rank[pRoot] < rank[qRoot] ) {
             parent[pRoot] = qRoot;
-        else if( rank[qRoot] < rank[pRoot])
+        }else if( rank[qRoot] < rank[pRoot]) {
             parent[qRoot] = pRoot;
-        else{
+        }else{
             // rank[pRoot] == rank[qRoot]
             parent[pRoot] = qRoot;
             // 此时, 我维护rank的值

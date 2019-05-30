@@ -13,13 +13,11 @@ import freemarker.template.Version;
 
 /**************************
  * @description: WordUtil
- * @user: xuegangliu
+ * @author xuegangliu
  * @date: 2019/1/29 10:37
  ***************************/
 public class WordUtil {
-    //配置信息,代码本身写的还是很可读的,就不过多注解了
     private static Configuration configuration = null;
-    //这里注意的是利用WordUtils的类加载器动态获得模板文件的位置
     private static final String templateFolder = WordUtil.class.getClassLoader().getResource("").
             getPath()+File.separatorChar+"config/tmp/";
 

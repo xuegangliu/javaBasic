@@ -34,10 +34,12 @@ public class FtpUtil {
         FTPClient ftp = new FTPClient();
         try {
             int reply;
-            ftp.connect(host, port);// 连接FTP服务器
+            // 连接FTP服务器
+            ftp.connect(host, port);
             ftp.setRemoteVerificationEnabled(false);
             // 如果采用默认端口，可以使用ftp.connect(host)的方式直接连接FTP服务器
-            ftp.login(username, password);// 登录
+            // 登录
+            ftp.login(username, password);
             reply = ftp.getReplyCode();
             if (!FTPReply.isPositiveCompletion(reply)) {
                 ftp.disconnect();
@@ -49,10 +51,14 @@ public class FtpUtil {
                 String[] dirs = filePath.split("/");
                 String tempPath = basePath;
                 for (String dir : dirs) {
-                    if (null == dir || "".equals(dir)) continue;
+                    if (null == dir || "".equals(dir)) {
+                        continue;
+                    }
                     tempPath += "/" + dir;
-                    if (!ftp.changeWorkingDirectory(tempPath)) {  //进不去目录，说明该目录不存在
-                        if (!ftp.makeDirectory(tempPath)) { //创建目录
+                    //进不去目录，说明该目录不存在
+                    if (!ftp.changeWorkingDirectory(tempPath)) {
+                        //创建目录
+                        if (!ftp.makeDirectory(tempPath)) {
                             //如果创建文件目录失败，则返回
                             System.out.println("创建文件目录"+tempPath+"失败");
                             return result;
@@ -104,13 +110,15 @@ public class FtpUtil {
             int reply;
             ftp.connect(host, port);
             // 如果采用默认端口，可以使用ftp.connect(host)的方式直接连接FTP服务器
-            ftp.login(username, password);// 登录
+            // 登录
+            ftp.login(username, password);
             reply = ftp.getReplyCode();
             if (!FTPReply.isPositiveCompletion(reply)) {
                 ftp.disconnect();
                 return result;
             }
-            ftp.changeWorkingDirectory(remotePath);// 转移到FTP服务器目录
+            // 转移到FTP服务器目录
+            ftp.changeWorkingDirectory(remotePath);
             FTPFile[] fs = ftp.listFiles();
             for (FTPFile ff : fs) {
                 if (ff.getName().equals(fileName)) {

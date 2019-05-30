@@ -7,9 +7,9 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 
 /**************************
- * @description: 图片添加水印
- * @user: xuegangliu
- * @date: 2019/1/23
+ * @description 图片添加水印
+ * @author xuegangliu
+ * @date 2019/1/23
  ***************************/
 public class PictureWaterMarkUtil {
 
@@ -23,34 +23,49 @@ public class PictureWaterMarkUtil {
      */
     public static void addWatermark(InputStream inputStream, String tarImgPath,
                                     String waterMarkContent, String fileExt){
-        Color markContentColor = Color.LIGHT_GRAY;//水印颜色
-        Integer degree = -30;//设置水印文字的旋转角度
-        float alpha = 0.5f;//设置水印透明度 默认为1.0  值越小颜色越浅
+        //水印颜色
+        Color markContentColor = Color.LIGHT_GRAY;
+        //设置水印文字的旋转角度
+        Integer degree = -30;
+        //设置水印透明度 默认为1.0  值越小颜色越浅
+        float alpha = 0.5f;
         OutputStream outImgStream = null;
         try {
-//            File srcImgFile = new File(sourceImgPath);//得到文件
-            Image srcImg = ImageIO.read(inputStream);//文件转化为图片
-            int srcImgWidth = srcImg.getWidth(null);//获取图片的宽
-            int srcImgHeight = srcImg.getHeight(null);//获取图片的高
+            //得到文件
+//            File srcImgFile = new File(sourceImgPath);
+            //文件转化为图片
+            Image srcImg = ImageIO.read(inputStream);
+            //获取图片的宽
+            int srcImgWidth = srcImg.getWidth(null);
+            //获取图片的高
+            int srcImgHeight = srcImg.getHeight(null);
             // 加水印
             BufferedImage bufImg = new BufferedImage(srcImgWidth, srcImgHeight, BufferedImage.TYPE_INT_RGB);
-            Graphics2D g = bufImg.createGraphics();//得到画笔
+            //得到画笔
+            Graphics2D g = bufImg.createGraphics();
             g.drawImage(srcImg, 0, 0, srcImgWidth, srcImgHeight, null);
-            g.setColor(markContentColor); //设置水印颜色
+            //设置水印颜色
+            g.setColor(markContentColor);
             int size = srcImgWidth>srcImgHeight?srcImgHeight/35:srcImgWidth/35;
-            Font font = new Font("宋体", Font.BOLD, size);//水印字体，大小
-            g.setFont(font);              //设置字体
-            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));//设置水印文字透明度
+            //水印字体，大小
+            Font font = new Font("宋体", Font.BOLD, size);
+            //设置字体
+            g.setFont(font);
+            //设置水印文字透明度
+            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));
             if (null != degree) {
-                g.rotate(Math.toRadians(degree),(double)bufImg.getWidth(),(double)bufImg.getHeight());//设置水印旋转
+                //设置水印旋转
+                g.rotate(Math.toRadians(degree),(double)bufImg.getWidth(),(double)bufImg.getHeight());
             }
 //            JLabel label = new JLabel(waterMarkContent);
 //            FontMetrics metrics = label.getFontMetrics(font);
-//            int markWidth = metrics.stringWidth(label.getText());//文字水印的宽
+            //文字水印的宽
+//            int markWidth = metrics.stringWidth(label.getText());
 
             int x = -srcImgWidth / 2;
             int y;
-            int markWidth = size * getTextLength (waterMarkContent);// 字体长度
+            // 字体长度
+            int markWidth = size * getTextLength (waterMarkContent);
             int XMOVE = srcImgWidth/3;
             int YMOVE = srcImgHeight/5;
             while (x < srcImgWidth * 1.5) {
@@ -61,7 +76,8 @@ public class PictureWaterMarkUtil {
                 }
                 x += markWidth + XMOVE;
             }
-            g.dispose();// 释放资源
+            // 释放资源
+            g.dispose();
             // 输出图片
             outImgStream = new FileOutputStream(tarImgPath);
             ImageIO.write(bufImg, fileExt, outImgStream);

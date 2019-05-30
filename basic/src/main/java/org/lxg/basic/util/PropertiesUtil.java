@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**
- * @author: xuegangliu
+ * @author xuegangliu
  * @date: 8/22/2018 2:10 PM
  * @DES:
  * @version: v1.0
@@ -34,7 +34,11 @@ public class PropertiesUtil {
         }
     }
 
-    //自定义俩个get方法，方便调用工具类读取properties文件的属性
+    /**
+     * 自定义俩个get方法，方便调用工具类读取properties文件的属性
+     * @param key
+     * @return
+     */
     public static String getProperty(String key){
         String value= props.getProperty(key.trim());
         if (StringUtils.isBlank(value)){

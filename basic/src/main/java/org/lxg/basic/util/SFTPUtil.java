@@ -10,7 +10,7 @@ import java.util.Properties;
 import java.util.Vector;
 
 /**
- * @author: xuegangliu
+ * @author xuegangliu
  * @date: 8/2/2018 10:05 AM
  * @DES: sftp工具类
  * @version: v1.0
@@ -63,7 +63,8 @@ public class SFTPUtil {
         try {
             JSch jsch = new JSch();
             if (privateKey != null) {
-                jsch.addIdentity(privateKey);// 设置私钥
+                // 设置私钥
+                jsch.addIdentity(privateKey);
             }
 
             session = jsch.getSession(username, host, port);
@@ -129,7 +130,8 @@ public class SFTPUtil {
                 }
             }
         }
-        sftp.put(input, sftpFileName);  //上传文件
+        //上传文件
+        sftp.put(input, sftpFileName);
     }
 
 

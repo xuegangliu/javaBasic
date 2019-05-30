@@ -9,7 +9,7 @@ import java.awt.event.WindowEvent;
 
 /**************************
  * @description: SwingControl
- * @user: xuegangliu
+ * @author xuegangliu
  * @date: 2019/1/24 16:11
  ***************************/
 public class SwingControl {

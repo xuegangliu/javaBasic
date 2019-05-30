@@ -15,18 +15,21 @@ import java.util.StringTokenizer;
 import java.util.TreeSet;
 
 /**************************
- * @description: Spring-Core StringUtils
+ * @description: Spring-Core AbstractStringUtils
  * @author: xuegangliu
  * @date: 2019/2/27 10:32
  ***************************/
-public abstract class StringUtils {
+public abstract class AbstractStringUtils {
     private static final String FOLDER_SEPARATOR = "/";
     private static final String WINDOWS_FOLDER_SEPARATOR = "\\";
     private static final String TOP_PATH = "..";
     private static final String CURRENT_PATH = ".";
     private static final char EXTENSION_SEPARATOR = '.';
 
-    public StringUtils() {
+    private static final Integer LENGTH=2;
+    private static final String INSPECTION="_";
+
+    public AbstractStringUtils() {
     }
 
     public static boolean hasLength(CharSequence str) {
@@ -349,7 +352,7 @@ public abstract class StringUtils {
         int separatorIndex = path.lastIndexOf("/");
         if (separatorIndex != -1) {
             String newPath = path.substring(0, separatorIndex);
-            if (!relativePath.startsWith("/")) {
+            if (!relativePath.startsWith(FOLDER_SEPARATOR)) {
                 newPath = newPath + "/";
             }
 
@@ -371,8 +374,8 @@ public abstract class StringUtils {
                 pathToUse = pathToUse.substring(prefixIndex + 1);
             }
 
-            if (pathToUse.startsWith("/")) {
-                prefix = prefix + "/";
+            if (pathToUse.startsWith(FOLDER_SEPARATOR)) {
+                prefix = prefix + FOLDER_SEPARATOR;
                 pathToUse = pathToUse.substring(1);
             }
 
@@ -413,10 +416,10 @@ public abstract class StringUtils {
         validateLocalePart(language);
         validateLocalePart(country);
         String variant = "";
-        if (parts.length >= 2) {
+        if (parts.length >= LENGTH) {
             int endIndexOfCountryCode = localeString.indexOf(country) + country.length();
             variant = trimLeadingWhitespace(localeString.substring(endIndexOfCountryCode));
-            if (variant.startsWith("_")) {
+            if (variant.startsWith(INSPECTION)) {
                 variant = trimLeadingCharacter(variant, '_');
             }
         }
@@ -439,7 +442,7 @@ public abstract class StringUtils {
     }
 
     public static String[] addStringToArray(String[] array, String str) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (AbstractObjectUtils.isEmpty(array)) {
             return new String[]{str};
         } else {
             String[] newArr = new String[array.length + 1];
@@ -450,9 +453,9 @@ public abstract class StringUtils {
     }
 
     public static String[] concatenateStringArrays(String[] array1, String[] array2) {
-        if (ObjectUtils.isEmpty(array1)) {
+        if (AbstractObjectUtils.isEmpty(array1)) {
             return array2;
-        } else if (ObjectUtils.isEmpty(array2)) {
+        } else if (AbstractObjectUtils.isEmpty(array2)) {
             return array1;
         } else {
             String[] newArr = new String[array1.length + array2.length];
@@ -463,9 +466,9 @@ public abstract class StringUtils {
     }
 
     public static String[] mergeStringArrays(String[] array1, String[] array2) {
-        if (ObjectUtils.isEmpty(array1)) {
+        if (AbstractObjectUtils.isEmpty(array1)) {
             return array2;
-        } else if (ObjectUtils.isEmpty(array2)) {
+        } else if (AbstractObjectUtils.isEmpty(array2)) {
             return array1;
         } else {
             List<String> result = new ArrayList();
@@ -485,7 +488,7 @@ public abstract class StringUtils {
     }
 
     public static String[] sortStringArray(String[] array) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (AbstractObjectUtils.isEmpty(array)) {
             return new String[0];
         } else {
             Arrays.sort(array);
@@ -507,7 +510,7 @@ public abstract class StringUtils {
     }
 
     public static String[] trimArrayElements(String[] array) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (AbstractObjectUtils.isEmpty(array)) {
             return new String[0];
         } else {
             String[] result = new String[array.length];
@@ -522,7 +525,7 @@ public abstract class StringUtils {
     }
 
     public static String[] removeDuplicateStrings(String[] array) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (AbstractObjectUtils.isEmpty(array)) {
             return array;
         } else {
             Set<String> set = new TreeSet();
@@ -558,7 +561,7 @@ public abstract class StringUtils {
     }
 
     public static Properties splitArrayElementsIntoProperties(String[] array, String delimiter, String charsToDelete) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (AbstractObjectUtils.isEmpty(array)) {
             return null;
         } else {
             Properties result = new Properties();
@@ -660,7 +663,7 @@ public abstract class StringUtils {
     }
 
     public static String collectionToDelimitedString(Collection<?> coll, String delim, String prefix, String suffix) {
-        if (CollectionUtils.isEmpty(coll)) {
+        if (AbstractCollectionUtils.isEmpty(coll)) {
             return "";
         } else {
             StringBuilder sb = new StringBuilder();
@@ -686,10 +689,10 @@ public abstract class StringUtils {
     }
 
     public static String arrayToDelimitedString(Object[] arr, String delim) {
-        if (ObjectUtils.isEmpty(arr)) {
+        if (AbstractObjectUtils.isEmpty(arr)) {
             return "";
         } else if (arr.length == 1) {
-            return ObjectUtils.nullSafeToString(arr[0]);
+            return AbstractObjectUtils.nullSafeToString(arr[0]);
         } else {
             StringBuilder sb = new StringBuilder();
 

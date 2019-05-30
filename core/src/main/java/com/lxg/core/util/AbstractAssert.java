@@ -4,12 +4,12 @@ import java.util.Collection;
 import java.util.Map;
 
 /**************************
- * @description: Spring-Core Assert
+ * @description: Spring-Core AbstractAssert
  * @author: xuegangliu
  * @date: 2019/2/27 10:30
  ***************************/
-public abstract class Assert {
-    public Assert() {
+public abstract class AbstractAssert {
+    public AbstractAssert() {
     }
 
     public static void isTrue(boolean expression, String message) {
@@ -43,7 +43,7 @@ public abstract class Assert {
     }
 
     public static void hasLength(String text, String message) {
-        if (!StringUtils.hasLength(text)) {
+        if (!AbstractStringUtils.hasLength(text)) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -53,7 +53,7 @@ public abstract class Assert {
     }
 
     public static void hasText(String text, String message) {
-        if (!StringUtils.hasText(text)) {
+        if (!AbstractStringUtils.hasText(text)) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -63,7 +63,7 @@ public abstract class Assert {
     }
 
     public static void doesNotContain(String textToSearch, String substring, String message) {
-        if (StringUtils.hasLength(textToSearch) && StringUtils.hasLength(substring) && textToSearch.indexOf(substring) != -1) {
+        if (AbstractStringUtils.hasLength(textToSearch) && AbstractStringUtils.hasLength(substring) && textToSearch.indexOf(substring) != -1) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -73,7 +73,7 @@ public abstract class Assert {
     }
 
     public static void notEmpty(Object[] array, String message) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (AbstractObjectUtils.isEmpty(array)) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -98,7 +98,7 @@ public abstract class Assert {
     }
 
     public static void notEmpty(Collection collection, String message) {
-        if (CollectionUtils.isEmpty(collection)) {
+        if (AbstractCollectionUtils.isEmpty(collection)) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -108,7 +108,7 @@ public abstract class Assert {
     }
 
     public static void notEmpty(Map map, String message) {
-        if (CollectionUtils.isEmpty(map)) {
+        if (AbstractCollectionUtils.isEmpty(map)) {
             throw new IllegalArgumentException(message);
         }
     }

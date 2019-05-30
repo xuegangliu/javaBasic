@@ -13,15 +13,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
-import java.util.Map.Entry;
 
 /**************************
- * @description: Spring-Core CollectionUtils
+ * @description: Spring-Core AbstractCollectionUtils
  * @author: xuegangliu
  * @date: 2019/2/27 10:35
  ***************************/
-public abstract class CollectionUtils {
-    public CollectionUtils() {
+public abstract class AbstractCollectionUtils {
+    public AbstractCollectionUtils() {
     }
 
     public static boolean isEmpty(Collection collection) {
@@ -33,14 +32,14 @@ public abstract class CollectionUtils {
     }
 
     public static List arrayToList(Object source) {
-        return Arrays.asList(ObjectUtils.toObjectArray(source));
+        return Arrays.asList(AbstractObjectUtils.toObjectArray(source));
     }
 
     public static void mergeArrayIntoCollection(Object array, Collection collection) {
         if (collection == null) {
             throw new IllegalArgumentException("Collection must not be null");
         } else {
-            Object[] arr = ObjectUtils.toObjectArray(array);
+            Object[] arr = AbstractObjectUtils.toObjectArray(array);
             Object[] var6 = arr;
             int var5 = arr.length;
 
@@ -75,7 +74,7 @@ public abstract class CollectionUtils {
         if (iterator != null) {
             while(iterator.hasNext()) {
                 Object candidate = iterator.next();
-                if (ObjectUtils.nullSafeEquals(candidate, element)) {
+                if (AbstractObjectUtils.nullSafeEquals(candidate, element)) {
                     return true;
                 }
             }
@@ -88,7 +87,7 @@ public abstract class CollectionUtils {
         if (enumeration != null) {
             while(enumeration.hasMoreElements()) {
                 Object candidate = enumeration.nextElement();
-                if (ObjectUtils.nullSafeEquals(candidate, element)) {
+                if (AbstractObjectUtils.nullSafeEquals(candidate, element)) {
                     return true;
                 }
             }
@@ -173,7 +172,7 @@ public abstract class CollectionUtils {
     }
 
     public static Object findValueOfType(Collection<?> collection, Class<?>[] types) {
-        if (!isEmpty(collection) && !ObjectUtils.isEmpty(types)) {
+        if (!isEmpty(collection) && !AbstractObjectUtils.isEmpty(types)) {
             Class[] var5 = types;
             int var4 = types.length;
 
@@ -246,15 +245,15 @@ public abstract class CollectionUtils {
     }
 
     public static <E> Iterator<E> toIterator(Enumeration<E> enumeration) {
-        return new CollectionUtils.EnumerationIterator(enumeration);
+        return new AbstractCollectionUtils.EnumerationIterator(enumeration);
     }
 
     public static <K, V> MultiValueMap<K, V> toMultiValueMap(Map<K, List<V>> map) {
-        return new CollectionUtils.MultiValueMapAdapter(map);
+        return new AbstractCollectionUtils.MultiValueMapAdapter(map);
     }
 
     public static <K, V> MultiValueMap<K, V> unmodifiableMultiValueMap(MultiValueMap<? extends K, ? extends V> map) {
-        Assert.notNull(map, "'map' must not be null");
+        AbstractAssert.notNull(map, "'map' must not be null");
         Map<K, List<V>> result = new LinkedHashMap(map.size());
         Iterator var3 = map.entrySet().iterator();
 
@@ -275,14 +274,15 @@ public abstract class CollectionUtils {
             this.enumeration = enumeration;
         }
 
+        @Override
         public boolean hasNext() {
             return this.enumeration.hasMoreElements();
         }
-
+        @Override
         public E next() {
             return this.enumeration.nextElement();
         }
-
+        @Override
         public void remove() throws UnsupportedOperationException {
             throw new UnsupportedOperationException("Not supported");
         }
@@ -292,10 +292,10 @@ public abstract class CollectionUtils {
         private final Map<K, List<V>> map;
 
         public MultiValueMapAdapter(Map<K, List<V>> map) {
-            Assert.notNull(map, "'map' must not be null");
+            AbstractAssert.notNull(map, "'map' must not be null");
             this.map = map;
         }
-
+        @Override
         public void add(K key, V value) {
             List<V> values = (List)this.map.get(key);
             if (values == null) {
@@ -305,18 +305,18 @@ public abstract class CollectionUtils {
 
             ((List)values).add(value);
         }
-
+        @Override
         public V getFirst(K key) {
             List<V> values = (List)this.map.get(key);
             return values != null ? values.get(0) : null;
         }
-
+        @Override
         public void set(K key, V value) {
             List<V> values = new LinkedList();
             values.add(value);
             this.map.put(key, values);
         }
-
+        @Override
         public void setAll(Map<K, V> values) {
             Iterator var3 = values.entrySet().iterator();
 
@@ -326,7 +326,7 @@ public abstract class CollectionUtils {
             }
 
         }
-
+        @Override
         public Map<K, V> toSingleValueMap() {
             LinkedHashMap<K, V> singleValueMap = new LinkedHashMap(this.map.size());
             Iterator var3 = this.map.entrySet().iterator();
@@ -338,63 +338,63 @@ public abstract class CollectionUtils {
 
             return singleValueMap;
         }
-
+        @Override
         public int size() {
             return this.map.size();
         }
-
+        @Override
         public boolean isEmpty() {
             return this.map.isEmpty();
         }
-
+        @Override
         public boolean containsKey(Object key) {
             return this.map.containsKey(key);
         }
-
+        @Override
         public boolean containsValue(Object value) {
             return this.map.containsValue(value);
         }
-
+        @Override
         public List<V> get(Object key) {
             return (List)this.map.get(key);
         }
-
+        @Override
         public List<V> put(K key, List<V> value) {
             return (List)this.map.put(key, value);
         }
-
+        @Override
         public List<V> remove(Object key) {
             return (List)this.map.remove(key);
         }
-
+        @Override
         public void putAll(Map<? extends K, ? extends List<V>> m) {
             this.map.putAll(m);
         }
-
+        @Override
         public void clear() {
             this.map.clear();
         }
-
+        @Override
         public Set<K> keySet() {
             return this.map.keySet();
         }
-
+        @Override
         public Collection<List<V>> values() {
             return this.map.values();
         }
-
+        @Override
         public Set<Map.Entry<K, List<V>>> entrySet() {
             return this.map.entrySet();
         }
-
+        @Override
         public boolean equals(Object other) {
             return this == other ? true : this.map.equals(other);
         }
-
+        @Override
         public int hashCode() {
             return this.map.hashCode();
         }
-
+        @Override
         public String toString() {
             return this.map.toString();
         }

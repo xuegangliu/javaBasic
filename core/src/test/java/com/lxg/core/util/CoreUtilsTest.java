@@ -15,7 +15,7 @@ public class CoreUtilsTest {
 
     @Test
     public void testAssert(){
-        Assert.isTrue(false);
+        AbstractAssert.isTrue(false);
     }
 
 

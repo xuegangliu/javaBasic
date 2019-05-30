@@ -4,11 +4,11 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**************************
- * @description: Spring-Core ObjectUtils
+ * @description: Spring-Core AbstractObjectUtils
  * @author: xuegangliu
  * @date: 2019/2/27 10:33
  ***************************/
-public abstract class ObjectUtils {
+public abstract class AbstractObjectUtils {
     private static final int INITIAL_HASH = 7;
     private static final int MULTIPLIER = 31;
     private static final String EMPTY_STRING = "";
@@ -18,7 +18,7 @@ public abstract class ObjectUtils {
     private static final String EMPTY_ARRAY = "{}";
     private static final String ARRAY_ELEMENT_SEPARATOR = ", ";
 
-    public ObjectUtils() {
+    public AbstractObjectUtils() {
     }
 
     public static boolean isCheckedException(Throwable ex) {

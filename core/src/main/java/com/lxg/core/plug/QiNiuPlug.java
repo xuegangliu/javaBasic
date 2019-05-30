@@ -19,10 +19,12 @@ import java.io.File;
 
 public class QiNiuPlug {
 
-    //根据七牛云的个人中心来填写  
-    private final static String accessKey = "xx";
-    private final static String secretKey = "xx";
-    private final static String bucket = "lxg_file";
+    /**
+     * 根据七牛云的个人中心来填写
+     */
+    private final static String ACCESS_KEY = "xx";
+    private final static String SECRET_KEY = "xx";
+    private final static String BUCKET = "lxg_file";
 
     /**
      * @param  file
@@ -41,8 +43,8 @@ public class QiNiuPlug {
         //默认不指定key的情况下，以文件内容的hash值作为文件名
         String key = null;
 
-        Auth auth = Auth.create(accessKey, secretKey);
-        String upToken = auth.uploadToken(bucket);
+        Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
+        String upToken = auth.uploadToken(BUCKET);
 
         try {
             //上传文件

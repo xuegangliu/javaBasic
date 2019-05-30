@@ -23,8 +23,9 @@ public class ClassUtils {
         log.info("----------------- {} ------------------------",obj.getClass().getName());
         Method[] methods = obj.getClass().getDeclaredMethods();
         for(Method t:methods){
-            if(t.getParameterCount()==0)
-                log.info("{}():{}",t.getName(),t.invoke(obj,(Object[]) null));
+            if(t.getParameterCount()==0) {
+                log.info("{}():{}", t.getName(), t.invoke(obj, (Object[]) null));
+            }
         }
         log.info("-----------------------------------------------");
     }

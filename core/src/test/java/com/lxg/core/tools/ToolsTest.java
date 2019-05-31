@@ -29,7 +29,7 @@ public class ToolsTest {
 
     private final static String JMX_URL="service:jmx:rmi:///jndi/rmi://127.0.0.1:9999/jmxrmi";
 
-    @Test
+//    @Test
     public void testHostServer() throws IOException, InvocationTargetException, IllegalAccessException {
         // 获取到JVM Manage信息
         // 监控应用与被监控应用位于同一JVM

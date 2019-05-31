@@ -14,7 +14,7 @@ import java.io.FileNotFoundException;
 @Slf4j
 public class QiNiuTest {
 
-    @Test
+//    @Test
     public void test1() throws FileNotFoundException {
         String result = QiNiuPlug.upLoadImage(new File("D:\\AA.jpg"));
         log.info(result);

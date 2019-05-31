@@ -1,8 +1,8 @@
 ---
 language: java
-#sudo: false
-#jdk:
-#  - oraclejdk8
+sudo: false
+jdk:
+  - oraclejdk8
 #notifications:
 #  email:
 #    recipients:
@@ -17,7 +17,6 @@ branches:
     - master
 
 #script: "mvn cobertura:cobertura"
-script: "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
 
-#after_success:
-#  - bash <(curl -s https://codecov.io/bash)
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

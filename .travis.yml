@@ -1,8 +1,8 @@
 ---
 language: java
-sudo: false
-jdk:
-  - oraclejdk8
+#sudo: false
+#jdk:
+#  - oraclejdk8
 #notifications:
 #  email:
 #    recipients:
@@ -16,7 +16,8 @@ branches:
   only:
     - master
 
-script: "mvn cobertura:cobertura"
+#script: "mvn cobertura:cobertura"
+script: "mvn install"
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+#after_success:
+#  - bash <(curl -s https://codecov.io/bash)

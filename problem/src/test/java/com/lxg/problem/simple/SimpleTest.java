@@ -194,4 +194,42 @@ public class SimpleTest {
         String uuid = UUID.randomUUID().toString();
         log.info("UUID.randomUUID().toString():{}",uuid);
     }
+
+    @Test
+    public void testSimpleOne(){
+        /**
+         * hashcode 与 equals
+         */
+        SimpleOne one = new SimpleOne(4);
+        SimpleOne two = new SimpleOne(4);
+        Set<Object> set = new HashSet<>();
+        set.add(one);
+        set.add(two);
+        log.info("{}",one==two);
+        log.info("{}",one.equals(two));
+        log.info("{}",set.size());
+    }
+
+    class SimpleOne{
+        private Integer age;
+
+        SimpleOne(Integer age){
+            this.age=age;
+        }
+
+        @Override
+        public int hashCode() {
+            return 1;
+//            return super.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(obj instanceof SimpleOne){
+                if(this.age == ((SimpleOne) obj).age)
+                    return true;
+            }
+            return super.equals(obj);
+        }
+    }
 }

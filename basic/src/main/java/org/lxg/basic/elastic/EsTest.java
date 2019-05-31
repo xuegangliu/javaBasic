@@ -221,21 +221,6 @@ public class EsTest {
      */
     @Test
     public void testUpdate2() throws Exception {
-        // 使用Script对象进行更新
-//        UpdateResponse response = client.prepareUpdate(index, type, "1")
-//                .setScript(new Script("hits._source.gender = \"male\""))
-//                .get();
-
-        // 使用XContFactory.jsonBuilder() 进行更新
-//        UpdateResponse response = client.prepareUpdate(index, type, "1")
-//                .setDoc(XContentFactory.jsonBuilder()
-//                        .startObject()
-//                            .field("gender", "malelelele")
-//                        .endObject()).get();
-
-        // 使用updateRequest对象及script
-//        UpdateRequest updateRequest = new UpdateRequest(index, type, "1")
-
         // 使用updateRequest对象及documents进行更新
         UpdateResponse response = client.update(new UpdateRequest(index, type, "1")
                 .doc(XContentFactory.jsonBuilder()

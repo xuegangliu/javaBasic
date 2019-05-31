@@ -1,12 +1,15 @@
 package org.lxg.basic.patterns.responsechain;
 
 /**
- * Created by Administrator on 2017/3/20 0020.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
+public class Father extends AbstractHandler {
 
-public class Father extends Handler {
-    @Override public void handlerRequest(String str, int money) {
-        if(money <= 500) {
+    @Override
+    public void handlerRequest(String str, int money) {
+        int t = 500;
+        if(money <= t) {
             System.out.println("粑粑：500块，粑粑还是有的，给你~");
         } else {
             if(getNextHandler() != null) {

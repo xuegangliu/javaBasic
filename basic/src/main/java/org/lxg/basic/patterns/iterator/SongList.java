@@ -5,5 +5,10 @@ package org.lxg.basic.patterns.iterator;
  */
 
 interface SongList {
+
+    /**
+     * getIterator
+     * @return
+     */
     Iterator getIterator();
 }

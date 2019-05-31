@@ -1,6 +1,7 @@
 package org.lxg.basic.sort.select;
 
 /**
+ * @author xuegangliu
  * 堆排序
  * 基本思想：
  堆排序是一种树形选择排序，是对直接选择排序的有效改进。
@@ -9,14 +10,19 @@ package org.lxg.basic.sort.select;
  */
 public class Heap {
 
-    //对data数组从0到lastIndex建大顶堆
+    /**
+     * 对data数组从0到lastIndex建大顶堆
+     * @param data
+     * @param lastIndex
+     */
     public static void buildMaxHeap(int[] data, int lastIndex){
         //从lastIndex处节点（最后一个节点）的父节点开始
-        for(int i=(lastIndex-1)/2;i>=0;i--){
+        int incrment = 2;
+        for(int i=(lastIndex-1)/incrment;i>=0;i--){
             //k保存正在判断的节点
             int k=i;
             //如果当前k节点的子节点存在
-            while(k*2+1<=lastIndex){
+            while(k*incrment+1<=lastIndex){
                 //k节点的左子节点的索引
                 int biggerIndex=2*k+1;
                 //如果biggerIndex小于lastIndex，即biggerIndex+1代表的k节点的右子节点存在
@@ -39,7 +45,13 @@ public class Heap {
             }
         }
     }
-    //交换
+
+    /**
+     * 交换
+     * @param data
+     * @param i
+     * @param j
+     */
     public static void swap(int[] data, int i, int j) {
         int tmp=data[i];
         data[i]=data[j];

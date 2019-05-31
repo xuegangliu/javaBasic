@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.proxy;
 
 /**
- * Created by Coder-pig on 2017/3/3 0003.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public class Agent implements FetchGoods{
     @Override public void fetchShoes() {
         Custom custom = new Custom();

@@ -8,13 +8,15 @@ package org.lxg.basic.patterns.factory.method;
  * @version: v1.0
  */
 public class ShapeFactory  {
+    private final String CIRCLE="CIRCLE";
+    private final String RECTANGLE="RECTANGLE";
     public Shape getShape(String shapeType){
         if(shapeType == null){
             return null;
         }
-        if(shapeType.equalsIgnoreCase("CIRCLE")){
+        if(CIRCLE.equals(shapeType)){
             return new Circle();
-        } else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+        } else if(RECTANGLE.equals(shapeType)){
             return new Rectangle();
         }
         return null;

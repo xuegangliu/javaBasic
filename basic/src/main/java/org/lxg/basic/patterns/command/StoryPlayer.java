@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/3/13 0013.
+ * @author xuegangliu
+ * @date 2017/3/13 0013.
  */
-
 public class StoryPlayer {
-
-    private int cursor = 0; //当前播放项
-
-    private int pauseCursor = -1;   //暂停播放项
-
-    private List<Story> playList = new ArrayList<>();   //播放列表
+    /** 当前播放项 */
+    private int cursor = 0;
+    /** 暂停播放项 */
+    private int pauseCursor = -1;
+    /** 播放列表 */
+    private List<Story> playList = new ArrayList<>();
 
     public void setPlayList(List<Story> list) {
         this.playList = list;

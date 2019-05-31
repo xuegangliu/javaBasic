@@ -5,8 +5,8 @@ package org.lxg.basic.patterns.prototype;
  */
 
 class Money implements Cloneable{
-
-    private String type;    //币种
+    /** 币种 */
+    private String type;
 
     Money(String type) { this.type = type; }
 

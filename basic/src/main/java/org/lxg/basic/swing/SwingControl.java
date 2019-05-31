@@ -13,6 +13,8 @@ import java.awt.event.WindowEvent;
  * @date: 2019/1/24 16:11
  ***************************/
 public class SwingControl {
+    private final String OK="OK";
+    private final String Submit="Submit";
     private JFrame mainFrame;
     private JLabel headerLabel;
     private JLabel statusLabel;
@@ -61,10 +63,10 @@ public class SwingControl {
         @Override
         public void actionPerformed(ActionEvent e) {
             String command = e.getActionCommand();
-            if( command.equals( "OK" ))  {
+            if( OK.equals(command))  {
                 statusLabel.setText("Ok Button clicked.");
             }
-            else if( command.equals( "Submit" ) )  {
+            else if( Submit.equals(command))  {
                 statusLabel.setText("Submit Button clicked.");
             }
             else  {

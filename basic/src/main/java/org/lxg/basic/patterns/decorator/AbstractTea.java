@@ -1,15 +1,19 @@
 package org.lxg.basic.patterns.decorator;
 
 /**
- * Created by Administrator on 2017/1/21 0021.
+ * @author xuegangliu
+ * @date 2017/1/21 0021.
  */
-
-abstract class Tea {
+abstract class AbstractTea {
     private String name = "茶";
 
     public String getName() { return name; }
 
     void setName(String name) { this.name = name; }
 
+    /**
+     * price
+     * @return
+     */
     public abstract int price();
 }

@@ -1,16 +1,15 @@
 package org.lxg.basic.patterns.interpreter;
 
 /**
- * Created by Administrator on 2017/3/16 0016.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
+public class PlusAbstractExpression extends AbstractExpression {
 
+    private AbstractExpression leftExpression;
+    private AbstractExpression rightExpression;
 
-public class PlusExpression extends Expression{
-
-    private Expression leftExpression;
-    private Expression rightExpression;
-
-    public PlusExpression(Expression leftExpression, Expression rightExpression) {
+    public PlusAbstractExpression(AbstractExpression leftExpression, AbstractExpression rightExpression) {
         this.leftExpression = leftExpression;
         this.rightExpression = rightExpression;
     }

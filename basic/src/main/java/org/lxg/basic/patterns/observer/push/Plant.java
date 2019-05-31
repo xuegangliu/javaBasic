@@ -1,13 +1,26 @@
 package org.lxg.basic.patterns.observer.push;
 
 /**
- * Created by Administrator on 2017/3/7 0007.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public interface Plant {
-    public void registerInsect(Insect insect);
 
-    public void unregisterInsect(Insect insect);
+    /**
+     * registerInsect
+     * @param insect
+     */
+    void registerInsect(Insect insect);
 
-    public void notifyInsect(boolean isOpen);
+    /**
+     * unregisterInsect
+     * @param insect
+     */
+    void unregisterInsect(Insect insect);
+
+    /**
+     * notifyInsect
+     * @param isOpen
+     */
+    void notifyInsect(boolean isOpen);
 }

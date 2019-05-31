@@ -12,6 +12,6 @@ public class SingleTest {
 
     @Test
     public void singleTest(){
-        System.out.println(Single_1.getInstance());
+        System.out.println(Single1.getInstance());
     }
 }

@@ -21,11 +21,6 @@ public class ThreadUnSecurity {
             while(tickets > 0) {
                 log.info(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
                 tickets--;
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
             }
             if (tickets <= 0) {
                 log.info(Thread.currentThread().getName()+"--->售票结束！");
@@ -48,11 +43,6 @@ public class ThreadUnSecurity {
                     }
                     log.info(Thread.currentThread().getName()+"--->售出第：  "+tickets+" 票");
                     tickets--;
-//                    try {
-//                        Thread.sleep(100);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
                 }
                 if (tickets <= 0) {
                     log.info(Thread.currentThread().getName()+"--->售票结束！");

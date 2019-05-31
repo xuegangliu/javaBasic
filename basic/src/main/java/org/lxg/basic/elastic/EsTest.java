@@ -36,9 +36,9 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by Administrator on 2017/7/12.
+ * @author xuegangliu
  */
-public class ESTest {
+public class EsTest {
     private TransportClient client;
     private IndexRequest source;
     final String serverIp = "192.168.113.97";
@@ -47,11 +47,11 @@ public class ESTest {
     final String index = "user";
     final String type = "student";
 
+//    @Before
     /**
      * 获取连接, 第一种方式
      * @throws Exception
      */
-//    @Before
     public void before() throws Exception {
         Map<String, String> map = new HashMap<>(1);
         map.put("cluster.name", cluster);
@@ -68,10 +68,12 @@ public class ESTest {
     public void before11() throws Exception {
         // 创建客户端, 默认集群名, "elasticSearch"
         // 通过setting对象指定集群配置信息, 配置的集群名
-        Settings settings = Settings.settingsBuilder().put("cluster.name", cluster) // 设置集群名
+        // 设置集群名
+        Settings settings = Settings.settingsBuilder().put("cluster.name", cluster)
 //                .put("client.transport.sniff", true) // 开启嗅探 , 开启后会一直连接不上, 原因未知
 //                .put("network.host", "192.168.50.37")
-                .put("client.transport.ignore_cluster_name", true) // 忽略集群名字验证, 打开后集群名字不对也能连接上
+                // 忽略集群名字验证, 打开后集群名字不对也能连接上
+                .put("client.transport.ignore_cluster_name", true)
 //                .put("client.transport.nodes_sampler_interval", 5) //报错,
 //                .put("client.transport.ping_timeout", 5) // 报错, ping等待时间,
                 .build();
@@ -165,9 +167,9 @@ public class ESTest {
     @Test
     public void testGet() {
 //        GetResponse response = client.prepareGet(index, type, "1")
-//                                .get();
         GetResponse response = client.prepareGet(index, type, "1")
-                .setOperationThreaded(false)    // 线程安全
+                // 线程安全
+                .setOperationThreaded(false)
                 .get();
         System.out.println(response.getSourceAsString());
     }
@@ -233,8 +235,6 @@ public class ESTest {
 
         // 使用updateRequest对象及script
 //        UpdateRequest updateRequest = new UpdateRequest(index, type, "1")
-//                .script(new Script("ctx._source.gender=\"male\""));
-//        UpdateResponse response = client.update(updateRequest).get();
 
         // 使用updateRequest对象及documents进行更新
         UpdateResponse response = client.update(new UpdateRequest(index, type, "1")

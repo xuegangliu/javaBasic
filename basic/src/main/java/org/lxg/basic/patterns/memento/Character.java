@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.memento;
 
 /**
- * Created by Administrator on 2017/3/15 0015.
+ * @author xuegangliu
+ * @date 2017/3/15 0015.
  */
-
 public class Character {
     private int hp;
     private int mp;
@@ -43,12 +43,18 @@ public class Character {
         System.out.println("当前状态：| HP：" + hp + " | MP：" + mp + " | 金钱：" + money + "\n");
     }
 
-    //创建一个备忘录，保存当前自身状态
+    /**
+     * 创建一个备忘录，保存当前自身状态
+     * @return
+     */
     public Memento save() {
         return new Memento(hp, mp, money);
     }
 
-    //传入一个备忘录对象，恢复内部状态
+    /**
+     * 传入一个备忘录对象，恢复内部状态
+     * @param memento
+     */
     public void restore(Memento memento) {
         this.hp = memento.getHp();
         this.mp = memento.getMp();

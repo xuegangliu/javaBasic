@@ -4,18 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2017/3/16 0016.
+ * @author xuegangliu
  */
-
 public class Context {
 
-    private Map<Expression, Integer> map = new HashMap<>();
+    private Map<AbstractExpression, Integer> map = new HashMap<>();
 
-    public void addExpression(Expression expression, int value) {
+    public void addExpression(AbstractExpression expression, int value) {
         map.put(expression, value);
     }
 
-    public int lookup(Expression expression) {
+    public int lookup(AbstractExpression expression) {
         return map.get(expression);
     }
 

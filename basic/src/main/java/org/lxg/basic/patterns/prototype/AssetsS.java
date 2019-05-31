@@ -8,9 +8,18 @@ import java.io.*;
 
 class AssetsS implements Serializable {
 
-    private int amount;     //数目
-    private MoneyS money;    //币种
-    private String kind;    //资金种类
+    /**
+     * 数目
+     */
+    private int amount;
+    /**
+     * 币种
+     */
+    private MoneyS money;
+    /**
+     * 资金种类
+     */
+    private String kind;
 
     AssetsS(int amount, MoneyS money, String kind) {
         System.out.println("执行了构造方法！");

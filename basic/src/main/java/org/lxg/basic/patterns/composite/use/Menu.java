@@ -17,13 +17,17 @@ class Menu extends AbstractMenu {
         this.desc = desc;
     }
 
-    @Override public void add(AbstractMenu menu) { menus.add(menu); }
+    @Override
+    public void add(AbstractMenu menu) { menus.add(menu); }
 
-    @Override public AbstractMenu get(int index) { return menus.get(index); }
+    @Override
+    public AbstractMenu get(int index) { return menus.get(index); }
 
-    @Override public String getString() {
-        StringBuilder sb = new StringBuilder("\n【菜单】：" + name + " 信息：" + desc + "\n");
-        for (AbstractMenu menu: menus) { sb.append(menu.getString()).append("\n"); }
+    @Override
+    public String getString() {
+        String line = "\n";
+        StringBuilder sb = new StringBuilder("\n【菜单】：" + name + " 信息：" + desc + line);
+        for (AbstractMenu menu: menus) { sb.append(menu.getString()).append(line); }
         return sb.toString();
     }
 }

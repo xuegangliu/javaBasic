@@ -30,7 +30,6 @@ public class DateToolsTest {
             log.info("{}",DF1.format(DF1.parse(dateTest1)));
             log.info("{}",DF2.format(DF2.parse(dateTest2)));
             log.info("{}",DF3.format(DF3.parse(dateTest3)));
-//            log.info("{}",df3.format(DF4.parse(dateTest4)));
         } catch (ParseException e) {
             e.printStackTrace();
         }

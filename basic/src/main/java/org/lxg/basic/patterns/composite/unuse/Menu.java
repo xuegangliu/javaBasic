@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/1/25 0025.
+ * @author xuegangliu
+ * @date 2017/1/25 0025.
  */
-
 class Menu {
     private String name;
     private String desc;
-    private List<Menu> menus = new ArrayList<>();   //子菜单
+    /** 子菜单 */
+    private List<Menu> menus = new ArrayList<>();
     private List<Juice> juices = new ArrayList<>();
     private List<MilkTea> teas = new ArrayList<>();
     private List<HandCake> handCakes = new ArrayList<>();
@@ -32,12 +33,13 @@ class Menu {
     void addFishBall(FishBall ball) { fishBalls.add(ball); }
 
     @Override public String toString() {
-        StringBuilder sb = new StringBuilder("\n【菜单】：" + name + " 信息：" + desc + "\n");
-        for (Menu menu: menus) { sb.append(menu.toString()).append("\n"); }
-        for (Juice juice: juices) { sb.append(juice.toString()).append("\n"); }
-        for (MilkTea tea: teas) { sb.append(tea.toString()).append("\n"); }
-        for (HandCake cake: handCakes) { sb.append(cake.toString()).append("\n"); }
-        for (FishBall ball: fishBalls) { sb.append(ball.toString()).append("\n"); }
+        String line = "\n";
+        StringBuilder sb = new StringBuilder("\n【菜单】：" + name + " 信息：" + desc + line);
+        for (Menu menu: menus) { sb.append(menu.toString()).append(line); }
+        for (Juice juice: juices) { sb.append(juice.toString()).append(line); }
+        for (MilkTea tea: teas) { sb.append(tea.toString()).append(line); }
+        for (HandCake cake: handCakes) { sb.append(cake.toString()).append(line); }
+        for (FishBall ball: fishBalls) { sb.append(ball.toString()).append(line); }
         return sb.toString();
     }
 }

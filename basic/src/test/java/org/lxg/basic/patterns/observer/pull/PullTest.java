@@ -12,7 +12,7 @@ public class PullTest {
 
     @Test
     public void test(){
-        OfficialAccount account = new CoderPig();
+        AbstractOfficialAccount account = new CoderPig();
         User user = new AndroidDev();
         account.registerUser(user);
         ((CoderPig)account).update("《观察者模式》");

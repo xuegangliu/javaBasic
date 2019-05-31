@@ -76,8 +76,10 @@ public class LinkedListQueue<E> implements BaseQueue<E> {
     }
 
     private class Node{
-        public E e; // 元素
-        public Node next; // 下一元素的信息
+        /** 元素 */
+        public E e;
+        /** 下一元素的信息 */
+        public Node next;
 
         public Node(E e, Node next){
             this.e = e;

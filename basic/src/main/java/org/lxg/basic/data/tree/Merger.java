@@ -1,8 +1,8 @@
 package org.lxg.basic.data.tree;
 
 /**
- * Merger
- * @param <E>
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
 public interface Merger<E> {
 

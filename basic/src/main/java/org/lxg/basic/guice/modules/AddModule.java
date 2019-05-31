@@ -9,11 +9,11 @@ import org.lxg.basic.guice.test.service.impl.SampleAdd;
 import org.lxg.basic.guice.test.service.impl.SomeAdd;
 
 /**
- * Created by Administrator on 2017/7/18.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  * 用于使用 Guice API 在一个应用程序中创建 Bindings
  * 维护一组 Bindings
  */
-
 public class AddModule implements Module {
     @Override
     public void configure(Binder binder) {

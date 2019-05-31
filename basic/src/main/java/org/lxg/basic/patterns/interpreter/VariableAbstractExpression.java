@@ -1,14 +1,14 @@
 package org.lxg.basic.patterns.interpreter;
 
 /**
- * Created by Administrator on 2017/3/20 0020.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
-public class VariableExpression extends Expression {
+public class VariableAbstractExpression extends AbstractExpression {
 
     private String name;
 
-    public VariableExpression(String name) {
+    public VariableAbstractExpression(String name) {
         this.name = name;
     }
 

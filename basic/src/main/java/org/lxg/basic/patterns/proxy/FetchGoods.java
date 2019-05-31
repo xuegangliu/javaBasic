@@ -1,9 +1,13 @@
 package org.lxg.basic.patterns.proxy;
 
 /**
- * Created by Coder-pig on 2017/3/3 0003.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public interface FetchGoods {
-    public void fetchShoes();
+
+    /**
+     * fetchShoes
+     */
+    void fetchShoes();
 }

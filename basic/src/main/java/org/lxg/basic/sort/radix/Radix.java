@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @author xuegangliu
  * 基数排序
  * 基本思想：将所有待比较数值（正整数）统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后,数列就变成一个有序序列。
  */
@@ -39,7 +40,8 @@ public class Radix {
         }
         //建立十个队列
         List<ArrayList> queue = new ArrayList<ArrayList>();
-        for (int i = 0; i < 10; i++) {
+        int t=10;
+        for (int i = 0; i < t; i++) {
             ArrayList queue1 = new ArrayList();
             queue.add(queue1);
         }
@@ -54,7 +56,7 @@ public class Radix {
             }
             //收集
             int count = 0;
-            for (int j = 0; j < 10; j++) {
+            for (int j = 0; j < t; j++) {
                 while(queue.get(j).size()>0){
                     ArrayList<Integer> queue3 = queue.get(j);
                     array[count] = queue3.get(0);

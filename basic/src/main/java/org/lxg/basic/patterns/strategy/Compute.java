@@ -1,8 +1,16 @@
 package org.lxg.basic.patterns.strategy;
 
 /**
- * Created by Administrator on 2017/3/6 0006.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
 public interface Compute {
+
+    /**
+     * compute
+     * @param first
+     * @param second
+     * @return
+     */
     String compute(int first, int second);
 }

@@ -38,9 +38,9 @@ public class KafkaProducer {
 
     void produce() {
         int messageNo = 1000;
-        final int COUNT = 10000;
+        final int count = 10000;
 
-        while (messageNo < COUNT) {
+        while (messageNo < count) {
             String key = String.valueOf(messageNo);
             String data = "hello kafka message " + key;
             producer.send(new KeyedMessage<String, String>(TOPIC, key ,data));

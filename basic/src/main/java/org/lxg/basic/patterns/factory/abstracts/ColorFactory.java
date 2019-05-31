@@ -7,14 +7,16 @@ package org.lxg.basic.patterns.factory.abstracts;
  * @version: v1.0
  */
 public class ColorFactory extends AbstractFactory {
+    private final String RED="RED";
+    private final String GREEN="GREEN";
     @Override
     public Color getColor(String color) {
         if(color == null){
             return null;
         }
-        if(color.equalsIgnoreCase("RED")){
+        if(RED.equals(color)){
             return new Red();
-        } else if(color.equalsIgnoreCase("GREEN")){
+        } else if(GREEN.equals(color)){
             return new Green();
         }
         return null;

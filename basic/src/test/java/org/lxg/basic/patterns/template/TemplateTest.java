@@ -12,7 +12,7 @@ public class TemplateTest {
 
     @Test
     public void templeTest(){
-        Game game = new Cricket();
+        AbstractGame game = new Cricket();
         game.play();
         System.out.println();
         game = new Football();

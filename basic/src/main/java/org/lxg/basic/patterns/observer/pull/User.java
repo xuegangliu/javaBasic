@@ -1,9 +1,14 @@
 package org.lxg.basic.patterns.observer.pull;
 
 /**
- * Created by Administrator on 2017/3/7 0007.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public interface User {
-    public void update(OfficialAccount account);
+
+    /**
+     * update
+     * @param account
+     */
+    void update(AbstractOfficialAccount account);
 }

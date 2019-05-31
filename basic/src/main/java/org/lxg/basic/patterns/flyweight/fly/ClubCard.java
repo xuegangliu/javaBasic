@@ -1,6 +1,10 @@
 package org.lxg.basic.patterns.flyweight.fly;
 
-public class ClubCard extends Card{
+/**
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
+ */
+public class ClubCard extends AbstractCard {
 
     public ClubCard() { super(); }
 

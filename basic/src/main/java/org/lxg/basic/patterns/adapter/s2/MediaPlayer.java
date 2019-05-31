@@ -7,5 +7,11 @@ package org.lxg.basic.patterns.adapter.s2;
  * @version: v1.0
  */
 public interface MediaPlayer {
+
+    /**
+     * play
+     * @param audioType
+     * @param fileName
+     */
     void play(String audioType, String fileName);
 }

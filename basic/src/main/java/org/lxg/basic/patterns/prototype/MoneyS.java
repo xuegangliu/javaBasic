@@ -7,8 +7,8 @@ import java.io.Serializable;
  */
 
 class MoneyS implements Serializable {
-
-    private String type;    //币种
+    /** 币种 */
+    private String type;
 
     MoneyS(String type) {
         this.type = type;

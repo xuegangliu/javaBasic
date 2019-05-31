@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.command;
 
 /**
- * Created by Administrator on 2017/3/13 0013.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public class Story {
     private String sName;
     private String sUrl;

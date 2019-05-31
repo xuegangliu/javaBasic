@@ -9,29 +9,29 @@ import java.util.TreeMap;
  * @param <V>
  */
 public class SelfHashTable<K, V> {
-    private static final int upperTol = 10;
-    private static final int lowerTol = 2;
-    private static final int initCapacity = 7;
+    private static final int UPPERTOL = 10;
+    private static final int LOWERTOL = 2;
+    private static final int INITCAPACITY = 7;
 
     private TreeMap<K, V>[] hashtable;
     private int size;
-    private int M;
+    private int m;
 
-    public SelfHashTable(int M){
-        this.M = M;
+    public SelfHashTable(int m){
+        this.m = m;
         size = 0;
-        hashtable = new TreeMap[M];
-        for(int i = 0 ; i < M ; i ++) {
+        hashtable = new TreeMap[m];
+        for(int i = 0 ; i < m ; i ++) {
             hashtable[i] = new TreeMap<>();
         }
     }
 
     public SelfHashTable(){
-        this(initCapacity);
+        this(INITCAPACITY);
     }
 
     private int hash(K key){
-        return (key.hashCode() & 0x7fffffff) % M;
+        return (key.hashCode() & 0x7fffffff) % m;
     }
 
     public int getSize(){
@@ -46,8 +46,8 @@ public class SelfHashTable<K, V> {
             map.put(key, value);
             size ++;
 
-            if(size >= upperTol * M) {
-                resize(2 * M);
+            if(size >= UPPERTOL * m) {
+                resize(2 * m);
             }
         }
     }
@@ -58,9 +58,9 @@ public class SelfHashTable<K, V> {
         if(map.containsKey(key)){
             ret = map.remove(key);
             size --;
-
-            if(size < lowerTol * M && M / 2 >= initCapacity) {
-                resize(M / 2);
+            int k = 2;
+            if(size < LOWERTOL * m && m / k >= INITCAPACITY) {
+                resize(m / 2);
             }
         }
         return ret;
@@ -89,8 +89,8 @@ public class SelfHashTable<K, V> {
             newHashTable[i] = new TreeMap<>();
         }
 
-        int oldM = M;
-        this.M = newM;
+        int oldM = m;
+        this.m = newM;
         for(int i = 0 ; i < oldM ; i ++){
             TreeMap<K, V> map = hashtable[i];
             for(K key: map.keySet()) {

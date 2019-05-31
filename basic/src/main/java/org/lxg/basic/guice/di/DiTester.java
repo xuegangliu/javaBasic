@@ -8,9 +8,13 @@ import org.lxg.basic.guice.di.base.impl.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
+ */
 public class DiTester {
-    private static final String str1 = "first";
-    private static final String str2 = "second";
+    private static final String STR1 = "first";
+    private static final String STR2 = "second";
     private DiTester() {
     }
 
@@ -27,7 +31,7 @@ public class DiTester {
 
         for (Class serviceName : services) {
             service = (SomeService) injector.getInstance(serviceName);
-            System.out.println(service.getClass().getSimpleName() + " " + service.processData(str1, str2));
+            System.out.println(service.getClass().getSimpleName() + " " + service.processData(STR1, STR2));
         }
 
     }

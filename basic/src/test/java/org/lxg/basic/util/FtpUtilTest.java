@@ -29,8 +29,8 @@ public class FtpUtilTest {
 //
 //    @Test
 //    public void sftpTest(){
-//        SFTPUtil sftp = new SFTPUtil("root", "xx.xx.xx.xx", 22, "c:\\Users\\Administrator\\.ssh\\id_rsa") ;
-////        SFTPUtil sftp = new SFTPUtil("xx", "xx", "xx.xx.xx.xx", 22);
+//        SftpUtil sftp = new SftpUtil("root", "xx.xx.xx.xx", 22, "c:\\Users\\Administrator\\.ssh\\id_rsa") ;
+////        SftpUtil sftp = new SftpUtil("xx", "xx", "xx.xx.xx.xx", 22);
 //        sftp.login();
 //        File file = new File("D:\\test.txt");
 //        InputStream is = null;

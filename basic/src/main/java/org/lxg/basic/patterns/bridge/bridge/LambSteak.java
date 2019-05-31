@@ -5,9 +5,9 @@ package org.lxg.basic.patterns.bridge.bridge;
  *
  * @author coder-pig： 2017/02/05 下午2:11
  */
-class LambSteak extends Steak {
+class LambSteak extends AbstractSteak {
 
-    LambSteak(Rations rations) { super(rations); }
+    LambSteak(AbstractRations rations) { super(rations); }
 
     @Override public String sale() { return "羊扒"+ (rations == null ? "" : rations.rations()); }
 }

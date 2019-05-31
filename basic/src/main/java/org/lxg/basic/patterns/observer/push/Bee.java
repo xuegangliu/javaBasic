@@ -1,12 +1,15 @@
 package org.lxg.basic.patterns.observer.push;
 
 /**
- * Created by Administrator on 2017/3/7 0007.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public class Bee implements Insect{
 
-    private int bId;    //蜜蜂编号
+    /**
+     * 蜜蜂编号
+     */
+    private int bId;
 
     public Bee(int bId) { this.bId = bId; }
 

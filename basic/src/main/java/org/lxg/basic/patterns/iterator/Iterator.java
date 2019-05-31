@@ -1,15 +1,32 @@
 package org.lxg.basic.patterns.iterator;
 
 /**
- * Created by Administrator on 2017/3/9 0009.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
 public interface Iterator {
 
+    /**
+     * first
+     * @return
+     */
     Song first();
 
+    /**
+     * next
+     * @return
+     */
     Song next();
 
+    /**
+     * hashNext
+     * @return
+     */
     boolean hashNext();
 
+    /**
+     * currentItem
+     * @return
+     */
     Song currentItem();
 }

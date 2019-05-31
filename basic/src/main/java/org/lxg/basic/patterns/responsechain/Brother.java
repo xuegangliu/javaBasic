@@ -1,9 +1,10 @@
 package org.lxg.basic.patterns.responsechain;
 
 /**
- * Created by Administrator on 2017/3/20 0020.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-public class Brother extends Handler {
+public class Brother extends AbstractHandler {
     private final Integer NUM = 100;
     @Override
     public void handlerRequest(String str, int money) {

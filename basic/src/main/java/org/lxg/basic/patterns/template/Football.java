@@ -6,19 +6,19 @@ package org.lxg.basic.patterns.template;
  * @DES:
  * @version: v1.0
  */
-public class Football extends Game {
+public class Football extends AbstractGame {
     @Override
     void endPlay() {
-        System.out.println("Football Game Finished!");
+        System.out.println("Football AbstractGame Finished!");
     }
 
     @Override
     void initialize() {
-        System.out.println("Football Game Initialized! Start playing.");
+        System.out.println("Football AbstractGame Initialized! Start playing.");
     }
 
     @Override
     void startPlay() {
-        System.out.println("Football Game Started. Enjoy the game!");
+        System.out.println("Football AbstractGame Started. Enjoy the game!");
     }
 }

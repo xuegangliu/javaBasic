@@ -1,7 +1,8 @@
 package org.lxg.basic.patterns.strategy;
 
 /**
- * Created by Administrator on 2017/3/6 0006.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
 public class Div implements Compute{
     @Override public String compute(int first, int second) {

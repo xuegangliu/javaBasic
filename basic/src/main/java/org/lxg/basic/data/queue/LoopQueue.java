@@ -57,7 +57,9 @@ public class LoopQueue<E> implements BaseQueue<E> {
         data[front] = null;
         front = (front + 1) % data.length;
         size --;
-        if(size == getCapacity() / 4 && getCapacity() / 2 != 0) {
+        int t = 4;
+        int t1 = 2;
+        if(size == getCapacity() / t && getCapacity() / t1 != 0) {
             resize(getCapacity() / 2);
         }
         return ret;

@@ -8,21 +8,23 @@ package org.lxg.basic.patterns.adapter.s2;
  */
 public class MediaAdapter implements MediaPlayer {
 
+    private final String VLC="vlc";
+    private final String MP4="mp4";
     AdvancedMediaPlayer advancedMusicPlayer;
 
     public MediaAdapter(String audioType){
-        if(audioType.equalsIgnoreCase("vlc") ){
+        if(VLC.equals(audioType)){
             advancedMusicPlayer = new VlcPlayer();
-        } else if (audioType.equalsIgnoreCase("mp4")){
+        } else if (MP4.equals(audioType)){
             advancedMusicPlayer = new Mp4Player();
         }
     }
 
     @Override
     public void play(String audioType, String fileName) {
-        if(audioType.equalsIgnoreCase("vlc")){
+        if(VLC.equals(audioType)){
             advancedMusicPlayer.playVlc(fileName);
-        }else if(audioType.equalsIgnoreCase("mp4")){
+        }else if(MP4.equals(audioType)){
             advancedMusicPlayer.playMp4(fileName);
         }
     }

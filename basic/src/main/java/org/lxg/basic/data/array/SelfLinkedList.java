@@ -205,11 +205,6 @@ public class SelfLinkedList<E> {
     public String toString(){
         StringBuilder res = new StringBuilder();
 
-//        Node cur = dummyHead.next;
-//        while(cur != null){
-//            res.append(cur + "->");
-//            cur = cur.next;
-//        }
         for(Node cur = node.next ; cur != null ; cur = cur.next) {
             res.append(cur + "->");
         }

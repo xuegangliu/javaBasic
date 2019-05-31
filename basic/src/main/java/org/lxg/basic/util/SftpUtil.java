@@ -15,7 +15,7 @@ import java.util.Vector;
  * @DES: sftp工具类
  * @version: v1.0
  */
-public class SFTPUtil {
+public class SftpUtil {
     private transient Logger log = LoggerFactory.getLogger(this.getClass());
 
     private ChannelSftp sftp;
@@ -36,7 +36,7 @@ public class SFTPUtil {
     /**
      * 构造基于密码认证的sftp对象
      */
-    public SFTPUtil(String username, String password, String host, int port) {
+    public SftpUtil(String username, String password, String host, int port) {
         this.username = username;
         this.password = password;
         this.host = host;
@@ -46,14 +46,14 @@ public class SFTPUtil {
     /**
      * 构造基于秘钥认证的sftp对象
      */
-    public SFTPUtil(String username, String host, int port, String privateKey) {
+    public SftpUtil(String username, String host, int port, String privateKey) {
         this.username = username;
         this.host = host;
         this.port = port;
         this.privateKey = privateKey;
     }
 
-    public SFTPUtil(){}
+    public SftpUtil(){}
 
 
     /**

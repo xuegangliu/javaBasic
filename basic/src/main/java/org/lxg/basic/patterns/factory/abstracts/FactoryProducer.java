@@ -7,10 +7,12 @@ package org.lxg.basic.patterns.factory.abstracts;
  * @version: v1.0
  */
 public class FactoryProducer {
+    private final static String SHAPE="SHAPE";
+    private final static String COLOR="COLOR";
     public static AbstractFactory getFactory(String choice){
-        if(choice.equalsIgnoreCase("SHAPE")){
+        if(SHAPE.equals(choice)){
             return new ShapeFactory();
-        } else if(choice.equalsIgnoreCase("COLOR")){
+        } else if(COLOR.equals(choice)){
             return new ColorFactory();
         }
         return null;

@@ -3,6 +3,10 @@ package org.lxg.basic.guice.aop;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+/**
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
+ */
 public class TestAopClass {
 
     @InvokeMe

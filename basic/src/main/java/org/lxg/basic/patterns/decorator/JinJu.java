@@ -4,11 +4,11 @@ package org.lxg.basic.patterns.decorator;
  * Created by Administrator on 2017/1/21 0021.
  */
 
-class JinJu extends Decorator{
+class JinJu extends AbstractDecorator {
 
-    Tea tea;
+    AbstractTea tea;
 
-    JinJu(Tea tea) { this.tea = tea; }
+    JinJu(AbstractTea tea) { this.tea = tea; }
 
     @Override public String getName() { return "金桔" + tea.getName(); }
 

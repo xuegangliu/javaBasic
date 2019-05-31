@@ -57,24 +57,22 @@ public class PictureWaterMarkUtil {
                 //设置水印旋转
                 g.rotate(Math.toRadians(degree),(double)bufImg.getWidth(),(double)bufImg.getHeight());
             }
-//            JLabel label = new JLabel(waterMarkContent);
-//            FontMetrics metrics = label.getFontMetrics(font);
             //文字水印的宽
-//            int markWidth = metrics.stringWidth(label.getText());
 
             int x = -srcImgWidth / 2;
             int y;
             // 字体长度
             int markWidth = size * getTextLength (waterMarkContent);
-            int XMOVE = srcImgWidth/3;
-            int YMOVE = srcImgHeight/5;
-            while (x < srcImgWidth * 1.5) {
+            int xMove = srcImgWidth/3;
+            int yMove = srcImgHeight/5;
+            double m = 1.5;
+            while (x < srcImgWidth * m) {
                 y = -srcImgHeight / 2;
-                while (y < srcImgHeight * 1.5) {
+                while (y < srcImgHeight * m) {
                     g.drawString(waterMarkContent, x, y);
-                    y += size + YMOVE;
+                    y += size + yMove;
                 }
-                x += markWidth + XMOVE;
+                x += markWidth + xMove;
             }
             // 释放资源
             g.dispose();

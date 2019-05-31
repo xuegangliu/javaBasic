@@ -7,5 +7,9 @@ package org.lxg.basic.patterns.facade;
  * @version: v1.0
  */
 public interface Shape {
+
+    /**
+     * draw
+     */
     void draw();
 }

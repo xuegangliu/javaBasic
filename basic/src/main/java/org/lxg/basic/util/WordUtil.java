@@ -18,14 +18,14 @@ import freemarker.template.Version;
  ***************************/
 public class WordUtil {
     private static Configuration configuration = null;
-    private static final String templateFolder = WordUtil.class.getClassLoader().getResource("").
+    private static final String TEMPLATEFOLDER = WordUtil.class.getClassLoader().getResource("").
             getPath()+File.separatorChar+"config/tmp/";
 
     static {
         configuration = new Configuration(new Version("2.3.0.1"));
         configuration.setDefaultEncoding("utf-8");
         try {
-            configuration.setDirectoryForTemplateLoading(new File(templateFolder));
+            configuration.setDirectoryForTemplateLoading(new File(TEMPLATEFOLDER));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/3/7 0007.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public class Flower implements Plant {
 
     private boolean state;

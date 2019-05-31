@@ -4,6 +4,10 @@ import com.google.inject.Inject;
 import org.lxg.basic.guice.di.base.DataProcessor;
 import org.lxg.basic.guice.di.base.SomeService;
 
+/**
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
+ */
 public class TestConstructorDiServiceImpl implements SomeService {
     DataProcessor processor;
 

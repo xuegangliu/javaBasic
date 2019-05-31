@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/3/9 0009.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public class MyStoryList implements SongList{
     private List<Song> list = new ArrayList<>();
 

@@ -1,11 +1,11 @@
 package org.lxg.basic.patterns.mediator;
 
 /**
- * Created by Administrator on 2017/3/15 0015.
+ * @author xuegangliu
+ * @date 2017/3/15 0015.
  */
-
-public class HouseMediator extends Mediator {
-    //中介者知道所有同事
+public class HouseMediator extends AbstractMediator {
+    /** 中介者知道所有同事 */
     private Landlord landlord;
     private Tenant tenant;
 
@@ -25,7 +25,7 @@ public class HouseMediator extends Mediator {
         this.tenant = tenant;
     }
 
-    @Override void contact(People people, String msg) {
+    @Override void contact(AbstractPeople people, String msg) {
         if(people == tenant) {
             tenant.getMessage(msg);
         } else {

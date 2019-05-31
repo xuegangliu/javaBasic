@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/3/13 0013.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
-
-
 public class SetListCommand implements Command {
 
     private StoryPlayer mPlayer;

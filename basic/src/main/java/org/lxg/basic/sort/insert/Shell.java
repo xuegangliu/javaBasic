@@ -1,6 +1,7 @@
 package org.lxg.basic.sort.insert;
 
 /**
+ * @author xuegangliu
  * 希尔排序
  * 基本思想：先取一个小于 n 的整数 d1 作为第一个增量，把文件的全部记录分成 d1 个组。
  *      所有距离为 d1 的倍数的记录放在同一个组中。先在各组内进行直接插入排序；

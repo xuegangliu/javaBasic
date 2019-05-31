@@ -1,12 +1,12 @@
 package org.lxg.basic.patterns.mediator;
 
 /**
- * Created by Administrator on 2017/3/15 0015.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
+public class Tenant extends AbstractPeople {
 
-public class Tenant extends People {
-
-    public Tenant(String name, Mediator mediator) {
+    public Tenant(String name, AbstractMediator mediator) {
         super(name, mediator);
     }
 

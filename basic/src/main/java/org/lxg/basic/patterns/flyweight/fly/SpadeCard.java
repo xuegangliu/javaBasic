@@ -1,10 +1,10 @@
 package org.lxg.basic.patterns.flyweight.fly;
 
 /**
- * Created by Administrator on 2017/2/26 0026.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
-public class SpadeCard extends Card{
+public class SpadeCard extends AbstractCard {
 
     public SpadeCard() { super(); }
 

@@ -13,7 +13,7 @@ public class FlyTest {
     @Test
     public void test(){
         for (int k = 0; k < 10; k ++){
-            Card card = null;
+            AbstractCard card = null;
             //随机花色
             switch ((int)(Math.random()*4)) {
                 case 0: card = PokerFactory.getPoker(PokerFactory.Spade); break;

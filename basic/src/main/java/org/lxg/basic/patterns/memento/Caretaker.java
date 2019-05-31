@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.memento;
 
 /**
- * Created by Administrator on 2017/3/15 0015.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public class Caretaker {
     private Memento memento;
 

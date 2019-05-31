@@ -5,10 +5,20 @@ package org.lxg.basic.patterns.prototype;
  */
 
 class Assets implements Cloneable{
+    /**
+     * 数目
+     */
+    private int amount;
 
-    private int amount;     //数目
-    private Money money;    //币种
-    private String kind;    //资金种类
+    /**
+     * 币种
+     */
+    private Money money;
+
+    /**
+     * 资金种类
+     */
+    private String kind;
 
     Assets(int amount, Money money, String kind) {
         System.out.println("执行了构造方法！");

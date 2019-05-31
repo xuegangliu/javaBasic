@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.visitor;
 
 /**
- * Created by Administrator on 2017/3/20 0020.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
 public class Driving implements Machine{
 
     @Override public void accept(Player player) {

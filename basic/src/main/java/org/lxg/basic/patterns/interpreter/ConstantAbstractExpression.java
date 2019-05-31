@@ -1,14 +1,14 @@
 package org.lxg.basic.patterns.interpreter;
 
 /**
- * Created by Administrator on 2017/3/20 0020.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
-
-public class ConstantExpression extends Expression {
+public class ConstantAbstractExpression extends AbstractExpression {
 
     private int value;
 
-    public ConstantExpression(int value) {
+    public ConstantAbstractExpression(int value) {
         this.value = value;
     }
 

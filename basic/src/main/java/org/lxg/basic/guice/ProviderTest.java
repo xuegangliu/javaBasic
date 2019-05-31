@@ -8,7 +8,8 @@ import org.lxg.basic.guice.process.SampleProcess;
 import org.lxg.basic.guice.providers.SampleProvider;
 
 /**
- * Created by Administrator on 2017/7/18.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
 public class ProviderTest {
     public static void main(String[] args) {

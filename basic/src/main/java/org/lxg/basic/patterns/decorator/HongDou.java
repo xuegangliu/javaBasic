@@ -5,11 +5,11 @@ package org.lxg.basic.patterns.decorator;
  */
 
 
-class HongDou extends Decorator{
+class HongDou extends AbstractDecorator {
 
-    Tea tea;
+    AbstractTea tea;
 
-    HongDou(Tea tea) { this.tea = tea; }
+    HongDou(AbstractTea tea) { this.tea = tea; }
 
     @Override public String getName() { return "红豆" + tea.getName(); }
 

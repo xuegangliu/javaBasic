@@ -1,7 +1,8 @@
 package org.lxg.basic.patterns.iterator;
 
 /**
- * Created by Administrator on 2017/3/9 0009.
+ * @author xuegangliu
+ * @date 2017/3/16 0016.
  */
 public class Song {
 

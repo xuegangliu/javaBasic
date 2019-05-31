@@ -22,20 +22,44 @@ import java.net.UnknownHostException;
 import java.util.Map;
 import java.util.Set;
 
-public class ESClient {
+/**
+ * @author xuegangliu
+ */
+public class EsClient {
 
-    // elasticsearch 集群名
+    /**
+     * elasticsearch 集群名
+     */
     final String cluster = "elap";
-    // 服务器地址
+
+    /**
+     * 服务器地址
+     */
     final String serverIP = "192.168.113.97";
-    //  服务器端口
+
+    /**
+     * 服务器端口
+     */
     final Integer port = 9300;
-    // 索引
+
+    /**
+     * 索引
+     */
     final String index = "elap_0";
+
+    /**
+     * 索引名前缀
+     */
     final String createIndex = "elap_1";
-    // type
+
+    /**
+     * type
+     */
     final String type = "message";
 
+    /**
+     * client
+     */
     private Client client;
 
     /**
@@ -49,7 +73,6 @@ public class ESClient {
         try {
             client = TransportClient.builder().settings(settings).build()
                     .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(serverIP),port));
-//					.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.113.126"),9300));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
@@ -62,9 +85,9 @@ public class ESClient {
         System.out.println("连接关闭！");
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         System.out.println("ES集群连接测试");
-        ESClient esc = new ESClient();
+        EsClient esc = new EsClient();
         esc.initESClient();
         esc.createIndex();
         esc.search();
@@ -78,11 +101,11 @@ public class ESClient {
      * 创建索引
      */
     private void createIndex() {
-        for(int i=0; i<10; i++){
+        int size = 10;
+        for(int i=0; i<size; i++){
             String id = "id"+i;
             String title = "this is title" + i;
             client.prepareIndex(createIndex, type).setSource(getBuilderJson(id, title)).execute().actionGet();
-            //System.out.println(i);
         }
         System.out.println("createIndex索引创建成功！");
     }
@@ -121,7 +144,6 @@ public class ESClient {
         searchRequestBuilder.setSearchType(SearchType.DFS_QUERY_THEN_FETCH);
         //设置查询关键字
         // fieldQuery 这个必须是你的索引字段哦,不然查不到数据,这里我只设置两个字段 id ,title
-//		searchRequestBuilder.setQuery(QueryBuilders.termQuery("title", "title"));
         // 设置查询数据的位置,分页用吧
         searchRequestBuilder.setFrom(0);
         // 设置查询结果集的最大条数
@@ -152,18 +174,21 @@ public class ESClient {
                 .execute().actionGet();
         //下面是不在多线程操作，他默认为.setOperationThreaded(true)
         //GetResponse response = client.prepareGet("blog", "post", "AVJjRJVqW-UsQoTouwCF")
-        //		.setOperationThreaded(false).execute().actionGet();
-        //Map headers = (Map) response.getHeaders();
         Set<String> headers = response.getHeaders();
-        System.out.println(headers);//获取请求头
+        System.out.println(headers);
+        //获取请求头
         boolean exists = response.isExists();
-        System.out.println(exists);//判断索引是否存在
+        //判断索引是否存在
+        System.out.println(exists);
         String sourceString = response.getSourceAsString();
-        System.out.println(sourceString);//获取索引，并打印出索引内容
+        //获取索引，并打印出索引内容
+        System.out.println(sourceString);
         String id = response.getId();
-        System.out.println(id);//获取索引id
+        //获取索引id
+        System.out.println(id);
         boolean sourceEmpty = response.isSourceEmpty();
-        System.out.println(sourceEmpty);//获取索引的内容是否为空
+        //获取索引的内容是否为空
+        System.out.println(sourceEmpty);
     }
     /**
      * 删除索引
@@ -173,9 +198,9 @@ public class ESClient {
                 .execute().actionGet();
         //下面是不在多线程操作，他默认为.setOperationThreaded(true)
         //GetResponse response = client.prepareDelete("blog", "post", "AVJjRJVqW-UsQoTouwCF")
-        //		.setOperationThreaded(false).execute().actionGet();
         boolean isFound = response.isFound();
-        System.out.println(isFound);//返回索引是否存在，存在删除
+        //返回索引是否存在，存在删除
+        System.out.println(isFound);
 
     }
 }

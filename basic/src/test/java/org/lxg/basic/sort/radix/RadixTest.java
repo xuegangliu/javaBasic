@@ -3,9 +3,9 @@ package org.lxg.basic.sort.radix;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 9/12/2018 11:00 AM
- * @DES:
+ * @author xuegangliu
+ *  9/12/2018 11:00 AM
+ *
  * @version: v1.0
  */
 public class RadixTest {

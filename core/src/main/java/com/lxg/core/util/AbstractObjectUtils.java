@@ -4,9 +4,9 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**************************
- * @description: Spring-Core AbstractObjectUtils
- * @author: xuegangliu
- * @date: 2019/2/27 10:33
+ *  Spring-Core AbstractObjectUtils
+ * @author xuegangliu
+ *  2019/2/27 10:33
  ***************************/
 public abstract class AbstractObjectUtils {
     private static final int INITIAL_HASH = 7;

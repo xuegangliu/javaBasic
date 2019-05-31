@@ -3,9 +3,9 @@ package com.lxg.problem.skills;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * @author: xuegangliu
- * @date: 8/21/2018 10:07 AM
- * @DES: Fork/Join任务
+ * @author xuegangliu
+ *  8/21/2018 10:07 AM
+ *  Fork/Join任务
  * @version: v1.0
  */
 public class SumTask extends RecursiveTask<Long> {

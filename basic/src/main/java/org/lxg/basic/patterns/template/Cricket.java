@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.template;
 
 /**
- * @author: xuegangliu
- * @date: 8/28/2018 3:33 PM
- * @DES:
+ * @author xuegangliu
+ *  8/28/2018 3:33 PM
+ *
  * @version: v1.0
  */
 public class Cricket extends AbstractGame {

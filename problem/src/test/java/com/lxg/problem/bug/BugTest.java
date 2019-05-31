@@ -15,9 +15,9 @@ import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**************************
- * @description: BugTest
- * @author: xuegangliu
- * @date: 2019/4/17 9:40
+ *  BugTest
+ * @author xuegangliu
+ *  2019/4/17 9:40
  * @since: jdk1.8+
  ***************************/
 @Slf4j
@@ -120,7 +120,7 @@ public class BugTest {
         log.info("{},{}",name,(name instanceof String));
     }
 
-    @Test
+//    @Test
     public void testInterruptedException(){
         Thread t = new Thread(new Runnable() {
             @Override
@@ -170,7 +170,7 @@ public class BugTest {
         }
     }
 
-    @Test
+//    @Test
     public void testCt(){
         final List t = new ArrayList<String>();
         log.info("{}",t.getClass().isAssignableFrom(String.class));
@@ -181,7 +181,7 @@ public class BugTest {
     /**
      *不抛出异常就不应该创建异常
      */
-    @Test
+//    @Test
     public void testException(){
         int i=5;
         int j=0;

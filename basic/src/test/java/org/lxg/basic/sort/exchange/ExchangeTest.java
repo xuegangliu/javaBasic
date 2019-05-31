@@ -3,9 +3,9 @@ package org.lxg.basic.sort.exchange;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 9/12/2018 10:15 AM
- * @DES:
+ * @author xuegangliu
+ *  9/12/2018 10:15 AM
+ *
  * @version: v1.0
  */
 public class ExchangeTest {

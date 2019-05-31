@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author xuegangliu
- * @date 2017/3/16 0016.
+ *  2017/3/16 0016.
  */
 public class MyStoryList implements SongList{
     private List<Song> list = new ArrayList<>();

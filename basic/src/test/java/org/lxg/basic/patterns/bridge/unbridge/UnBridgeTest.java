@@ -6,9 +6,9 @@ import org.lxg.basic.patterns.bridge.bridge.*;
 import java.util.Date;
 
 /**
- * @author: xuegangliu
- * @date: 8/14/2018 11:09 AM
- * @DES:
+ * @author xuegangliu
+ *  8/14/2018 11:09 AM
+ *
  * @version: v1.0
  */
 public class UnBridgeTest {

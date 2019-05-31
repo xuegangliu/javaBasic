@@ -6,9 +6,9 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**************************
- * @description: ThreadUnSecurity
- * @author: xuegangliu
- * @date: 2019/3/4 10:07
+ *  ThreadUnSecurity
+ * @author xuegangliu
+ *  2019/3/4 10:07
  ***************************/
 @Slf4j
 public class ThreadUnSecurity {

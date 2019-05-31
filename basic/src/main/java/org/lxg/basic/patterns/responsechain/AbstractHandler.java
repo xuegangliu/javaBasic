@@ -2,7 +2,7 @@ package org.lxg.basic.patterns.responsechain;
 
 /**
  * @author xuegangliu
- * @date   2017/3/20 0020.
+ *    2017/3/20 0020.
  */
 public abstract class AbstractHandler {
 

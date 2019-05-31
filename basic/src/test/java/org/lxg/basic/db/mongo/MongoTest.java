@@ -16,14 +16,14 @@ import java.util.List;
 
 
 /**
- * @author: xuegangliu
- * @date: 11/13/2018 1:39 PM
- * @DES:
+ * @author xuegangliu
+ *  11/13/2018 1:39 PM
+ *
  * @version: v1.0
  */
 public class MongoTest {
 
-    @Test
+//    @Test
     public void connectTest(){
         MongoClient mongoClient = MongoUtils.connectMongo("140.143.250.99", 27017,"mongodb",
                 "lxgmongo", "admin");

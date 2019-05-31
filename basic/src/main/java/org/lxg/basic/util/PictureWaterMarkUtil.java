@@ -7,14 +7,14 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 
 /**************************
- * @description 图片添加水印
+ *  图片添加水印
  * @author xuegangliu
- * @date 2019/1/23
+ *  2019/1/23
  ***************************/
 public class PictureWaterMarkUtil {
 
     /**
-     * @description 添加水印
+     *  添加水印
      * @param inputStream 源图片流
      * @param tarImgPath 保存的图片路径
      * @param waterMarkContent 水印内容

@@ -1,9 +1,9 @@
 package com.lxg.common.util;
 
 /**************************
- * @description: StringTools
- * @author: xuegangliu
- * @date: 2019/3/6 15:50
+ *  StringTools
+ * @author xuegangliu
+ *  2019/3/6 15:50
  ***************************/
 public final class StringTools {
 

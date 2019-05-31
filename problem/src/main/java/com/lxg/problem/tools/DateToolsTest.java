@@ -7,9 +7,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**************************
- * @description: DateToolsTest
- * @author: xuegangliu
- * @date: 2019/4/15 13:14
+ *  DateToolsTest
+ * @author xuegangliu
+ *  2019/4/15 13:14
  * @since: jdk1.8+
  ***************************/
 @Slf4j

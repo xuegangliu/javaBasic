@@ -7,9 +7,9 @@ import redis.clients.jedis.*;
 import java.util.List;
 
 /**
- * @author: xuegangliu
- * @date: 11/13/2018 12:19 PM
- * @DES:
+ * @author xuegangliu
+ *  11/13/2018 12:19 PM
+ *
  * @version: v1.0
  */
 public class RedisUtils {

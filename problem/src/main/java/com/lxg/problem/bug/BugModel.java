@@ -1,9 +1,9 @@
 package com.lxg.problem.bug;
 
 /**************************
- * @description: BugModel
- * @author: xuegangliu
- * @date: 2019/4/18 11:15
+ *  BugModel
+ * @author xuegangliu
+ *  2019/4/18 11:15
  * @since: jdk1.8+
  ***************************/
 public class BugModel {

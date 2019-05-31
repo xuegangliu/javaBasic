@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.function.Supplier;
 
 /**
- * @author: xuegangliu
- * @date: 4/29/2018 2:33 PM
- * @DES: 方法引用
+ * @author xuegangliu
+ *  4/29/2018 2:33 PM
+ *  方法引用
  * @version: v1.0
  */
 public class MethodReference {

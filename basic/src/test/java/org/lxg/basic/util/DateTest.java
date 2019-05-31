@@ -8,9 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**************************
- * @description: DateTest
- * @author: xuegangliu
- * @date: 2019/3/6 9:06
+ *  DateTest
+ * @author xuegangliu
+ *  2019/3/6 9:06
  ***************************/
 @Slf4j
 public class DateTest {

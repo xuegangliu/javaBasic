@@ -1,9 +1,9 @@
 package org.lxg.basic.sample.reflection;
 
 /**
- * @author: xuegangliu
- * @date: 11/12/2018 11:35 AM
- * @DES:
+ * @author xuegangliu
+ *  11/12/2018 11:35 AM
+ *
  * @version: v1.0
  */
 public class A {

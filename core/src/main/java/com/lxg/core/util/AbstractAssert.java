@@ -4,9 +4,9 @@ import java.util.Collection;
 import java.util.Map;
 
 /**************************
- * @description: Spring-Core AbstractAssert
- * @author: xuegangliu
- * @date: 2019/2/27 10:30
+ *  Spring-Core AbstractAssert
+ * @author xuegangliu
+ *  2019/2/27 10:30
  ***************************/
 public abstract class AbstractAssert {
     public AbstractAssert() {

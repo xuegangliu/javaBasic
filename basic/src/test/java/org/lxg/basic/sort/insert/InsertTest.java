@@ -3,9 +3,9 @@ package org.lxg.basic.sort.insert;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 9/12/2018 10:55 AM
- * @DES:
+ * @author xuegangliu
+ *  9/12/2018 10:55 AM
+ *
  * @version: v1.0
  */
 public class InsertTest {

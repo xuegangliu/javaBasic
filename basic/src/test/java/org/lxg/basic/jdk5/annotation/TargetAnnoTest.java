@@ -5,9 +5,9 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
 
 /**
- * @author: Max
- * @date: 2018/4/6 13:00
- * @DES: 用@Target指定ElementType属性
+ * @author Max
+ *  2018/4/6 13:00
+ *  用@Target指定ElementType属性
  */
 
 // 用于类，接口，枚举但不能是注解

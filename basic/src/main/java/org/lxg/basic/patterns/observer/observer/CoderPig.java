@@ -4,7 +4,7 @@ import java.util.Observable;
 
 /**
  * @author xuegangliu
- * @date 2017/3/7 0007.
+ *  2017/3/7 0007.
  */
 public class CoderPig extends Observable {
 

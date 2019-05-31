@@ -5,9 +5,9 @@ import org.quartz.JobExecutionException;
 import org.quartz.JobListener;
 
 /**
- * @author: xuegangliu
- * @date: 8/22/2018 6:14 PM
- * @DES:
+ * @author xuegangliu
+ *  8/22/2018 6:14 PM
+ *
  * @version: v1.0
  */
 public class BasicJobListener implements JobListener {

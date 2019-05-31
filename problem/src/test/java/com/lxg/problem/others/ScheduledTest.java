@@ -11,14 +11,14 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**************************
- * @description: ScheduledTest
- * @author: xuegangliu
- * @date: 2019/4/1 9:14
+ *  ScheduledTest
+ * @author xuegangliu
+ *  2019/4/1 9:14
  ***************************/
 @Slf4j
 public class ScheduledTest {
 
-    @Test
+//    @Test
     public void testTimer() throws InterruptedException {
         TimerTask timerTask = new TimerTask() {
             @Override
@@ -33,7 +33,7 @@ public class ScheduledTest {
         Thread.sleep(5*1000);
     }
 
-    @Test
+//    @Test
     public void testExecutor() throws InterruptedException {
         ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
         // 参数：1、任务体 2、首次执行的延时时间

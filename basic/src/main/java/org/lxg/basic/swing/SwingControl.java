@@ -8,9 +8,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**************************
- * @description: SwingControl
+ *  SwingControl
  * @author xuegangliu
- * @date: 2019/1/24 16:11
+ *  2019/1/24 16:11
  ***************************/
 public class SwingControl {
     private final String OK="OK";

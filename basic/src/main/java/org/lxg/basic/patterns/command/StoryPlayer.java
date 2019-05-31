@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author xuegangliu
- * @date 2017/3/13 0013.
+ *  2017/3/13 0013.
  */
 public class StoryPlayer {
     /** 当前播放项 */

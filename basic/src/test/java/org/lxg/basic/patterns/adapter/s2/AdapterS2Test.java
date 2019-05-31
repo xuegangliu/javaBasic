@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.adapter.s2;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/10/2018 5:39 PM
- * @DES:
+ * @author xuegangliu
+ *  8/10/2018 5:39 PM
+ *
  * @version: v1.0
  */
 public class AdapterS2Test {

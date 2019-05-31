@@ -7,7 +7,7 @@ import org.lxg.basic.guice.test.service.Add;
 
 /**
  * @author xuegangliu
- * @date 2017/7/18.
+ *  2017/7/18.
  */
 public class ModuleTest {
 

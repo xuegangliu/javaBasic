@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.template;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/28/2018 3:34 PM
- * @DES:
+ * @author xuegangliu
+ *  8/28/2018 3:34 PM
+ *
  * @version: v1.0
  */
 public class TemplateTest {

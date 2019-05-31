@@ -4,9 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 /**************************
- * @description: ConcurrentTeset
- * @author: xuegangliu
- * @date: 2019/3/26 10:30
+ *  ConcurrentTeset
+ * @author xuegangliu
+ *  2019/3/26 10:30
  ***************************/
 @Slf4j
 public class ConcurrentTeset {

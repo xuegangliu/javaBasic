@@ -2,7 +2,7 @@ package org.lxg.basic.patterns.observer.pull;
 
 /**
  * @author xuegangliu
- * @date 2017/3/7 0007.
+ *  2017/3/7 0007.
  */
 public class CoderPig extends AbstractOfficialAccount {
     /** 更新的文章 */

@@ -5,9 +5,9 @@ import org.junit.Test;
 import java.io.IOException;
 
 /**
- * @author: xuegangliu
- * @date: 8/30/2018 10:48 AM
- * @DES:
+ * @author xuegangliu
+ *  8/30/2018 10:48 AM
+ *
  * @version: v1.0
  */
 public class PrototypeTest {

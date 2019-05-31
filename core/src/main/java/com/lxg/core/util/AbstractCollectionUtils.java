@@ -15,9 +15,9 @@ import java.util.Properties;
 import java.util.Set;
 
 /**************************
- * @description: Spring-Core AbstractCollectionUtils
- * @author: xuegangliu
- * @date: 2019/2/27 10:35
+ *  Spring-Core AbstractCollectionUtils
+ * @author xuegangliu
+ *  2019/2/27 10:35
  ***************************/
 public abstract class AbstractCollectionUtils {
     public AbstractCollectionUtils() {

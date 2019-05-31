@@ -15,9 +15,9 @@ import java.util.StringTokenizer;
 import java.util.TreeSet;
 
 /**************************
- * @description: Spring-Core AbstractStringUtils
- * @author: xuegangliu
- * @date: 2019/2/27 10:32
+ *  Spring-Core AbstractStringUtils
+ * @author xuegangliu
+ *  2019/2/27 10:32
  ***************************/
 public abstract class AbstractStringUtils {
     private static final String FOLDER_SEPARATOR = "/";

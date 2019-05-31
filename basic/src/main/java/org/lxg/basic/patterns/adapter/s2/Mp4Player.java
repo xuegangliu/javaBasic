@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.adapter.s2;
 
 /**
- * @author: xuegangliu
- * @date: 8/10/2018 5:48 PM
- * @DES:
+ * @author xuegangliu
+ *  8/10/2018 5:48 PM
+ *
  * @version: v1.0
  */
 public class Mp4Player implements AdvancedMediaPlayer {

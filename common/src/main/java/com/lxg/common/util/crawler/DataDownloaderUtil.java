@@ -12,7 +12,7 @@ import java.net.URLConnection;
  * Package ：com.lxg.common.util.crawler
  * Description: 搜索引擎爬虫技术  批量抓取
  * @author lxg
- * @date 2017年9月12日 上午10:38:35
+ *  2017年9月12日 上午10:38:35
  * @version v1.0
  */
 public final class DataDownloaderUtil {

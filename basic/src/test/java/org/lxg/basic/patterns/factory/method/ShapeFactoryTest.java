@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.factory.method;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/24/2018 2:46 PM
- * @DES:
+ * @author xuegangliu
+ *  8/24/2018 2:46 PM
+ *
  * @version: v1.0
  */
 public class ShapeFactoryTest {

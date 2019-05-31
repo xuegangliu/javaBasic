@@ -5,7 +5,7 @@ import org.aopalliance.intercept.MethodInvocation;
 
 /**
  * @author xuegangliu
- * @date 2017/3/16 0016.
+ *  2017/3/16 0016.
  */
 public class TestAopInvoker implements MethodInterceptor {
 

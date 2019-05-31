@@ -8,8 +8,8 @@ import org.quartz.*;
 // 更新JobDetail中JobDataMap的数据，使得该job（即JobDetail）在下一次执行的时候，JobDataMap中是更新后的数据，而不是更新前的旧数据。
 /**
  * @author xuegangliu
- * @date: 8/22/2018 5:04 PM
- * @DES:
+ *  8/22/2018 5:04 PM
+ *
  * @version: v1.0
  */
 public class HelloJob implements Job {

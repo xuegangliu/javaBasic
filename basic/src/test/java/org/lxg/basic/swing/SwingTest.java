@@ -2,9 +2,9 @@ package org.lxg.basic.swing;
 
 
 /**************************
- * @description: SwingTest
+ *  SwingTest
  * @user: xuegangliu
- * @date: 2019/1/24 16:12
+ *  2019/1/24 16:12
  ***************************/
 public class SwingTest {
 

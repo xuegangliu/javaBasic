@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.flyweight.fly;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/30/2018 3:31 PM
- * @DES:
+ * @author xuegangliu
+ *  8/30/2018 3:31 PM
+ *
  * @version: v1.0
  */
 public class FlyTest {
@@ -16,10 +16,10 @@ public class FlyTest {
             AbstractCard card = null;
             //随机花色
             switch ((int)(Math.random()*4)) {
-                case 0: card = PokerFactory.getPoker(PokerFactory.Spade); break;
-                case 1: card = PokerFactory.getPoker(PokerFactory.Heart); break;
-                case 2: card = PokerFactory.getPoker(PokerFactory.Club); break;
-                case 3: card = PokerFactory.getPoker(PokerFactory.Diamond); break;
+                case 0: card = PokerFactory.getPoker(PokerFactory.SPADE); break;
+                case 1: card = PokerFactory.getPoker(PokerFactory.HEART); break;
+                case 2: card = PokerFactory.getPoker(PokerFactory.CLUB); break;
+                case 3: card = PokerFactory.getPoker(PokerFactory.DIAMOND); break;
             }
             if(card != null) {
                 //随机大小

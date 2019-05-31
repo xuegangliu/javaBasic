@@ -5,9 +5,9 @@ import org.lxg.basic.jdk5.annotation.MethodInfo;
 import java.lang.reflect.Method;
 
 /**
- * @author: Max
- * @date: 2018/4/6 15:34
- * @DES: com.lxg.jdk5.process
+ * @author Max
+ *  2018/4/6 15:34
+ *  com.lxg.jdk5.process
  */
 public class AnnotationParser {
     public static void main(String[] args) {

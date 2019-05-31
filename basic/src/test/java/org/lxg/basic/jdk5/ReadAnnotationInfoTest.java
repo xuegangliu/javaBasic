@@ -6,9 +6,9 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 /**
- * @author: Max
- * @date: 2018/4/6 15:08
- * @DES: com.lxg
+ * @author Max
+ *  2018/4/6 15:08
+ *  com.lxg
  */
 //读取注解信息
 public class ReadAnnotationInfoTest {

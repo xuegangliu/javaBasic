@@ -1,9 +1,9 @@
 package com.lxg.core.plug;
 
 /**************************
- * @description: QiNiuPlug
- * @author: xuegangliu
- * @date: 2019/3/1 16:48
+ *  QiNiuPlug
+ * @author xuegangliu
+ *  2019/3/1 16:48
  ***************************/
 
 import com.google.gson.Gson;

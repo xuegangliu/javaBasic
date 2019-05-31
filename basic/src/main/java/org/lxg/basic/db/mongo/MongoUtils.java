@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 /**
- * @author: xuegangliu
- * @date: 11/13/2018 1:37 PM
- * @DES:
+ * @author xuegangliu
+ *  11/13/2018 1:37 PM
+ *
  * @version: v1.0
  */
 public class MongoUtils {

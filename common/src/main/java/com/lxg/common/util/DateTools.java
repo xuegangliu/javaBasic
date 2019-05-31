@@ -4,9 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**************************
- * @description: DateTools
- * @author: xuegangliu
- * @date: 2019/3/6 14:20
+ *  DateTools
+ * @author xuegangliu
+ *  2019/3/6 14:20
  ***************************/
 public final class DateTools {
 

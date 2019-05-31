@@ -4,9 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 /**************************
- * @description: MD5Test
- * @author: xuegangliu
- * @date: 2019/3/18 10:59
+ *  MD5Test
+ * @author xuegangliu
+ *  2019/3/18 10:59
  ***************************/
 @Slf4j
 public class MD5Test {

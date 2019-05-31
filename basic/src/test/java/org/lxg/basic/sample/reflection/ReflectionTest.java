@@ -7,9 +7,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * @author: xuegangliu
- * @date: 11/12/2018 11:39 AM
- * @DES:
+ * @author xuegangliu
+ *  11/12/2018 11:39 AM
+ *
  * @version: v1.0
  */
 public class ReflectionTest {

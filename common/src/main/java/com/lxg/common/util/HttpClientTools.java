@@ -20,9 +20,9 @@ import java.util.List;
 import java.util.Map;
 
 /**************************
- * @description: HttpClientTools
- * @author: xuegangliu
- * @date: 2019/3/15 13:24
+ *  HttpClientTools
+ * @author xuegangliu
+ *  2019/3/15 13:24
  ***************************/
 public final class HttpClientTools {
 

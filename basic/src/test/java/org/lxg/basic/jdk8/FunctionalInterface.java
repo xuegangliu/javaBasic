@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * @author: xuegangliu
- * @date: 4/29/2018 2:42 PM
- * @DES: 函数式接口 java.util.function包下边的接口
+ * @author xuegangliu
+ *  4/29/2018 2:42 PM
+ *  函数式接口 java.util.function包下边的接口
  * @version: v1.0
  */
 public class FunctionalInterface {

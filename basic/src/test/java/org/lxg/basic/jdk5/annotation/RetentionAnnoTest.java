@@ -4,9 +4,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * @author: Max
- * @date: 2018/4/6 15:04
- * @DES: 注解保持性策略
+ * @author Max
+ *  2018/4/6 15:04
+ *  注解保持性策略
  * 编译器的处理有三种策略：
  * 将注解保留在编译后的类文件中，并在第一次加载类时读取它；
  * 将注解保留在编译后的类文件中，但是在运行时忽略它；

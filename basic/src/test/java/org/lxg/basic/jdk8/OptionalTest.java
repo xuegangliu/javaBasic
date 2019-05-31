@@ -10,9 +10,9 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**************************
- * @description: OptionalTest
- * @author: xuegangliu
- * @date: 2019/4/10 14:33
+ *  OptionalTest
+ * @author xuegangliu
+ *  2019/4/10 14:33
  * @since: jdk1.8+
  ***************************/
 @Slf4j
@@ -27,7 +27,7 @@ public class OptionalTest {
         emptyOpt.ofNullable(null);
     }
 
-    @Test
+//    @Test
     public void testOptionalGetValue(){
         String hello = null;
         log.info("hello:{}",hello);

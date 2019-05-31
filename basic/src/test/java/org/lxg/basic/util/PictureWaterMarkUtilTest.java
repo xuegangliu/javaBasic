@@ -7,9 +7,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 /**************************
- * @description: PictureWaterMarkUtilTest
+ *  PictureWaterMarkUtilTest
  * @user: xuegangliu
- * @date: 2019/1/24 9:02
+ *  2019/1/24 9:02
  ***************************/
 public class PictureWaterMarkUtilTest {
 

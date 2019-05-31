@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.observer.pull;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/30/2018 11:46 AM
- * @DES:
+ * @author xuegangliu
+ *  8/30/2018 11:46 AM
+ *
  * @version: v1.0
  */
 public class PullTest {

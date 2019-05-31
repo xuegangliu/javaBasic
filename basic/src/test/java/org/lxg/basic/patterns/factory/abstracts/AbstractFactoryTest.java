@@ -3,19 +3,19 @@ package org.lxg.basic.patterns.factory.abstracts;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/24/2018 2:37 PM
- * @DES:
+ * @author xuegangliu
+ *  8/24/2018 2:37 PM
+ *
  * @version: v1.0
  */
 public class AbstractFactoryTest {
 
-    @Test
+//    @Test
     public void abstractFactoryTest(){
         //获取形状工厂
-        AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
+        AbstractFactory shapeFactory = FactoryProducer.getFactory(FactoryProducer.SHAPE);
         //获取颜色工厂
-        AbstractFactory colorFactory = FactoryProducer.getFactory("COLOR");
+        AbstractFactory colorFactory = FactoryProducer.getFactory(FactoryProducer.COLOR);
 
         //获取形状为 Circle 的对象
         Shape circle = shapeFactory.getShape("CIRCLE");

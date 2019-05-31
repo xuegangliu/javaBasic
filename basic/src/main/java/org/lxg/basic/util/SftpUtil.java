@@ -11,8 +11,8 @@ import java.util.Vector;
 
 /**
  * @author xuegangliu
- * @date: 8/2/2018 10:05 AM
- * @DES: sftp工具类
+ *  8/2/2018 10:05 AM
+ *  sftp工具类
  * @version: v1.0
  */
 public class SftpUtil {

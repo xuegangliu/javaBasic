@@ -7,9 +7,9 @@ import java.math.BigDecimal;
 import java.util.*;
 
 /**************************
- * @description: SimpleTest
- * @author: xuegangliu
- * @date: 2019/3/19 16:07
+ *  SimpleTest
+ * @author xuegangliu
+ *  2019/3/19 16:07
  ***************************/
 @Slf4j
 public class SimpleTest {
@@ -89,7 +89,7 @@ public class SimpleTest {
 
     }
 
-    @Test
+//    @Test
     public void testBigDecimalNull(){
         BigDecimal t = new BigDecimal("");
         log.info("{}",t);

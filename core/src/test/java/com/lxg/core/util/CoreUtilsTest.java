@@ -6,14 +6,14 @@ import org.junit.Test;
 import java.io.File;
 
 /**************************
- * @description: CoreUtilsTest
- * @author: xuegangliu
- * @date: 2019/2/27 10:42
+ *  CoreUtilsTest
+ * @author xuegangliu
+ *  2019/2/27 10:42
  ***************************/
 @Slf4j
 public class CoreUtilsTest {
 
-    @Test
+//    @Test
     public void testAssert(){
         AbstractAssert.isTrue(false);
     }

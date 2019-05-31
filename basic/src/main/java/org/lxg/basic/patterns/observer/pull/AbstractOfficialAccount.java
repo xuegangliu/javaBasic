@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author xuegangliu
- * @date 2017/3/16 0016.
+ *  2017/3/16 0016.
  */
 public abstract class AbstractOfficialAccount {
     private List<User> userList = new ArrayList<>();

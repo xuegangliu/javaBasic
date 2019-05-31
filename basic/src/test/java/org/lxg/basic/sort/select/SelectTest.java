@@ -5,9 +5,9 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * @author: xuegangliu
- * @date: 9/12/2018 11:04 AM
- * @DES:
+ * @author xuegangliu
+ *  9/12/2018 11:04 AM
+ *
  * @version: v1.0
  */
 public class SelectTest {

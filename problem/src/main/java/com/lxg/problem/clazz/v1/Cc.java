@@ -2,9 +2,9 @@ package com.lxg.problem.clazz.v1;
 
 
 /**************************
- * @description: Cc
- * @author: xuegangliu
- * @date: 2019/3/22 14:06
+ *  Cc
+ * @author xuegangliu
+ *  2019/3/22 14:06
  ***************************/
 public  class Cc extends Bb implements Aa {
 

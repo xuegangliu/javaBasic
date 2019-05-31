@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.factory.method;
 
 /**
- * @author: xuegangliu
- * @date: 8/24/2018 2:21 PM
- * @DES: 圆
+ * @author xuegangliu
+ *  8/24/2018 2:21 PM
+ *  圆
  * @version: v1.0
  */
 public class Circle implements Shape {

@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.state;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/28/2018 3:55 PM
- * @DES:
+ * @author xuegangliu
+ *  8/28/2018 3:55 PM
+ *
  * @version: v1.0
  */
 public class StateTest {

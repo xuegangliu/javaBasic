@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author: xuegangliu
- * @date: 8/21/2018 11:35 AM
- * @DES:
+ * @author xuegangliu
+ *  8/21/2018 11:35 AM
+ *
  * @version: v1.0
  */
 public class ClientTest {

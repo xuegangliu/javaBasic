@@ -7,9 +7,9 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 /**************************
- * @description: UserEntity
+ *  UserEntity
  * @author xuegangliu
- * @date: 2019/4/10 15:14
+ *  2019/4/10 15:14
  * @since: jdk1.8+
  ***************************/
 @Data

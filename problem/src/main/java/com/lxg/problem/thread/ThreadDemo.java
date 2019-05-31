@@ -3,9 +3,9 @@ package com.lxg.problem.thread;
 import lombok.extern.slf4j.Slf4j;
 
 /**************************
- * @description: ThreadDemo
- * @author: xuegangliu
- * @date: 2019/3/4 11:32
+ *  ThreadDemo
+ * @author xuegangliu
+ *  2019/3/4 11:32
  ***************************/
 @Slf4j
 public class ThreadDemo {

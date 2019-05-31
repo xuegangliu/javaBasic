@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.factory.method;
 
 /**
- * @author: xuegangliu
- * @date: 8/24/2018 2:20 PM
- * @DES: 矩形
+ * @author xuegangliu
+ *  8/24/2018 2:20 PM
+ *  矩形
  * @version: v1.0
  */
 public class Rectangle implements Shape {

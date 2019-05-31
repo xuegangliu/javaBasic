@@ -5,9 +5,9 @@ import org.lxg.basic.jdk5.annotation.MethodInfo;
 import org.lxg.basic.jdk5.annotation.TargetAnnoTest;
 
 /**
- * @author: Max
- * @date: 2018/4/6 12:53
- * @DES: com.lxg
+ * @author Max
+ *  2018/4/6 12:53
+ *  com.lxg
  */
 public class AnnotationTest {
     public static void main(String[]args) {

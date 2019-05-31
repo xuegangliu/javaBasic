@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.memento;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/30/2018 11:54 AM
- * @DES:
+ * @author xuegangliu
+ *  8/30/2018 11:54 AM
+ *
  * @version: v1.0
  */
 public class MementoTest {

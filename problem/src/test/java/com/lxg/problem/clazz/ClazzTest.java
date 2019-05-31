@@ -6,9 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 /**************************
- * @description: ClazzTest
- * @author: xuegangliu
- * @date: 2019/3/18 10:10
+ *  ClazzTest
+ * @author xuegangliu
+ *  2019/3/18 10:10
  ***************************/
 @Slf4j
 public class ClazzTest {

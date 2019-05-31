@@ -9,9 +9,9 @@ import java.io.PrintStream;
 import java.util.Properties;
 
 /**
- * @author: xuegangliu
- * @date: 8/22/2018 11:25 AM
- * @DES:
+ * @author xuegangliu
+ *  8/22/2018 11:25 AM
+ *
  * @version: v1.0
  */
 public class PropertiesTest {

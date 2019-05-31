@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**************************
- * @description: HttpTest
- * @author: xuegangliu
- * @date: 2019/3/15 13:29
+ *  HttpTest
+ * @author xuegangliu
+ *  2019/3/15 13:29
  ***************************/
 @Slf4j
 public class HttpTest {
@@ -47,7 +47,7 @@ public class HttpTest {
         log.info("返回参数:{}", result);
     }
 
-    @Test
+//    @Test
     public void testVerify(){
         String url = "http://v.juhe.cn/verifybankcard3/verify";
         Map params = new HashMap<>();

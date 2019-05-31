@@ -2,7 +2,7 @@ lombok使用
 ---
 |名称|描述|日期|作者|
 |---|---|---|---|
-|lombok|lombok基础用法|@date:2019-01-07|by xuegangliu|
+|lombok|lombok基础用法|2019-01-07|by xuegangliu|
 
 ## 网站
 

@@ -12,9 +12,9 @@ import freemarker.template.Template;
 import freemarker.template.Version;
 
 /**************************
- * @description: WordUtil
+ *  WordUtil
  * @author xuegangliu
- * @date: 2019/1/29 10:37
+ *  2019/1/29 10:37
  ***************************/
 public class WordUtil {
     private static Configuration configuration = null;

@@ -7,9 +7,9 @@ import kafka.producer.ProducerConfig;
 import java.util.Properties;
 
 /**
- * @author: xuegangliu
- * @date: 8/21/2018 6:30 PM
- * @DES:
+ * @author xuegangliu
+ *  8/21/2018 6:30 PM
+ *
  * @version: v1.0
  */
 public class KafkaProducer {

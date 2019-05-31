@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.decorator;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/23/2018 2:36 PM
- * @DES:
+ * @author xuegangliu
+ *  8/23/2018 2:36 PM
+ *
  * @version: v1.0
  */
 public class DecoratorTest {

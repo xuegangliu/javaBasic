@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.facade;
 
 /**
- * @author: xuegangliu
- * @date: 8/24/2018 2:21 PM
- * @DES: 正方形
+ * @author xuegangliu
+ *  8/24/2018 2:21 PM
+ *  正方形
  * @version: v1.0
  */
 public class Square implements Shape {

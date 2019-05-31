@@ -5,9 +5,9 @@ import org.junit.Test;
 import java.util.*;
 
 /**
- * @author: xuegangliu
- * @date: 8/14/2018 6:03 PM
- * @DES: 基本数据结构
+ * @author xuegangliu
+ *  8/14/2018 6:03 PM
+ *  基本数据结构
  * @version: v1.0
  */
 public class StructureTest {

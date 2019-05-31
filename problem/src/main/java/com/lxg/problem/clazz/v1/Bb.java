@@ -1,9 +1,9 @@
 package com.lxg.problem.clazz.v1;
 
 /**************************
- * @description: Bb
- * @author: xuegangliu
- * @date: 2019/3/22 14:06
+ *  Bb
+ * @author xuegangliu
+ *  2019/3/22 14:06
  ***************************/
 public class Bb {
     private static String name="Bb static prop name";

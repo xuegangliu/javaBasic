@@ -10,7 +10,7 @@ import java.util.Collection;
 
 /**
  * @author xuegangliu
- * @date 2017/3/16 0016.
+ *  2017/3/16 0016.
  */
 public class DiTester {
     private static final String STR1 = "first";

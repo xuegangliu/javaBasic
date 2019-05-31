@@ -1,9 +1,9 @@
 package org.lxg.basic.jdk8;
 
 /**
- * @author: Max
- * @date: 2018/4/6 16:12
- * @DES: Lambda 表达式
+ * @author Max
+ *  2018/4/6 16:12
+ *  Lambda 表达式
  */
 public class LambdaTest {
 //    (parameters) -> expression

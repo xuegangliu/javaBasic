@@ -3,9 +3,9 @@ package org.lxg.basic.sample.inte;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 9/3/2018 4:26 PM
- * @DES:
+ * @author xuegangliu
+ *  9/3/2018 4:26 PM
+ *
  * @version: v1.0
  */
 public class BaseTest{

@@ -3,9 +3,9 @@ package org.lxg.basic.jdk5.annotation;
 import java.lang.annotation.*;
 
 /**
- * @author: Max
- * @date: 2018/4/6 15:24
- * @DES: com.lxg.jdk5.annotation
+ * @author Max
+ *  2018/4/6 15:24
+ *  com.lxg.jdk5.annotation
  */
 @Documented
 @Retention( RetentionPolicy.RUNTIME )

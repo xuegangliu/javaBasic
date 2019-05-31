@@ -5,9 +5,9 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**************************
- * @description: BoundedBuffer
- * @author: xuegangliu
- * @date: 2019/3/26 10:29
+ *  BoundedBuffer
+ * @author xuegangliu
+ *  2019/3/26 10:29
  ***************************/
 public class BoundedBuffer {
     final Lock lock = new ReentrantLock();

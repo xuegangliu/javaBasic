@@ -2,7 +2,7 @@ package org.lxg.basic.patterns.composite.use;
 
 /**
  * @author xuegangliu
- * @date 2017/1/25 0025.
+ *  2017/1/25 0025.
  */
 abstract class AbstractMenu {
 

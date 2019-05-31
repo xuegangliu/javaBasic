@@ -20,9 +20,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
 /**************************
- * @description: ToolsTest
- * @author: xuegangliu
- * @date: 2019/3/1 9:45
+ *  ToolsTest
+ * @author xuegangliu
+ *  2019/3/1 9:45
  ***************************/
 @Slf4j
 public class ToolsTest {
@@ -37,7 +37,7 @@ public class ToolsTest {
         printInfo(server);
     }
 
-    @Test
+//    @Test
     public void testJMXConnector() throws IOException, InvocationTargetException, IllegalAccessException {
         // 获取到JVM Manage信息
         // 连接到代理上

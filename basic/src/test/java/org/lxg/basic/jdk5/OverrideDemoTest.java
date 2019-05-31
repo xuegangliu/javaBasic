@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author: Max
- * @date: 2018/4/6 12:03
- * @DES: 注解作用
+ * @author Max
+ *  2018/4/6 12:03
+ *  注解作用
  * ①编写文档：通过代码里标识的元数据生成文档【生成文档doc文档】
  * ②代码分析：通过代码里标识的元数据对代码进行分析【使用反射】
  * ③编译检查：通过代码里标识的元数据让编译器能够实现基本的编译检查【Override】

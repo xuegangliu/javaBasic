@@ -3,9 +3,9 @@ package org.lxg.basic.patterns.builder;
 import org.junit.Test;
 
 /**
- * @author: xuegangliu
- * @date: 8/14/2018 1:13 PM
- * @DES:
+ * @author xuegangliu
+ *  8/14/2018 1:13 PM
+ *
  * @version: v1.0
  */
 public class BuilderTest {

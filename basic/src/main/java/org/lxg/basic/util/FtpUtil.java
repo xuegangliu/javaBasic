@@ -8,9 +8,9 @@ import org.apache.commons.net.ftp.FTPReply;
 import java.io.*;
 
 /**
- * @author: xuegangliu
- * @date: 8/2/2018 10:08 AM
- * @DES: ftp上传下载工具类
+ * @author xuegangliu
+ *  8/2/2018 10:08 AM
+ *  ftp上传下载工具类
  * @version: v1.0
  */
 public class FtpUtil {

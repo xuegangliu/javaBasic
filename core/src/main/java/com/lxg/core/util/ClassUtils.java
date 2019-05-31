@@ -6,9 +6,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**************************
- * @description: ClassUtils
- * @author: xuegangliu
- * @date: 2019/3/1 10:29
+ *  ClassUtils
+ * @author xuegangliu
+ *  2019/3/1 10:29
  ***************************/
 @Slf4j
 public class ClassUtils {

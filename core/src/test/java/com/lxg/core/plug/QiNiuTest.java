@@ -7,9 +7,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 /**************************
- * @description: QiNiuTest
- * @author: xuegangliu
- * @date: 2019/3/1 16:58
+ *  QiNiuTest
+ * @author xuegangliu
+ *  2019/3/1 16:58
  ***************************/
 @Slf4j
 public class QiNiuTest {

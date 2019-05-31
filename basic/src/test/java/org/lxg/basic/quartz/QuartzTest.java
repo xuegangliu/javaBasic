@@ -16,9 +16,9 @@ import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.impl.matchers.GroupMatcher.jobGroupEquals;
 
 /**
- * @author: xuegangliu
- * @date: 8/22/2018 5:03 PM
- * @DES:
+ * @author xuegangliu
+ *  8/22/2018 5:03 PM
+ *
  * @version: v1.0
  */
 public class QuartzTest {

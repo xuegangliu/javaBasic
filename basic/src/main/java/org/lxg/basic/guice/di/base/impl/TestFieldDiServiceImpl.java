@@ -6,7 +6,7 @@ import org.lxg.basic.guice.di.base.SomeService;
 
 /**
  * @author xuegangliu
- * @date 2017/3/16 0016.
+ *  2017/3/16 0016.
  */
 public class TestFieldDiServiceImpl implements SomeService {
     @Inject

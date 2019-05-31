@@ -4,9 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 /**************************
- * @description: DateToolsTest
- * @author: xuegangliu
- * @date: 2019/3/6 15:20
+ *  DateToolsTest
+ * @author xuegangliu
+ *  2019/3/6 15:20
  ***************************/
 @Slf4j
 public class DateToolsTest {

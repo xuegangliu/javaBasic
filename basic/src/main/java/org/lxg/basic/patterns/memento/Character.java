@@ -2,7 +2,7 @@ package org.lxg.basic.patterns.memento;
 
 /**
  * @author xuegangliu
- * @date 2017/3/15 0015.
+ *  2017/3/15 0015.
  */
 public class Character {
     private int hp;

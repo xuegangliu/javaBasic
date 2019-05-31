@@ -1,14 +1,14 @@
 package org.lxg.basic.patterns.factory.abstracts;
 
 /**
- * @author: xuegangliu
- * @date: 8/24/2018 2:36 PM
- * @DES:
+ * @author xuegangliu
+ *  8/24/2018 2:36 PM
+ *
  * @version: v1.0
  */
 public class FactoryProducer {
-    private final static String SHAPE="SHAPE";
-    private final static String COLOR="COLOR";
+    public final static String SHAPE="SHAPE";
+    public final static String COLOR="COLOR";
     public static AbstractFactory getFactory(String choice){
         if(SHAPE.equals(choice)){
             return new ShapeFactory();

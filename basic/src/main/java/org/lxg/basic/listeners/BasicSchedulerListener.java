@@ -3,9 +3,9 @@ package org.lxg.basic.listeners;
 import org.quartz.*;
 
 /**
- * @author: xuegangliu
- * @date: 8/22/2018 6:23 PM
- * @DES:
+ * @author xuegangliu
+ *  8/22/2018 6:23 PM
+ *
  * @version: v1.0
  */
 public class BasicSchedulerListener implements SchedulerListener {

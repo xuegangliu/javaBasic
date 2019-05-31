@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**************************
- * @description: WordUtilTest
+ *  WordUtilTest
  * @user: xuegangliu
- * @date: 2019/1/29 10:49
+ *  2019/1/29 10:49
  ***************************/
 public class WordUtilTest {
 

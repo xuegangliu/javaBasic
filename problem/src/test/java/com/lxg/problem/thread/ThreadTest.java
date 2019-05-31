@@ -4,9 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 /**************************
- * @description: ThreadTest
- * @author: xuegangliu
- * @date: 2019/3/4 10:10
+ *  ThreadTest
+ * @author xuegangliu
+ *  2019/3/4 10:10
  ***************************/
 @Slf4j
 public class ThreadTest {
@@ -77,7 +77,7 @@ public class ThreadTest {
     /**
      * interrupt()示例
      */
-    @Test
+//    @Test
     public void testSample1(){
         Sample1 t = new Sample1();
         log.info("Start thread");

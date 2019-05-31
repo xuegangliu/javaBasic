@@ -1,9 +1,9 @@
 package org.lxg.basic.patterns.facade;
 
 /**
- * @author: xuegangliu
- * @date: 8/24/2018 2:23 PM
- * @DES: 对外形状
+ * @author xuegangliu
+ *  8/24/2018 2:23 PM
+ *  对外形状
  * @version: v1.0
  */
 public class ShapeMaker {

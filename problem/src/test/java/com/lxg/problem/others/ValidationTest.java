@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Vector;
 
 /**************************
- * @description: ValidationTest
- * @author: xuegangliu
- * @date: 2019/3/14 16:14
+ *  ValidationTest
+ * @author xuegangliu
+ *  2019/3/14 16:14
  ***************************/
 @Slf4j
 public class ValidationTest {

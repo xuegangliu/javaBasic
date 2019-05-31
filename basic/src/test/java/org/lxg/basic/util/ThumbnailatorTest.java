@@ -13,9 +13,9 @@ import net.coobird.thumbnailator.geometry.Positions;
 import org.junit.Test;
 
 /**************************
- * @description: ThumbnailatorTest
+ *  ThumbnailatorTest
  * @user: xuegangliu
- * @date: 2019/1/29 16:50
+ *  2019/1/29 16:50
  ***************************/
 public class ThumbnailatorTest {
 

@@ -13,9 +13,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**************************
- * @description: SelfThreadPool
- * @author: xuegangliu
- * @date: 2019/3/19 17:34
+ *  SelfThreadPool
+ * @author xuegangliu
+ *  2019/3/19 17:34
  ***************************/
 public final class SelfThreadPool {
 

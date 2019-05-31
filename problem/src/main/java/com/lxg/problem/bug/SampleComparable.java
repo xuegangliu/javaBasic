@@ -1,9 +1,9 @@
 package com.lxg.problem.bug;
 
 /**************************
- * @description: SampleComparable
- * @author: xuegangliu
- * @date: 2019/4/18 15:06
+ *  SampleComparable
+ * @author xuegangliu
+ *  2019/4/18 15:06
  * @since: jdk1.8+
  ***************************/
 public class SampleComparable {

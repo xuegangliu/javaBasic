@@ -1,9 +1,9 @@
 package com.lxg.common.constants;
 
 /**
- * @author: xuegangliu
- * @date: 8/22/2018 2:41 PM
- * @DES:
+ * @author xuegangliu
+ *  8/22/2018 2:41 PM
+ *
  * @version: v1.0
  */
 public final class KafkaConstants {

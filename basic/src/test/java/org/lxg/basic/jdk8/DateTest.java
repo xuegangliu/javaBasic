@@ -9,9 +9,9 @@ import java.time.LocalTime;
 import java.time.temporal.TemporalAdjusters;
 
 /**
- * @author: xuegangliu
- * @date: 8/21/2018 10:57 AM
- * @DES:
+ * @author xuegangliu
+ *  8/21/2018 10:57 AM
+ *
  * @version: v1.0
  */
 public class DateTest {

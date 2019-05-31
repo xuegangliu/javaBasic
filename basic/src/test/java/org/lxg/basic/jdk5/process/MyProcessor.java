@@ -12,9 +12,9 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author: Max
- * @date: 2018/4/6 15:29
- * @DES: com.lxg.jdk5.process
+ * @author Max
+ *  2018/4/6 15:29
+ *  com.lxg.jdk5.process
  */
 @SupportedAnnotationTypes( {"MethodInfo"} )
 public class MyProcessor extends AbstractProcessor {

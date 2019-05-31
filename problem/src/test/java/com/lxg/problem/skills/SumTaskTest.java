@@ -10,9 +10,9 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 
 /**
- * @author: xuegangliu
- * @date: 8/21/2018 10:09 AM
- * @DES:
+ * @author xuegangliu
+ *  8/21/2018 10:09 AM
+ *
  * @version: v1.0
  */
 public class SumTaskTest {
@@ -40,7 +40,7 @@ public class SumTaskTest {
     }
 
 
-    @Test
+//    @Test
     public void testNio() throws IOException {
         RandomAccessFile aFile = new RandomAccessFile("D:\\workspace\\lxg\\javaBasic\\src\\test\\resources\\data.txt", "rw");
         FileChannel inChannel = aFile.getChannel();

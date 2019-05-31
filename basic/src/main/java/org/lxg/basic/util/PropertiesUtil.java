@@ -10,8 +10,8 @@ import java.util.Properties;
 
 /**
  * @author xuegangliu
- * @date: 8/22/2018 2:10 PM
- * @DES:
+ *  8/22/2018 2:10 PM
+ *
  * @version: v1.0
  */
 public class PropertiesUtil {

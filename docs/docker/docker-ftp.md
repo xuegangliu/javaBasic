@@ -1,7 +1,7 @@
 ---
 |名称|描述|日期|作者|
 |---|---|---|---|
-|基于docker的ftp搭建|ftp服务器搭建|@date:2019-01-07|by xuegangliu|
+|基于docker的ftp搭建|ftp服务器搭建|2019-01-07|by xuegangliu|
 
 ## 利用docker构建ftp服务
 

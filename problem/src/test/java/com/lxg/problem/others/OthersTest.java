@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 /**************************
- * @description: OthersTest
- * @author: xuegangliu
- * @date: 2019/3/19 17:15
+ *  OthersTest
+ * @author xuegangliu
+ *  2019/3/19 17:15
  ***************************/
 
 @Slf4j
@@ -52,7 +52,7 @@ public class OthersTest {
         System.out.println(student2.hashCode());
     }
 
-    @Test
+//    @Test
     public void test111(){
         Runnable t= new Runnable() {
             @Override

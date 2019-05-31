@@ -3,9 +3,9 @@ package org.lxg.basic.jdk5.annotation;
 import java.lang.annotation.Documented;
 
 /**
- * @author: Max
- * @date: 2018/4/6 15:06
- * @DES: com.lxg.jdk5.annotation
+ * @author Max
+ *  2018/4/6 15:06
+ *  com.lxg.jdk5.annotation
  */
 // 让它定制文档化功能
 // 使用此注解时必须设置RetentionPolicy为RUNTIME

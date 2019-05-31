@@ -5,9 +5,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**************************
- * @description: Md5Tools
- * @author: xuegangliu
- * @date: 2019/3/18 10:57
+ *  Md5Tools
+ * @author xuegangliu
+ *  2019/3/18 10:57
  ***************************/
 public final class Md5Tools {
 

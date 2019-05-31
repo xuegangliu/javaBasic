@@ -13,14 +13,14 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**************************
- * @description: ThreadPoolTest
- * @author: xuegangliu
- * @date: 2019/3/19 17:40
+ *  ThreadPoolTest
+ * @author xuegangliu
+ *  2019/3/19 17:40
  ***************************/
 @Slf4j
 public class ThreadPoolTest {
 
-    @Test
+//    @Test
     public void testSingleThread() throws InterruptedException {
         ExecutorService executor = SelfThreadPool.singleThreadExecutor;
 
@@ -31,7 +31,7 @@ public class ThreadPoolTest {
         Thread.sleep(5*6000);
     }
 
-    @Test
+//    @Test
     public void testCachedThread() throws InterruptedException {
         ExecutorService executor = SelfThreadPool.cachedThreadPool;
 
@@ -42,7 +42,7 @@ public class ThreadPoolTest {
         Thread.sleep(5*6000);
     }
 
-    @Test
+//    @Test
     public void testFixedThread() throws InterruptedException {
         ExecutorService executor = SelfThreadPool.fixedThreadPool;
 
@@ -53,7 +53,7 @@ public class ThreadPoolTest {
         Thread.sleep(5*6000);
     }
 
-    @Test
+//    @Test
     public void testSelfThreadPool() throws IOException {
         int corePoolSize = 2;
         int maximumPoolSize = 4;

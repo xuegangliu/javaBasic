@@ -5,9 +5,9 @@ import org.quartz.Trigger;
 import org.quartz.TriggerListener;
 
 /**
- * @author: xuegangliu
- * @date: 8/22/2018 6:15 PM
- * @DES:
+ * @author xuegangliu
+ *  8/22/2018 6:15 PM
+ *
  * @version: v1.0
  */
 public class BasicTriggerListener implements TriggerListener {

@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
  ***************************/
 public class PictureWaterMarkUtilTest {
 
-    @Test
+//    @Test
     public void testWaterMark() {
         System.out.println("开始水印：");
         FileInputStream is = null;

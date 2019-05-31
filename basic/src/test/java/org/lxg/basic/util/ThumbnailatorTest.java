@@ -24,7 +24,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test1() throws IOException {
         /*
          * size(width,height) 若图片横比200小，高比300小，不变
@@ -40,7 +40,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test2() throws IOException {
         /**
          * scale(比例)
@@ -54,7 +54,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test3() throws IOException {
         /**
          * keepAspectRatio(false) 默认是按照比例缩放的
@@ -67,7 +67,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test4() throws IOException {
         /**
          * rotate(角度),正数：顺时针 负数：逆时针
@@ -81,7 +81,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test5() throws IOException {
         /**
          * watermark(位置，水印图，透明度)
@@ -97,7 +97,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test6() throws IOException {
         /**
          * 图片中心400*400的区域
@@ -120,7 +120,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test7() throws IOException {
         /**
          * outputFormat(图像格式)
@@ -134,7 +134,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test8() throws IOException {
         /**
          * toOutputStream(流对象)
@@ -148,7 +148,7 @@ public class ThumbnailatorTest {
      *
      * @throws IOException
      */
-    @Test
+//    @Test
     public void test9() throws IOException {
         /**
          * asBufferedImage() 返回BufferedImage

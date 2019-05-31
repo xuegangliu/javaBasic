@@ -1,8 +1,6 @@
 ---
 language: java
 #sudo: false
-#jdk:
-#  - oraclejdk8
 #notifications:
 #  email:
 #    recipients:
@@ -17,6 +15,3 @@ branches:
     - master
 
 script: "mvn install"
-
-#after_success:
-#  - bash <(curl -s https://codecov.io/bash)

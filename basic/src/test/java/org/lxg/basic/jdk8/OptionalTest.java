@@ -2,6 +2,7 @@ package org.lxg.basic.jdk8;
 
 import com.lxg.common.entity.UserEntity;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -64,5 +65,31 @@ public class OptionalTest {
         optional2.ifPresent(t ->
                 Assert.assertEquals(null,t.getAge())
         );
+    }
+
+    @Test
+    public void t(){
+        String t = null;
+        Object s = null;
+//        String t = "2";
+//        Optional<String> optional = Optional.ofNullable(t);
+//        log.error("{}",optional.isPresent());
+//        log.error("{}",optional.get());
+//        log.error("{}", StringUtils.isEmpty("null"));
+        log.error("{}", checkParamsHashNull(new Object[]{"null","123",null}));
+    }
+
+    public boolean checkParamsHashNull(Object... args){
+        for(Object t:args){
+            if(null==t){
+                return true;
+            }
+            if(t instanceof String){
+                if(StringUtils.isEmpty((String)t)){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

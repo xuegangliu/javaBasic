@@ -196,6 +196,13 @@ public class SimpleTest {
     }
 
     @Test
+    public void tttTest(){
+        Integer t = new Integer(5);
+        Integer t1 = new Integer(5);
+        log.info("{},{},{}",t.compareTo(t1)==0,t==t1,t.compareTo(t1));
+    }
+
+    @Test
     public void testSimpleOne(){
         /**
          * hashcode 与 equals

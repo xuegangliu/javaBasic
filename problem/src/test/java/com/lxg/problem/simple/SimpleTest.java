@@ -217,6 +217,28 @@ public class SimpleTest {
         log.info("{}",set.size());
     }
 
+    @Test
+    public void t(){
+        BigDecimal s = new BigDecimal(Integer.MAX_VALUE);
+        BigDecimal s1 = new BigDecimal(Long.MAX_VALUE);
+        BigDecimal s2 = new BigDecimal(Float.MAX_VALUE);
+        BigDecimal s3 = new BigDecimal(Double.MAX_VALUE);
+        log.info("Integer{}",s);
+        log.info("Long{}",s1);
+        log.info("Float{}",s2);
+        log.info("Double{}",s3);
+    }
+
+    @Test
+    public void ttt1(){
+        String a="http://xpay.hrtpayment.com/xpay/qrpayment?mid=864004953111885&sign=VBXQDFQIJL2323";
+        log.info("{}",a.substring(a.indexOf("sign"),a.length()));
+        log.info("{}",a.lastIndexOf("="));
+        log.info("{}",a.substring(0,a.lastIndexOf("=")+1));
+
+
+    }
+
     class SimpleOne{
         private Integer age;
 

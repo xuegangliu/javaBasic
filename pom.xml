@@ -11,6 +11,7 @@
         <module>core</module>
         <module>basic</module>
         <module>problem</module>
+        <module>open</module>
     </modules>
     <packaging>pom</packaging>
 

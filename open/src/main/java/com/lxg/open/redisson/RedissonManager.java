@@ -1,5 +1,6 @@
 package com.lxg.open.redisson;
 
+import com.lxg.open.utils.PropertiesUtils;
 import org.redisson.Redisson;
 import org.redisson.config.Config;
 
@@ -19,10 +20,12 @@ public class RedissonManager {
     private static Redisson redisson = null;
     //实例化redisson
     static{
-        config.useSingleServer().setAddress("127.0.0.1:6379");
+        config.useSingleServer()
+                .setAddress(PropertiesUtils.properties.getProperty("redis.host.port"))
+                .setPassword(PropertiesUtils.properties.getProperty("redis.password"))
+                .setDatabase(Integer.parseInt(PropertiesUtils.properties.getProperty("redis.database.select")));
         //得到redisson对象
         redisson = (Redisson) Redisson.create(config);
-
     }
 
     //获取redisson对象的方法

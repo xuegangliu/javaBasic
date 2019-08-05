@@ -14,15 +14,15 @@ import org.redisson.api.RLock;
  **/
 public class RedissonTest {
 
-    @Test
-    public void redissonLockTest(){
-        String key = "test123";
-        //加锁
-        DistributedRedisLock.acquire(key);
-        //执行具体业务逻辑
+//    @Test
+//    public void redissonLockTest(){
+//        String key = "test123";
+//        //加锁
 //        DistributedRedisLock.acquire(key);
-        //释放锁
-        DistributedRedisLock.release(key);
-        //返回结果
-    }
+//        //执行具体业务逻辑
+////        DistributedRedisLock.acquire(key);
+//        //释放锁
+//        DistributedRedisLock.release(key);
+//        //返回结果
+//    }
 }

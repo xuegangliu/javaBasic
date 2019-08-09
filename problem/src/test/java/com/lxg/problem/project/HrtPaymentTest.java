@@ -7,6 +7,8 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * HrtPaymentTest
@@ -68,6 +70,32 @@ public class HrtPaymentTest {
     @Test
     public void testAA(){
         log.info("");
+    }
+
+    @Test
+    public void testList(){
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        String t="";
+        boolean is=false;
+        if(list.size()>0){
+            int tt = 0;
+            for (String s : list) {
+                if(s.equals("2")){
+                    t=s;
+                    is=true;
+                }else{
+                    tt++;
+                    t=s;
+                }
+                if(is || tt==list.size()){
+                    log.error("{}",t);
+                    break;
+                }
+            }
+        }
     }
 
     class A{

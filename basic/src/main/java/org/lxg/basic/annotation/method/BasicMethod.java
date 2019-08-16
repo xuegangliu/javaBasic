@@ -1,17 +1,17 @@
-package org.lxg.basic.jdk5.annotation;
+package org.lxg.basic.annotation.method;
 
 import java.lang.annotation.*;
 
 /**
  * @author Max
  *  2018/4/6 15:24
- *  com.lxg.jdk5.annotation
  */
 @Documented
 @Retention( RetentionPolicy.RUNTIME )
 @Target( ElementType.METHOD )
-public @interface MethodInfo {
-    String author() default "Max";
+@Inherited
+public @interface BasicMethod {
+    String author() default "Tony";
     String date();
     int version() default 1;
 }

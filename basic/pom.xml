@@ -63,11 +63,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
-            <version>2.1.1</version>
-        </dependency>
-        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.9.9.2</version>
@@ -96,13 +91,6 @@
             <version>1.6</version>
         </dependency>
 
-        <!-- mongo -->
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-            <version>3.5.0</version>
-        </dependency>
-
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
@@ -120,11 +108,11 @@
             <version>0.4.8</version>
         </dependency>
 
-        <dependency>
+<!--        <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.6.Final</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 </project>

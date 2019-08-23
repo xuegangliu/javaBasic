@@ -1,8 +1,9 @@
-package org.lxg.basic.db.mongo;
+package com.lxg.database.mongo;
 
-import com.mongodb.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 
@@ -12,14 +13,14 @@ import java.util.Arrays;
  *
  * @version: v1.0
  */
+@Slf4j
 public class MongoUtils {
 
-    private static Logger logger = LoggerFactory.getLogger( MongoUtils.class );
 
-    public static MongoClient connectMongo(String host,int port,String userName,String password,String databse){
+    public static MongoClient connectMongo(String host, int port, String userName, String password, String databse){
         MongoCredential credential = MongoCredential.createCredential(userName, databse, password.toCharArray());
         MongoClient mongoClient = new MongoClient(new ServerAddress(host, port), Arrays.asList(credential));
-        logger.info( "Connect to database successfully" );
+        log.info( "Connect to database successfully" );
 //        DB database = mongoClient.getDB(databse);//获取数据库
         return mongoClient;
     }

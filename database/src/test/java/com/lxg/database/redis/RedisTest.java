@@ -1,8 +1,10 @@
-package org.lxg.basic.db.redis;
+package com.lxg.database.redis;
 
-import org.junit.Test;
-import org.lxg.basic.db.redis.RedisUtils;
-import redis.clients.jedis.*;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisShardInfo;
+import redis.clients.jedis.ShardedJedis;
+import redis.clients.jedis.ShardedJedisPool;
+import redis.clients.jedis.SortingParams;
 
 import java.util.Iterator;
 import java.util.LinkedList;

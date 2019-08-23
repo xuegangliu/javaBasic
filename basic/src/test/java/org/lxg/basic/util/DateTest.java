@@ -1,7 +1,6 @@
 package org.lxg.basic.util;
 
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.common.recycler.Recycler;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;

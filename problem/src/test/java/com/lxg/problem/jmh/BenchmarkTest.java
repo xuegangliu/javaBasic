@@ -42,4 +42,15 @@ public class BenchmarkTest {
 
         new Runner(opt).run();
     }
+
+    @Test
+    public void testHashWalkBench() throws RunnerException {
+        Options opt = new OptionsBuilder()
+                .include(HashWalkBench.class.getSimpleName())
+                .forks(2)
+                .warmupIterations(5)
+                .measurementIterations(5)
+                .build();
+        new Runner(opt).run();
+    }
 }

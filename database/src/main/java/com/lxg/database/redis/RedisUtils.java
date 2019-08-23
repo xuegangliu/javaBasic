@@ -1,8 +1,9 @@
-package org.lxg.basic.db.redis;
+package com.lxg.database.redis;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import redis.clients.jedis.*;
+import lombok.extern.slf4j.Slf4j;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.ShardedJedisPool;
 
 import java.util.List;
 
@@ -12,9 +13,8 @@ import java.util.List;
  *
  * @version: v1.0
  */
+@Slf4j
 public class RedisUtils {
-
-    private static Logger logger = LoggerFactory.getLogger( RedisUtils.class );
 
     /**
      * 集群
@@ -22,7 +22,7 @@ public class RedisUtils {
      * @return
      */
     public static ShardedJedisPool getConnetcShardedRedis(List jedisShardInfo){
-        logger.info( "获取集群连接池" );
+        log.info( "获取集群连接池" );
         ShardedJedisPool pool;
         JedisPoolConfig config = new JedisPoolConfig();
         config.setMaxTotal(100);
@@ -41,8 +41,8 @@ public class RedisUtils {
      * @param password
      * @return
      */
-    public static Jedis getConnectJedis(String host,int port,String password){
-        logger.info("jedis connect params [host={},port={},password={}]",host,port,password );
+    public static Jedis getConnectJedis(String host, int port, String password){
+        log.info("jedis connect params [host={},port={},password={}]",host,port,password );
         Jedis jedis = new Jedis(host,port);
         jedis.auth(password);
         return jedis;

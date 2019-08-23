@@ -1,11 +1,12 @@
-package org.lxg.basic.db.mongo;
+package com.lxg.database.mongo;
 
 import com.alibaba.fastjson.JSON;
-import com.mongodb.*;
+import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import lombok.extern.slf4j.Slf4j;
 import org.bson.Document;
 import org.junit.Test;
 
@@ -21,6 +22,7 @@ import java.util.List;
  *
  * @version: v1.0
  */
+@Slf4j
 public class MongoTest {
 
 //    @Test
@@ -54,5 +56,10 @@ public class MongoTest {
             System.out.println(doc.get("_id") + "," + JSON.toJSONString(doc));
         }
 
+    }
+
+    @Test
+    public void testLog(){
+        log.info("{}","test log");
     }
 }

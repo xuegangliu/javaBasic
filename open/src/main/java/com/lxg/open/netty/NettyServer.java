@@ -8,6 +8,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * NettyServer
@@ -17,6 +18,7 @@ import io.netty.handler.codec.string.StringDecoder;
  * @author xuegangliu 2019/07/01
  * @since 1.8
  **/
+@Slf4j
 public class NettyServer {
     public static void main(String[] args) {
         ServerBootstrap serverBootstrap = new ServerBootstrap();
@@ -27,12 +29,13 @@ public class NettyServer {
                 .group(boos, worker)
                 .channel(NioServerSocketChannel.class)
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
+                    @Override
                     protected void initChannel(NioSocketChannel ch) {
                         ch.pipeline().addLast(new StringDecoder());
                         ch.pipeline().addLast(new SimpleChannelInboundHandler<String>() {
                             @Override
                             protected void channelRead0(ChannelHandlerContext ctx, String msg) {
-                                System.out.println(msg);
+                                log.error("NettyServer:{}",msg);
                             }
                         });
                     }

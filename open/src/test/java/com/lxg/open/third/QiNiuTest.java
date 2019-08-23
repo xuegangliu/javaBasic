@@ -1,7 +1,6 @@
-package com.lxg.core.plug;
+package com.lxg.open.third;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;

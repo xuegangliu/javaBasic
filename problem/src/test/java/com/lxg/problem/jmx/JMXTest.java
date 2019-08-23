@@ -1,35 +1,36 @@
-package com.lxg.core.tools;
+package com.lxg.problem.jmx;
 
-import com.lxg.core.util.ClassUtils;
-//import com.sun.tools.attach.AgentInitializationException;
-//import com.sun.tools.attach.AgentLoadException;
-//import com.sun.tools.attach.AttachNotSupportedException;
-//import com.sun.tools.attach.VirtualMachine;
+import com.lxg.common.util.ClassUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
 
 import javax.management.MBeanServer;
 import javax.management.MBeanServerConnection;
 import javax.management.remote.JMXConnector;
 import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
-import java.io.File;
 import java.io.IOException;
-import java.lang.management.*;
+import java.lang.management.ClassLoadingMXBean;
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
+import java.lang.management.OperatingSystemMXBean;
+import java.lang.management.RuntimeMXBean;
+import java.lang.management.ThreadMXBean;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Properties;
 
-/**************************
- *  ToolsTest
- * @author xuegangliu
- *  2019/3/1 9:45
- ***************************/
+/**
+ * JMXTest
+ * <p>
+ * This is description
+ * </p>
+ *
+ * @author xuegangliu 2019/08/23
+ * @since 1.8
+ **/
 @Slf4j
-public class ToolsTest {
-
+public class JMXTest {
     private final static String JMX_URL="service:jmx:rmi:///jndi/rmi://127.0.0.1:9999/jmxrmi";
 
-//    @Test
+    //    @Test
     public void testHostServer() throws IOException, InvocationTargetException, IllegalAccessException {
         // 获取到JVM Manage信息
         // 监控应用与被监控应用位于同一JVM
@@ -37,7 +38,7 @@ public class ToolsTest {
         printInfo(server);
     }
 
-//    @Test
+    //    @Test
     public void testJMXConnector() throws IOException, InvocationTargetException, IllegalAccessException {
         // 获取到JVM Manage信息
         // 连接到代理上

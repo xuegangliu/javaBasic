@@ -1,4 +1,4 @@
-package com.lxg.core.util;
+package com.lxg.common.util;
 
 import lombok.extern.slf4j.Slf4j;
 

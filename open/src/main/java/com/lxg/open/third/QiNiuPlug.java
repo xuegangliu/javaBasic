@@ -1,4 +1,4 @@
-package com.lxg.core.plug;
+package com.lxg.open.third;
 
 /**************************
  *  QiNiuPlug

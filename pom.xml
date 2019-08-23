@@ -8,11 +8,10 @@
 
     <modules>
         <module>common</module>
-        <module>core</module>
-        <module>basic</module>
+        <module>database</module>
         <module>problem</module>
         <module>open</module>
-        <module>database</module>
+        <module>basic</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -20,6 +19,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <fastjson.version>1.2.58</fastjson.version>
     </properties>
 
     <repositories>
@@ -35,7 +35,11 @@
 
     <dependencyManagement>
         <dependencies>
-
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

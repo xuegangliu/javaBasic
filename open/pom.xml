@@ -11,16 +11,27 @@
 
     <artifactId>open</artifactId>
 
+    <properties>
+        <redisson.version>2.7.0</redisson.version>
+        <qiniu.version>7.2.0</qiniu.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
     <dependencies>
+        <dependency>
+            <groupId>org.lxg</groupId>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>
-            <version>2.7.0</version>
+            <version>${redisson.version}</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <version>${qiniu.version}</version>
         </dependency>
     </dependencies>
 

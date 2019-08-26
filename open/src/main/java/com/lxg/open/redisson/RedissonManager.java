@@ -16,7 +16,10 @@ import org.redisson.config.Config;
 public class RedissonManager {
 
     private static Config config = new Config();
-    //声明redisso对象
+
+    /**
+     * 声明redisso对象
+     */
     private static Redisson redisson = null;
     //实例化redisson
     static{
@@ -28,7 +31,10 @@ public class RedissonManager {
         redisson = (Redisson) Redisson.create(config);
     }
 
-    //获取redisson对象的方法
+    /**
+     * 获取redisson对象的方法
+     * @return
+     */
     public static Redisson getRedisson(){
         return redisson;
     }

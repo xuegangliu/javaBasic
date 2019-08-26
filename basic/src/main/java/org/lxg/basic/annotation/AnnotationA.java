@@ -17,7 +17,7 @@ import org.lxg.basic.annotation.method.BasicMethod;
 @BasicInfo
 public class AnnotationA {
     @BaseFiled(description = "static name",Old = BaseFiled.Old.YES)
-    public final static String name="annotationA";
+    public final static String NAME="annotationA";
 
     @BaseFiled(description = "filed1",Old = BaseFiled.Old.YES)
     private String filed1;
@@ -36,7 +36,7 @@ public class AnnotationA {
 
     @BasicMethod(date = "20190816",author = "Tue")
     public void method2(){
-        log.info("AnnotationA method2() - filed1={},filed2={},name={}",this.filed1,this.filed2,name);
+        log.info("AnnotationA method2() - filed1={},filed2={},name={}",this.filed1,this.filed2,NAME);
     }
 
     public AnnotationA(){

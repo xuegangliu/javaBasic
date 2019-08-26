@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 public class Benchmark1 {
 
     @Benchmark
-    public int sleepAWhile() {
+    public int sleepWhile() {
         try {
             Thread.sleep(500);
             log.info("{}",Thread.currentThread().getId());

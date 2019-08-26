@@ -20,10 +20,10 @@ public class SwingControl {
     private JLabel statusLabel;
     private JPanel controlPanel;
     public SwingControl(){
-        prepareGUI();
+        prepareGui();
     }
 
-    private void prepareGUI(){
+    private void prepareGui(){
         mainFrame = new JFrame("Java SWING Examples");
         mainFrame.setSize(400,400);
         mainFrame.setLayout(new GridLayout(3, 1));

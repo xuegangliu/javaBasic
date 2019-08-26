@@ -148,7 +148,7 @@ public class Bst<E extends Comparable<E>> {
     /**
      * 二分搜索树的非递归前序遍历
      */
-    public void preOrderNR(){
+    public void preOrderNr(){
         if(root == null) {
             return;
         }
@@ -209,7 +209,7 @@ public class Bst<E extends Comparable<E>> {
     @Override
     public String toString(){
         StringBuilder res = new StringBuilder();
-        generateBSTString(root, 0, res);
+        generateBstString(root, 0, res);
         return res.toString();
     }
 
@@ -219,14 +219,14 @@ public class Bst<E extends Comparable<E>> {
      * @param depth
      * @param res
      */
-    private void generateBSTString(Node node, int depth, StringBuilder res){
+    private void generateBstString(Node node, int depth, StringBuilder res){
         if(node == null){
             res.append(generateDepthString(depth) + "null\n");
             return;
         }
         res.append(generateDepthString(depth) + node.e + "\n");
-        generateBSTString(node.left, depth + 1, res);
-        generateBSTString(node.right, depth + 1, res);
+        generateBstString(node.left, depth + 1, res);
+        generateBstString(node.right, depth + 1, res);
     }
     private String generateDepthString(int depth){
         StringBuilder res = new StringBuilder();

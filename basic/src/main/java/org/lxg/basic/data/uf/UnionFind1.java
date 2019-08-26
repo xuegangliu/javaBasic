@@ -57,17 +57,17 @@ public class UnionFind1 implements Uf {
     @Override
     public void unionElements(int p, int q) {
 
-        int pID = find(p);
-        int qID = find(q);
+        int pId = find(p);
+        int qId = find(q);
 
-        if (pID == qID) {
+        if (pId == qId) {
             return;
         }
 
         // 合并过程需要遍历一遍所有元素, 将两个元素的所属集合编号合并
         for (int i = 0; i < id.length; i++) {
-            if (id[i] == pID) {
-                id[i] = qID;
+            if (id[i] == pId) {
+                id[i] = qId;
             }
         }
     }

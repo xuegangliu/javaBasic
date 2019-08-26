@@ -30,7 +30,7 @@ public class TreeTest {
         Bst<Integer> bst1 = new Bst<>();
         for(int p:arr)
             bst1.add(p);
-        bst1.preOrderNR();
+        bst1.preOrderNr();
     }
 
     @Test

@@ -83,15 +83,15 @@ public class SelfHashTable<K, V> {
         return hashtable[hash(key)].get(key);
     }
 
-    private void resize(int newM){
-        TreeMap<K, V>[] newHashTable = new TreeMap[newM];
-        for(int i = 0 ; i < newM ; i ++) {
+    private void resize(int newLength){
+        TreeMap<K, V>[] newHashTable = new TreeMap[newLength];
+        for(int i = 0 ; i < newLength ; i ++) {
             newHashTable[i] = new TreeMap<>();
         }
 
-        int oldM = m;
-        this.m = newM;
-        for(int i = 0 ; i < oldM ; i ++){
+        int oldValue = m;
+        this.m = newLength;
+        for(int i = 0 ; i < oldValue ; i ++){
             TreeMap<K, V> map = hashtable[i];
             for(K key: map.keySet()) {
                 newHashTable[hash(key)].put(key, map.get(key));

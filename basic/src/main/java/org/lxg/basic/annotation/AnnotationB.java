@@ -35,7 +35,7 @@ public class AnnotationB extends AnnotationA {
     }
 
     @BasicMethod(date = "20190816")
-    public static void methodB(){
+    public static void methodBo(){
         log.info("AnnotationB static methodB()");
     }
 }

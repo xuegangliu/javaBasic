@@ -94,16 +94,16 @@ public class SegmentTree<E> {
 
     /**
      * 返回区间[queryL, queryR]的值
-     * @param queryL
-     * @param queryR
+     * @param queryLeft
+     * @param queryRight
      * @return
      */
-    public E query(int queryL, int queryR){
-        if(queryL < 0 || queryL >= data.length ||
-                queryR < 0 || queryR >= data.length || queryL > queryR) {
+    public E query(int queryLeft, int queryRight){
+        if(queryLeft < 0 || queryLeft >= data.length ||
+                queryRight < 0 || queryRight >= data.length || queryLeft > queryRight) {
             throw new IllegalArgumentException("Index is illegal.");
         }
-        return query(0, 0, data.length - 1, queryL, queryR);
+        return query(0, 0, data.length - 1, queryLeft, queryRight);
     }
 
     /**
@@ -111,25 +111,25 @@ public class SegmentTree<E> {
      * @param treeIndex
      * @param l
      * @param r
-     * @param queryL
-     * @param queryR
+     * @param queryLeft
+     * @param queryRight
      * @return
      */
-    private E query(int treeIndex, int l, int r, int queryL, int queryR){
-        if(l == queryL && r == queryR) {
+    private E query(int treeIndex, int l, int r, int queryLeft, int queryRight){
+        if(l == queryLeft && r == queryRight) {
             return tree[treeIndex];
         }
         int mid = l + (r - l) / 2;
         // treeIndex的节点分为[l...mid]和[mid+1...r]两部分
         int leftTreeIndex = leftChild(treeIndex);
         int rightTreeIndex = rightChild(treeIndex);
-        if(queryL >= mid + 1) {
-            return query(rightTreeIndex, mid + 1, r, queryL, queryR);
-        }else if(queryR <= mid) {
-            return query(leftTreeIndex, l, mid, queryL, queryR);
+        if(queryLeft >= mid + 1) {
+            return query(rightTreeIndex, mid + 1, r, queryLeft, queryRight);
+        }else if(queryRight <= mid) {
+            return query(leftTreeIndex, l, mid, queryLeft, queryRight);
         }
-        E leftResult = query(leftTreeIndex, l, mid, queryL, mid);
-        E rightResult = query(rightTreeIndex, mid + 1, r, mid + 1, queryR);
+        E leftResult = query(leftTreeIndex, l, mid, queryLeft, mid);
+        E rightResult = query(rightTreeIndex, mid + 1, r, mid + 1, queryRight);
         return merger.merge(leftResult, rightResult);
     }
 

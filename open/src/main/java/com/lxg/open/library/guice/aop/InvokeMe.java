@@ -6,6 +6,9 @@ import java.lang.annotation.Target;
 
 import static java.lang.annotation.ElementType.METHOD;
 
+/**
+ * @author xuegangliu
+ */
 @Target({ METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface InvokeMe {

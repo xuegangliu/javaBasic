@@ -16,10 +16,17 @@ import java.util.concurrent.TimeUnit;
  **/
 public class DistributedRedisLock {
 
-    //从配置类中获取redisson对象
+    /**
+     * 从配置类中获取redisson对象
+     */
     private static Redisson redisson = RedissonManager.getRedisson();
     private static final String LOCK_TITLE = "redisLock_";
-    //加锁
+
+    /**
+     * 加锁
+     * @param lockName
+     * @return
+     */
     public static boolean acquire(String lockName){
         //声明key对象
         String key = LOCK_TITLE + lockName;
@@ -31,7 +38,11 @@ public class DistributedRedisLock {
         //加锁成功
         return  true;
     }
-    //锁的释放
+
+    /**
+     * 锁的释放
+     * @param lockName
+     */
     public static void release(String lockName){
         //必须是和加锁时的同一个key
         String key = LOCK_TITLE + lockName;

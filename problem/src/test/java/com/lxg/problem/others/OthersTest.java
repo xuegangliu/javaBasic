@@ -84,5 +84,11 @@ public class OthersTest {
         }
     }
 
+    @Test
+    public void tt(){
+        String a="153936661111";
+        log.error("{}",a.substring(5));
+    }
+
 
 }

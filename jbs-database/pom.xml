@@ -3,13 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>javaBasic</artifactId>
+        <artifactId>jbs-parent</artifactId>
         <groupId>org.lxg</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>database</artifactId>
+    <artifactId>jbs-database</artifactId>
+    <name>jbs-database</name>
     <description>不同数据源连接</description>
 
     <properties>

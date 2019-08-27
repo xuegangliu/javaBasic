@@ -46,4 +46,8 @@ public class HashFunction {
                 this.firstName.toLowerCase().equals(another.firstName.toLowerCase()) &&
                 this.lastName.toLowerCase().equals(another.lastName.toLowerCase());
     }
+
+    public static void main(String[] args) {
+        System.out.println(System.getProperty("user.dir"));
+    }
 }

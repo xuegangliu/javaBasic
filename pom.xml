@@ -3,19 +3,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.lxg</groupId>
-    <artifactId>javaBasic</artifactId>
+    <artifactId>jbs-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
-        <module>common</module>
-        <module>database</module>
-        <module>problem</module>
-        <module>open</module>
-        <module>basic</module>
+        <module>jbs-common</module>
+        <module>jbs-core</module>
+        <module>jbs-open</module>
+        <module>jbs-database</module>
+        <module>jbs-problem</module>
     </modules>
     <packaging>pom</packaging>
 
-    <name>javaBasic</name>
+    <name>jbs-parent</name>
 
     <properties>
         <java.version>1.8</java.version>

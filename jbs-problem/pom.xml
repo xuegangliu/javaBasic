@@ -5,7 +5,8 @@
     <parent>
         <artifactId>jbs-parent</artifactId>
         <groupId>org.lxg</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+<!--        <version>0.0.1-SNAPSHOT</version>-->
+        <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -23,7 +24,7 @@
     <dependencies>
         <dependency>
             <groupId>org.lxg</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>jbs-common</artifactId>
             <version>${project.version}</version>
         </dependency>
 

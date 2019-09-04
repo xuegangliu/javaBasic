@@ -19,6 +19,7 @@
         <junit.version>4.12</junit.version>
         <kafka.version>0.8.0</kafka.version>
         <quartz.version>2.2.1</quartz.version>
+        <collections.version>4.4</collections.version>
     </properties>
 
     <dependencies>
@@ -79,6 +80,12 @@
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz-jobs</artifactId>
             <version>${quartz.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${collections.version}</version>
         </dependency>
     </dependencies>
 

@@ -1,4 +1,4 @@
-package com.lxg.open.library;
+package com.lxg.open.library.guice;
 
 import com.google.inject.Binder;
 import com.google.inject.Guice;

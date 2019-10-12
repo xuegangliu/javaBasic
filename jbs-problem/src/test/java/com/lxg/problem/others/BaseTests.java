@@ -22,4 +22,9 @@ public class BaseTests {
         log.error("{},{}",Byte.MAX_VALUE,Byte.MIN_VALUE);
         log.error("{}",t==t1);
     }
+
+    @Test
+    public void tt(){
+        St.ttt();
+    }
 }

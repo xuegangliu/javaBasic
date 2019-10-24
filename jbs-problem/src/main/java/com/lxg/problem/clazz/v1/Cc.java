@@ -38,7 +38,27 @@ public  class Cc extends Bb implements Aa {
         System.out.println("c.say()");
     }
 
+    @Override
+    public void talk(){
+        super.talk();
+        System.out.println("c.talk(){}");
+    }
+
     public static void main(String[] args) {
-        System.out.println("Cc main()");
+        // 1.父类的static{}只加载一次     Bb static{}
+        // 2.当前类的static{}只加载一次   Cc static{}v1.0.0
+        // 3.当前方法           -----Cc main()
+        System.out.println("===============Cc main()");
+
+        // 4.父类 {}块          Bb {}
+        // 5.父类 构造器         Bb()
+        // 6.当前类 {}块         Cc {}
+        // 7.当前类 构造器       Cc()
+        Cc c=new Cc();
+        System.out.println(c.name1);
+        c.say();
+        c.talk();
+        System.out.println("===============");
+        Cc c1=new Cc();
     }
 }

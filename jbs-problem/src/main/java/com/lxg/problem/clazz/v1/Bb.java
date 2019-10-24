@@ -31,6 +31,9 @@ public class Bb {
     }
 
     public static void main(String[] args) {
-        System.out.println("Bb main()");
+        System.out.println("----------Bb main()");
+        Bb t=new Bb();
+        System.out.println(t.name1);
+        t.talk();
     }
 }

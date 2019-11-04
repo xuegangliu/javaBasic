@@ -20,6 +20,8 @@ public class Test1 {
         log.error("{}","\033[0m");
         log.error("{}","[32m" + 11 + "[0m");
         System.out.println("[32m" + 11 + "[0m");
-
+        System.out.println(Byte.hashCode((byte)-123));
+        Byte t=100;
+        System.out.println(t.compareTo(new Byte("125")));
     }
 }

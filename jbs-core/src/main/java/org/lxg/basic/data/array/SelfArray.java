@@ -98,7 +98,7 @@ public class SelfArray<T> {
         if(index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
         }
-        // 插入位置未中间,将后边的数据挪一位
+        // 插入位置为中间,将后边的数据挪一位
         for(int i = size - 1; i >= index ; i --) {
             data[i + 1] = data[i];
         }

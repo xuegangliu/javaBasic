@@ -1,5 +1,6 @@
-package com.lxg.problem.skills;
+package com.lxg.problem.skills.jdk7;
 
+import com.lxg.problem.skills.jdk7.SumTask;
 import org.junit.Test;
 
 import java.io.IOException;

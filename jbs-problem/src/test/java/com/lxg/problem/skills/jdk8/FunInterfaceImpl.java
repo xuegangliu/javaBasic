@@ -14,7 +14,7 @@ public class FunInterfaceImpl {
         FunInterface funInterface = ()->{
             System.out.println("ok");
         };
-        funInterface.funA();
+        funInterface.funAt();
     }
 
 }

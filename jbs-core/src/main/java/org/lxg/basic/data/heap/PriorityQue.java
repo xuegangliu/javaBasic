@@ -20,7 +20,10 @@ public class PriorityQue {
         nItems = 0;
     }
 
-    //插入数据
+    /**
+     * 插入数据
+     * @param value
+     */
     public void insert(int value){
         int j;
         if(nItems == 0){
@@ -37,27 +40,40 @@ public class PriorityQue {
         }
     }
 
-    //移除数据,由于是按照大小排序的，所以移除数据我们指针向下移动
-    //被移除的地方由于是int类型的，不能设置为null，这里的做法是设置为 -1
+    /**
+     * 移除数据,由于是按照大小排序的，所以移除数据我们指针向下移动
+     * 被移除的地方由于是int类型的，不能设置为null，这里的做法是设置为 -1
+     * @return
+     */
     public int remove(){
         int k = nItems -1;
         int value = priQueArray[k];
-        priQueArray[k] = -1;//-1表示这个位置的数据被移除了
+        //-1表示这个位置的数据被移除了
+        priQueArray[k] = -1;
         nItems--;
         return value;
     }
 
-    //查看优先级最高的元素
+    /**
+     * 查看优先级最高的元素
+     * @return
+     */
     public int peekMin(){
         return priQueArray[nItems-1];
     }
 
-    //判断是否为空
+    /**
+     * 判断是否为空
+     * @return
+     */
     public boolean isEmpty(){
         return (nItems == 0);
     }
 
-    //判断是否满了
+    /**
+     * 判断是否满了
+     * @return
+     */
     public boolean isFull(){
         return (nItems == maxSize);
     }

@@ -18,7 +18,7 @@
         <qiniu.version>7.2.0</qiniu.version>
         <junit.version>4.12</junit.version>
         <kafka.version>0.8.0</kafka.version>
-        <quartz.version>2.2.1</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
         <collections.version>4.4</collections.version>
     </properties>
 

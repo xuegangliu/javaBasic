@@ -28,7 +28,7 @@
         <org.jsoup.version>1.8.3</org.jsoup.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-io.version>2.5</commons-io.version>
-        <commons-net.version>3.6</commons-net.version>
+        <commons-net.version>3.9.0</commons-net.version>
     </properties>
 
     <dependencies>
